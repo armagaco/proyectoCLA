@@ -1,38 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang ="en">
 	<head>
 		<title>MenuPrincipal</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />		
-		<meta name= "viewport" content= "width = device-width, initial-escale=1.0">
-	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
-	<script> src= "js/jquery.js" </script>
-	<script> src= "css/bootstrap.min.css" </script>
+		<meta charset=utf-8" >		
+		<!--<meta name= "viewport" content= "width = device-width, initial-escale=1.0">-->
+	<link href="css/bootstrap.min.css" rel="stylesheet" >
+
 	</head>
 
 	<body>
-
+	<div class= "container">
+	<br>
+	<header>
 	<nav class = "navbar navbar-default" role = "navigation">
 	<div class= "container-fluid">
 	
 	<div class= "navbar-header">
-	<button type = "button" class = "navbar-toggle collapsed" data-toggle= "collapse" data-target= "#acolapsar" aria-expanded="false" aria-controls="navbar">
-
-		<spam class = "sr-only" >Toggle Navigation</spam>
-		<spam class = "icon-bar"</spam>
-		<spam class = "icon-bar"</spam>
-		<spam class = "icon-bar"</spam>
+	<button type = "button" class = "navbar-toggle collapsed" data-toggle= "collapse" data-target= "#barra">
+		<span class = "sr-only" >Menu</span>
+		<span class = "icon-bar"></span>
+		<span class = "icon-bar"></span>
+		<span class = "icon-bar"></span>
 	</button>
 
 
 	<a href = "#"class= "navbar-brand"> Sistema de Control de Labores</a>
 	</div>
 
-	<div class ="navbar-collapse collapse" id = "acolapsar">
+	<div class ="collapse navbar-collapse " id = "barra">
 	<ul class = "nav navbar-nav">
-	<li><a href = "#"><spam class = "glyphicon glyphicon-home"> </spam> Inicio</a></li>
+	<li><a href = "#"><span class = "glyphicon glyphicon-home"> </span> Inicio</a></li>
 
 	<li class = "dropdown">
-	<a href= "#" class = "dropdown-toggle" data-toggle= "dropdown"> Mantenimientos <b class = "caret"></b></a>
+	<a href= "#" class = "dropdown-toggle" data-toggle= "dropdown" role = "button"><span class = "glyphicon glyphicon-cog"> </span>  Mantenimientos <span class = "caret"></span></a>
 	<ul class = "dropdown-menu">
 		<li><a href= "#">Areas</a></li>
 		<li><a href= "#">Lotes</a></li>
@@ -42,8 +42,8 @@
 	</ul>
 	</li>
 
-	<li><a href = "#"><spam class = "glyphicon glyphicon-tree-conifer"> </spam> Procesos</a></li>
-	<li><a href = "#"><spam class = "glyphicon glyphicon-list"> </spam> Consultas</a></li>
+	<li><a href = "#"><span class = "glyphicon glyphicon-folder-open"> </span> Procesos</a></li>
+	<li><a href = "#"><span class = "glyphicon glyphicon-list"> </span> Consultas</a></li>
 	
 
 	</ul>
@@ -53,7 +53,10 @@
 
 	</div>
 	</nav>
-
+	</header>	
+	</div>
+	<script src= "js/jquery.js" ></script>
+	<script src= "js/bootstrap.min.js" ></script>
 
 
 	</body>
