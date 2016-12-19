@@ -19,6 +19,7 @@ Main components
 -------------------------------- */
 .cd-testimonials-wrapper {
   position: relative;
+  text-align: justify;
   width: 90%;
   max-width: 768px;
   background-color:rgba(53, 58, 34, 0.64);
@@ -43,7 +44,7 @@ Main components
   color: #ffffff;
   font-size: 70px;
   font-size: 4.375rem;
-  text-align: center;
+  text-align: justify;
   /* visible on big devices only */
   display: none;
 }
@@ -51,6 +52,7 @@ Main components
   .cd-testimonials-wrapper {
     margin: 0 auto;
     padding: 64px 50px 114px;
+    text-align: justify;
   }
 }
 @media only screen and (min-width: 1170px) {
@@ -61,8 +63,8 @@ Main components
 }
 
 .cd-testimonials {
-  color: #ffffff;
-  text-align: center;
+  color: #000000;
+  text-align: justify;
 }
 .cd-testimonials::after {
   clear: both;
