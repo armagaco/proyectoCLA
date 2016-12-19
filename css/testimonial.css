@@ -19,7 +19,7 @@ Main components
 -------------------------------- */
 .cd-testimonials-wrapper {
   position: relative;
-  text-align: justify;
+  text-align: center;
   width: 90%;
   max-width: 768px;
   background-color:rgba(53, 58, 34, 0.64);
@@ -41,7 +41,7 @@ Main components
   margin-left: -25px;
   background:rgb(57, 60, 45);
   font-family: 'Raleway', sans-serif;
-  color: #ffffff;
+  color: #000000;
   font-size: 70px;
   font-size: 4.375rem;
   text-align: justify;
@@ -63,8 +63,8 @@ Main components
 }
 
 .cd-testimonials {
-  color: #000000;
-  text-align: justify;
+  color: #ffffff;
+  text-align: center;
 }
 .cd-testimonials::after {
   clear: both;
