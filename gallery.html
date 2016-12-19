@@ -401,28 +401,28 @@ En el sector agrícola se deben aplicar conceptos muy básicos para planear, org
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 slideanim">
-				<form action="#" method="post" onsubmit= "return validar();>
+				<form action="registrar.php" method="post" onsubmit= "return validar();">
 					<div class="row">
 						<div class="form-group col-lg-4">
 							<label>Nombre</label>
-							<input type="text" id = "nombre" name="name" class="form-control" placeholder="" required>
+							<input type="text" id = "nombre" name="name" class="form-control" placeholder="" >
 						</div>
 						<div class="form-group col-lg-4">
 							<label>Email</label>
-							<input type="email" id = "correo"  name="email" class="form-control" placeholder="" required>
+							<input type="email" id = "correo"  name="email" class="form-control" placeholder="" >
 						</div>
 						<div class="form-group col-lg-4">
 							<label>Teléfono</label>
-							<input type="text" id = "telefono"  name="phone" class="form-control" placeholder="" required>
+							<input type="text" id = "telefono"  name="phone" class="form-control" placeholder="" >
 						</div>
 						<div class="clearfix"></div>
 						<div class="form-group col-lg-6">
 							<label>Usuario</label>
-							<input type="text"  id = "usuario" name="usuario" class="form-control" placeholder="" required>
+							<input type="text"  id = "usuario" name="usuario" class="form-control" placeholder="" >
 						</div>
 						<div class="form-group col-lg-6">
 							<label>Contraseña</label>
-							<input type="password"  id = "clave" name="clave" class="form-control" placeholder="" required>
+							<input type="password"  id = "clave" name="clave" class="form-control" placeholder="" >
 						</div>
 						<div class="form-group col-lg-12">
 							<button type="submit" class="btn btn-lg btn-outline">Ingresar</button>
@@ -528,6 +528,7 @@ $(window).scroll(function() {
 <script src="js/jquery.hoverdir.js"></script>
 <script src="js/jquery.hoverex.min.js"></script>
 <script src="js/jquery.isotope.min.js"></script>
+<script src="js/validar.js"></script>
 <script>
 // Portfolio
 (function($) {
