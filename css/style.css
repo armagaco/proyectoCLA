@@ -1395,7 +1395,7 @@ section#portfolio,section.our-blog,footer.text-center,section.about-us,section.t
 	text-align:-webkit-center;
 }
 .col-lg-4.slideanim.slide {
-    text-align: justify;
+    text-align: center;
 	margin-top:25px;
 }
 .comment-agile {
@@ -2512,7 +2512,7 @@ footer .footer-below {
 }
 /*-- footer --*/
 .slideanim {visibility:hidden;
-        text-align:justify;
+        text-align:center;
 }
 .slide {
     /* The name of the animation */
@@ -3241,7 +3241,7 @@ section#portfolio,section.our-blog,footer.text-center,section.about-us,section.t
 	text-align:-webkit-center;
 }
 .col-lg-4.slideanim.slide {
-    text-align: justify;
+    text-align: center;
 	margin-top:25px;
 }
 .comment-agile {

@@ -11,6 +11,10 @@ html{
 	-webki-border-radius:5px;
 	-moz-border-radius: 5px;
 }
+img{
+ margin-top:20px;
+ margin-bottom: 20px;
+}
 input[type="submit"]{
 	margin-top:14px;
 }
