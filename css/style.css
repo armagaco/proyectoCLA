@@ -248,11 +248,13 @@ section.about-us p {
 	background: #345603;
 }
 h3.section-heading {
+    text-align:justify;
     font-family: 'Poiret One', cursive;
 	font-size:2.5em;
 	color:rgb(113, 142, 4);
 }
 p.lead {
+        text-align:justify;
 	color:rgb(113, 142, 4);
 	font-size: 19px;
     line-height: 1.7em;
