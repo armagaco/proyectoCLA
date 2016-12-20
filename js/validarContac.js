@@ -1,16 +1,14 @@
-function validar() {
-	var nombre, correo , clave, usuario, telefono, expresion, mensaje;
+function validarContac() {
+	var nombre, correo , telefono, expresion, mensaje;
 	nombre = document.getElementById("nombre").value;
 	correo = document.getElementById("correo").value;
-	clave = document.getElementById("clave").value;
-	usuario = document.getElementById("usuario").value;
 	telefono = document.getElementById("telefono").value;
-
+	mensaje = document.getElementById("mensaje").value;
 
 
 	expresion= /\w+@\w+\.+[a-z]/ ;	
 
-	if (nombre== ""||correo == "" ||clave== ""||usuario == "" ||telefono == ""||mensaje == "") {
+	if (nombre== ""||correo == ""||telefono == ""||mensaje == "") {
 		alert("Todos los campos son obligatorios");
 		return false;
 	}
@@ -30,10 +28,9 @@ function validar() {
 		
 	}
 
-	else if(clave.length>20){
-		alert("La clave tiene demasiados caracteres");
+	else if(mensaje.length<5){
+		alert("El mensaje tiene pocos caracteres");
 		return false;
 		
 	}
-
 }
