@@ -1,11 +1,11 @@
-!function validar() {
+function validar() {
 	var nombre, apellidos, correo , clave, usuario, telefono, expresion, mensaje;
 	nombre = document.getElementById("nombre").value;
 	correo = document.getElementById("correo").value;
 	clave = document.getElementById("clave").value;
 	usuario = document.getElementById("usuario").value;
 	telefono = document.getElementById("telefono").value;
-	mensaje = document.getElementById("mensaje").value;
+	/*mensaje = document.getElementById("mensaje").value;*/
 
 
 	expresion= /\w+@\w+\.+[a-z]/ ;	
@@ -40,4 +40,4 @@
 		return false;
 		
 	}
-};
+}
