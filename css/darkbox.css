@@ -34,8 +34,6 @@ Darkbox
 #darkbox_prev,
 #darkbox_next{
     cursor:pointer;
-    user-select:none;
-    -webkit-user-select:none;
     position:absolute;
     top:50%;
     margin-top:-25px;
