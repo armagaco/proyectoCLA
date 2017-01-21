@@ -15,6 +15,16 @@ session_start();
 	<body>
 		<div class="jumbotron boxlogin" >
                   <img src="images/logo.png" alt="JARE Solutions" title="JARE Soluions" style="width:279px;height:47px;">
+
+<?php
+
+ if (isset($_SESSION['Salmeron'])){
+   echo"<p> Bienvenido Usuario:(" . $_SESSION['Salmeron']. ") [<a href='logout.php'>Salir</a>]";
+}
+else{
+}
+?>
+
 			<form action="login.php" method="POST" name = "flogin" id = "flogin">
 				<label>Nombre de Usuario:</label>
 				<input type="text" name="username" id = "username" class="form-control">
