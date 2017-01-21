@@ -1,3 +1,14 @@
+*{
+ margin:0;
+ padding:0;
+}
+
+#salir{ 
+  float: right;
+  position: relative;
+  right: 1em;
+  top: 1em;
+}
 html{
 	margin: 0px;
 	padding: 0px;
