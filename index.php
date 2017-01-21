@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,7 +15,7 @@
 	<body>
 		<div class="jumbotron boxlogin" >
                   <img src="images/logo.png" alt="JARE Solutions" title="JARE Soluions" style="width:279px;height:47px;">
-			<form method="POST" name = "flogin" id = "flogin">
+			<form action="login.php" method="POST" name = "flogin" id = "flogin">
 				<label>Nombre de Usuario:</label>
 				<input type="text" name="username" id = "username" class="form-control">
 				<label>Contraseña:</label>
