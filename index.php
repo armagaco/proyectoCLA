@@ -31,8 +31,8 @@ else{
 				<label>Contraseña:</label>
 				<input type="text" name="password" id="password" class="form-control">
 				<!--<input type="submit" class="btn btn-success" value="Conectarse">-->
-				
-				<a href= "principal.html" class="btn btn-success" role = "button"> Conectarse </a>
+				<!--<a href= "principal.html" class="btn btn-success" role = "button"> Conectarse </a>-->
+                                <input type="submit" value="Conectarse" class="btn btn-success" />
 			</form>
 		</div>
 
