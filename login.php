@@ -24,9 +24,12 @@ $psw_valido = '1234';
 
 
 
-
-	echo 'Bienvenido ' . $usuario;
+       echo "<div id='panel'>";
+        echo "<div id='welcome'>";
+	echo 'Bienvenid@ ' . $usuario;
 	$_SESSION['Salmeron']=$usuario;
+        echo "</div>";
+        echo '<br>';
 
 	echo "<div id='salir'><a href='logout.php'>Salir</a></div>";
 
@@ -35,6 +38,7 @@ $psw_valido = '1234';
 	echo "Se ha creado sesion";
 	}
 
+      echo"</div>";
 
 ?>
 	<div class= "container">
