@@ -23,7 +23,7 @@ $usr_valido = 'administrador';
 $psw_valido = '1234';
 
 
-
+ if($usuario== $usr_valido && $password==$psw_valido){
        echo "<div id='panel'>";
         echo "<div id='welcome'>";
 	echo 'Bienvenid@ ' . $usuario;
@@ -39,6 +39,13 @@ $psw_valido = '1234';
 	}
 
       echo"</div>";
+}
+else{
+      echo "<div class=\"info\">Usuario o clave incorrecta;n</div>";
+      header('Location: index.php');
+      session_destroy();
+    
+}
 
 ?>
 	<div class= "container">
