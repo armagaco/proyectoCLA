@@ -52,7 +52,6 @@ CREATE TABLE IF NOT EXISTS controlAgricola.lote
 	tamano DECIMAL NULL,
 	estado INT NULL,
 	CONSTRAINT lote_pkey PRIMARY KEY (idLote),
-	CONSTRAINT lote_ukey UNIQUE INDEX idarea_UNIQUE (idArea ASC),
 	CONSTRAINT fkArea
 	FOREIGN KEY (idArea)
 	REFERENCES controlAgricola.area (idArea)
@@ -98,9 +97,6 @@ CREATE TABLE IF NOT EXISTS controlAgricola.cultivoLote
 	fecha VARCHAR(45) NULL,
 	estado INT NULL,
 	CONSTRAINT cultivoLote_pkey PRIMARY KEY (idcultivoLote),
-	CONSTRAINT lote_cl_ukey UNIQUE INDEX idLote_UNIQUE (idLote ASC),
-	CONSTRAINT cultivo_cl_ukey UNIQUE INDEX idCultivo_UNIQUE (idCultivo ASC),
-	UNIQUE INDEX periodo_UNIQUE (idPeriodo ASC),
 	CONSTRAINT fkPeriodo
 	FOREIGN KEY (idPeriodo)
 	REFERENCES controlAgricola.periodo (idPeriodo)
@@ -132,7 +128,7 @@ CREATE TABLE IF NOT EXISTS controlAgricola.departamento
 	idDepartamento INT NOT NULL,
 	nombre VARCHAR(45) NULL,
 	estado INT NULL,
-	PRIMARY KEY (idDepartamento)
+	CONSTRAINT departamento_pkey PRIMARY KEY (idDepartamento)
 )
 WITH 
 (
@@ -149,7 +145,7 @@ CREATE TABLE IF NOT EXISTS controlAgricola.cargo
 	idCargo INT NOT NULL,
 	nombre VARCHAR(45) NULL,
 	estado INT NULL,
-	PRIMARY KEY (idCargo)
+	CONSTRAINT cargo_pkey PRIMARY KEY (idCargo)
 )
 WITH 
 (
@@ -168,9 +164,7 @@ CREATE TABLE IF NOT EXISTS controlAgricola.empleado
 	apellido VARCHAR(45) NULL,
 	departamento INT NULL,
 	cargo INT NULL,
-	PRIMARY KEY (idempleado),
-	UNIQUE INDEX departamento_UNIQUE (departamento ASC),
-	UNIQUE INDEX cargo_UNIQUE (cargo ASC),
+	CONSTRAINT empleado_pkey PRIMARY KEY (idempleado),
 	CONSTRAINT fkDepartamento
 	FOREIGN KEY (departamento)
 	REFERENCES controlAgricola.departamento (idDepartamento)
@@ -200,10 +194,7 @@ CREATE TABLE IF NOT EXISTS controlAgricola.cabeceraTarea
 	supervisor INT NULL,
 	idCultivoLote INT NULL,
 	estado INT NULL,
-	PRIMARY KEY (idCabeceraTarea),
-	UNIQUE INDEX periodo_UNIQUE (periodo ASC),
-	UNIQUE INDEX supervisor_UNIQUE (supervisor ASC),
-	UNIQUE INDEX idCultivoLote_UNIQUE (idCultivoLote ASC),
+	CONSTRAINT cabeceraTarea_pkey PRIMARY KEY (idCabeceraTarea),
 	CONSTRAINT fkPeriodo
 	FOREIGN KEY (periodo)
 	REFERENCES controlAgricola.periodo (idPeriodo)
@@ -235,7 +226,7 @@ CREATE TABLE IF NOT EXISTS controlAgricola.grupoLabor
 	idGrupoLabor INT NOT NULL,
 	nombre VARCHAR(45) NULL,
 	estado INT NULL,
-	PRIMARY KEY (idGrupoLabor)
+	CONSTRAINT grupoLabor_pkey PRIMARY KEY (idGrupoLabor)
 )
 WITH 
 (
@@ -249,17 +240,16 @@ ALTER TABLE controlagricola.grupoLabor
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS controlAgricola.labor 
 (
-idLabor INT NOT NULL,
-idGrupoLabor INT NULL,
-nombre VARCHAR(45) NULL,
-estado INT NULL,
-PRIMARY KEY (idLabor),
-UNIQUE INDEX idGrupoLabor_UNIQUE (idGrupoLabor ASC),
-CONSTRAINT fkGrupoLabor
-FOREIGN KEY (idGrupoLabor)
-REFERENCES controlAgricola.grupoLabor (idGrupoLabor)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
+	idLabor INT NOT NULL,
+	idGrupoLabor INT NULL,
+	nombre VARCHAR(45) NULL,
+	estado INT NULL,
+	CONSTRAINT labor_pkey PRIMARY KEY (idLabor),
+	CONSTRAINT fkGrupoLabor
+	FOREIGN KEY (idGrupoLabor)
+	REFERENCES controlAgricola.grupoLabor (idGrupoLabor)
+	ON DELETE NO ACTION
+	ON UPDATE NO ACTION
 )
 WITH 
 (
@@ -279,9 +269,7 @@ CREATE TABLE IF NOT EXISTS controlAgricola.detalleTarea
 	idLabor INT NULL,
 	cantidad DECIMAL NULL,
 	tarifa DECIMAL NULL,
-	PRIMARY KEY (idCabeceraTarea, idDetalleTarea),
-	UNIQUE INDEX idEmpleado_UNIQUE (idEmpleado ASC),
-	UNIQUE INDEX idLabor_UNIQUE (idLabor ASC),
+	CONSTRAINT detalleTarea_pkey PRIMARY KEY (idCabeceraTarea, idDetalleTarea),
 	CONSTRAINT fkEmpleado
 	FOREIGN KEY (idEmpleado)
 	REFERENCES controlAgricola.empleado (idempleado)
@@ -315,9 +303,7 @@ CREATE TABLE IF NOT EXISTS controlAgricola.cabeceraTarifario
 	idCultivo INT NULL,
 	fecha DATETIME NULL,
 	estado INT NULL,
-	PRIMARY KEY (idCabeceraTarifario),
-	UNIQUE INDEX idCultivo_UNIQUE (idCultivo ASC),
-	UNIQUE INDEX idPeriodo_UNIQUE (idPeriodo ASC),
+	CONSTRAINT cabeceraTarifario_pkey PRIMARY KEY (idCabeceraTarifario),
 	CONSTRAINT fkPeriodo
 	FOREIGN KEY (idPeriodo)
 	REFERENCES controlAgricola.periodo (idPeriodo)
@@ -343,7 +329,7 @@ CREATE TABLE IF NOT EXISTS controlAgricola.medida
 (
 	idMedida INT NOT NULL,
 	nombre VARCHAR(45) NULL,
-	PRIMARY KEY (idMedida)
+	CONSTRAINT medida_pkey PRIMARY KEY (idMedida)
 )
 WITH 
 (
@@ -362,7 +348,7 @@ CREATE TABLE IF NOT EXISTS controlAgricola.detalleTarifario
 	idLabor INT NULL,
 	idMedida INT NULL,
 	valor VARCHAR(45) NULL,
-	PRIMARY KEY (idCabeceraTarifario, idDetalleTarifario),
+	CONSTRAINT detalleTarifario_pkey PRIMARY KEY (idCabeceraTarifario, idDetalleTarifario),
 	INDEX fkLabor_idx (idLabor ASC),
 	INDEX fkMedida_idx (idMedida ASC),
 	CONSTRAINT fkLabor
