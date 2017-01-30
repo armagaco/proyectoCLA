@@ -1,6 +1,6 @@
 <?php
 
-class Periodo{
+class Dron{
 
   private $idArea;
   private $nombre;

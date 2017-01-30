@@ -374,3 +374,19 @@ WITH
 ALTER TABLE controlagricola.detalleTarifario
   OWNER TO postgres;
 
+
+CREATE TABLE IF NOT EXISTS controlAgricola.dron 
+(
+	iddron INT NOT NULL,
+	nombre VARCHAR(45) NULL,
+	CONSTRAINT dron_pkey PRIMARY KEY (idMedida)
+)
+WITH 
+(
+  OIDS=FALSE
+);
+ALTER TABLE controlagricola.dron
+  OWNER TO postgres;
+
+
+
