@@ -10,7 +10,7 @@ class EmpleadoCollector extends Collector
     $rows = self::$db->getRows("SELECT * FROM empleado ");        
     $arrayEmpleado= array();        
     foreach ($rows as $c){
-      $aux = new Empleado($c{'idEmpleado'},$c{'nombre'},$c{'apellido'},$c{'idDepartamento'},${'idCargo'});
+      $aux = new Empleado($c{'idEmpleado'},$c{'nombre'},$c{'apellido'},$c{'idDepartamento'},$c{'idCargo'});
       array_push($arrayEmpleado, $aux);
     }
     return $arrayEmpleado;        
