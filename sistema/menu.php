@@ -18,7 +18,7 @@ session_start();
 	echo "<br>"; 	
 	echo "<a href = 'readMedida.php' >tablaMedida</a>"; 
 	echo "<br>"; 	
-	echo "<a href = 'readGrupoLabores.php' >tablaLabores</a>"; 
+	echo "<a href = 'readGrupoLabor.php' >tablaLabores</a>"; 
 	echo "<br>"; 	
 	echo "<a href = 'readDepartamento.php' >tablaDepartamento</a>"; 
 	echo "<br>"; 	
