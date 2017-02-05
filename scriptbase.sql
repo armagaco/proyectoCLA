@@ -1,13 +1,22 @@
-﻿CREATE SCHEMA IF NOT EXISTS ControlAgricola;
+CREATE SCHEMA IF NOT EXISTS controlAgricola;
 
 --DROP SCHEMA IF EXISTS controlAgricola;
 
 -- -----------------------------------------------------
 -- Table controlAgricola.cultivo
 -- -----------------------------------------------------
+CREATE SEQUENCE controlAgricola.idCultivo_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1
+  CACHE 1;
+ALTER TABLE controlAgricola.idCultivo_seq
+  OWNER TO postgres;
+
 CREATE TABLE IF NOT EXISTS controlAgricola.cultivo 
 (
-	idCultivo INT,
+	idCultivo INT NOT NULL DEFAULT nextval('controlAgricola.idCultivo_seq'::regclass),
 	nombre VARCHAR(45) ,
 	estado INT,
 	CONSTRAINT cultivo_pkey PRIMARY KEY (idcultivo)
@@ -19,14 +28,51 @@ WITH
 ALTER TABLE controlagricola.cultivo
   OWNER TO postgres;
 
+-- -----------------------------------------------------
+-- Table controlAgricola.medida
+-- -----------------------------------------------------
+
+
+CREATE SEQUENCE controlAgricola.idMedida_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1
+  CACHE 1;
+ALTER TABLE controlAgricola.idMedida_seq
+  OWNER TO postgres;
+
+CREATE TABLE IF NOT EXISTS controlAgricola.medida 
+(
+	idMedida  INT NOT NULL DEFAULT nextval('controlAgricola.idMedida_seq'::regclass),
+	nombre VARCHAR(45) ,
+	CONSTRAINT medida_pkey PRIMARY KEY (idMedida)
+)
+WITH 
+(
+  OIDS=FALSE
+);
+ALTER TABLE controlagricola.medida
+  OWNER TO postgres;
+
 
 
 -- -----------------------------------------------------
 -- Table controlAgricola.area
 -- -----------------------------------------------------
+
+CREATE SEQUENCE controlAgricola.idArea_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1
+  CACHE 1;
+ALTER TABLE controlAgricola.idArea_seq
+  OWNER TO postgres;
+
 CREATE TABLE IF NOT EXISTS controlAgricola.area 
 (
-	idArea INT,
+	idArea INT NOT NULL DEFAULT nextval('controlAgricola.idArea_seq'::regclass),
 	nombre VARCHAR(45) ,
 	tamano DECIMAL(10,0) ,
 	estado INT,
@@ -43,9 +89,19 @@ ALTER TABLE controlagricola.area
 -- -----------------------------------------------------
 -- Table controlAgricola.lote
 -- -----------------------------------------------------
+
+CREATE SEQUENCE controlAgricola.idLote_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1
+  CACHE 1;
+ALTER TABLE controlAgricola.idLote_seq
+  OWNER TO postgres;
+
 CREATE TABLE IF NOT EXISTS controlAgricola.lote 
 (
-	idLote INT,
+	idLote INT NOT NULL DEFAULT nextval('controlAgricola.idLote_seq'::regclass),
 	idArea INT,
 	nombre VARCHAR(45) ,
 	tamano DECIMAL ,
@@ -68,9 +124,19 @@ ALTER TABLE controlagricola.lote
 -- -----------------------------------------------------
 -- Table controlAgricola.periodo
 -- -----------------------------------------------------
+
+CREATE SEQUENCE controlAgricola.idPeriodo_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1
+  CACHE 1;
+ALTER TABLE controlAgricola.idPeriodo_seq
+  OWNER TO postgres;
+
 CREATE TABLE IF NOT EXISTS controlAgricola.periodo 
 (
-	idPeriodo INT,
+	idPeriodo INT NOT NULL DEFAULT nextval('controlAgricola.idPeriodo_seq'::regclass),
 	nombre VARCHAR(45),
 	fechainicio TIMESTAMP,
 	fechafinal TIMESTAMP,
@@ -87,9 +153,20 @@ ALTER TABLE controlagricola.periodo
 -- -----------------------------------------------------
 -- Table controlAgricola.cultivoLote
 -- -----------------------------------------------------
+
+
+CREATE SEQUENCE controlAgricola.idCultivoLote_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1
+  CACHE 1;
+ALTER TABLE controlAgricola.idCultivoLote_seq
+  OWNER TO postgres;
+
 CREATE TABLE IF NOT EXISTS controlAgricola.cultivoLote 
 (
-	idcultivoLote INT,
+	idcultivoLote INT NOT NULL DEFAULT nextval('controlAgricola.idCultivoLote_seq'::regclass),
 	idPeriodo INT,
 	idLote INT,
 	idCultivo INT,
@@ -122,9 +199,19 @@ ALTER TABLE controlagricola.cultivoLote
 -- -----------------------------------------------------
 -- Table controlAgricola.departamento
 -- -----------------------------------------------------
+
+CREATE SEQUENCE controlAgricola.idDepartamento_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1
+  CACHE 1;
+ALTER TABLE controlAgricola.idDepartamento_seq
+  OWNER TO postgres;
+
 CREATE TABLE IF NOT EXISTS controlAgricola.departamento 
 (
-	idDepartamento INT ,
+	idDepartamento INT NOT NULL DEFAULT nextval('controlAgricola.idDepartamento_seq'::regclass),
 	nombre VARCHAR(45) ,
 	estado INT,
 	CONSTRAINT departamento_pkey PRIMARY KEY (idDepartamento)
@@ -139,9 +226,19 @@ ALTER TABLE controlagricola.departamento
 -- -----------------------------------------------------
 -- Table controlAgricola.cargo
 -- -----------------------------------------------------
+
+CREATE SEQUENCE controlAgricola.idCargo_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1
+  CACHE 1;
+ALTER TABLE controlAgricola.idCargo_seq
+  OWNER TO postgres;
+
 CREATE TABLE IF NOT EXISTS controlAgricola.cargo 
 (
-	idCargo INT ,
+	idCargo INT NOT NULL DEFAULT nextval('controlAgricola.idCargo_seq'::regclass),
 	nombre VARCHAR(45) ,
 	estado INT,
 	CONSTRAINT cargo_pkey PRIMARY KEY (idCargo)
@@ -156,9 +253,19 @@ ALTER TABLE controlagricola.cargo
 -- -----------------------------------------------------
 -- Table controlAgricola.empleado
 -- -----------------------------------------------------
+
+CREATE SEQUENCE controlAgricola.idEmpleado_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1
+  CACHE 1;
+ALTER TABLE controlAgricola.idEmpleado_seq
+  OWNER TO postgres;
+
 CREATE TABLE IF NOT EXISTS controlAgricola.empleado 
 (
-	idempleado INT ,
+	idempleado  INT NOT NULL DEFAULT nextval('controlAgricola.idEmpleado_seq'::regclass),
 	nombre VARCHAR(45) ,
 	apellido VARCHAR(45) ,
 	departamento INT,
@@ -220,9 +327,18 @@ ALTER TABLE controlagricola.cabeceraTarea
 -- -----------------------------------------------------
 -- Table controlAgricola.grupoLabor
 -- -----------------------------------------------------
+CREATE SEQUENCE controlAgricola.idGrupoLabor_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1
+  CACHE 1;
+ALTER TABLE controlAgricola.idGrupoLabor_seq
+  OWNER TO postgres;
+
 CREATE TABLE IF NOT EXISTS controlAgricola.grupoLabor 
 (
-	idGrupoLabor INT ,
+	idGrupoLabor  INT NOT NULL DEFAULT nextval('controlAgricola.idGrupoLabor_seq'::regclass),
 	nombre VARCHAR(45) ,
 	estado INT,
 	CONSTRAINT grupoLabor_pkey PRIMARY KEY (idGrupoLabor)
@@ -237,9 +353,20 @@ ALTER TABLE controlagricola.grupoLabor
 -- -----------------------------------------------------
 -- Table controlAgricola.labor
 -- -----------------------------------------------------
+
+
+CREATE SEQUENCE controlAgricola.idLabor_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1
+  CACHE 1;
+ALTER TABLE controlAgricola.idLabor_seq
+  OWNER TO postgres;
+
 CREATE TABLE IF NOT EXISTS controlAgricola.labor 
 (
-	idLabor INT ,
+	idLabor INT NOT NULL DEFAULT nextval('controlAgricola.idLabor_seq'::regclass),
 	idGrupoLabor INT,
 	nombre VARCHAR(45) ,
 	estado INT,
@@ -300,7 +427,7 @@ CREATE TABLE IF NOT EXISTS controlAgricola.cabeceraTarifario
 	idCabeceraTarifario INT ,
 	idPeriodo INT,
 	idCultivo INT,
-	fecha TIMESTAMP ,
+	fecha TIMESTAMP NULL ,
 	estado INT,
 	CONSTRAINT cabeceraTarifario_pkey PRIMARY KEY (idCabeceraTarifario),
 	CONSTRAINT fkPeriodo
@@ -321,21 +448,8 @@ WITH
 ALTER TABLE controlagricola.cabeceraTarifario
   OWNER TO postgres;
 
--- -----------------------------------------------------
--- Table controlAgricola.medida
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS controlAgricola.medida 
-(
-	idMedida INT ,
-	nombre VARCHAR(45) ,
-	CONSTRAINT medida_pkey PRIMARY KEY (idMedida)
-)
-WITH 
-(
-  OIDS=FALSE
-);
-ALTER TABLE controlagricola.medida
-  OWNER TO postgres;
+
+
 
 -- -----------------------------------------------------
 -- Table controlAgricola.detalleTarifario
@@ -374,17 +488,75 @@ ALTER TABLE controlagricola.detalleTarifario
   OWNER TO postgres;
 
 
-CREATE TABLE IF NOT EXISTS controlAgricola.dron 
+
+-- -----------------------------------------------------
+-- Table controlAgricola.cabeceraSupervisionDron
+-- -----------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS controlAgricola.cabeceraSupervisionDron 
 (
-	iddron INT ,
-	nombre VARCHAR(45)
+	idCabeceraDron INT NOT NULL,
+	periodo INT NULL,
+	fecha TIMESTAMP NULL,
+	supervisor INT NULL,
+	idCultivoLote INT NULL,
+	estado INT NULL,
+	CONSTRAINT cabeceraDron_pkey PRIMARY KEY (idCabeceraDron),
+	CONSTRAINT fkPeriodo
+	FOREIGN KEY (periodo)
+	REFERENCES controlAgricola.periodo (idPeriodo)
+	ON DELETE NO ACTION
+	ON UPDATE NO ACTION,
+	CONSTRAINT fkCultivoLote
+	FOREIGN KEY (idCultivoLote)
+	REFERENCES controlAgricola.cultivoLote (idcultivoLote)
+	ON DELETE NO ACTION
+	ON UPDATE NO ACTION,
+	CONSTRAINT fkSupervisor
+	FOREIGN KEY (supervisor)
+	REFERENCES controlAgricola.empleado (idempleado)
+	ON DELETE NO ACTION
+	ON UPDATE NO ACTION
 )
 WITH 
 (
   OIDS=FALSE
 );
-ALTER TABLE controlagricola.dron
+ALTER TABLE controlagricola.cabeceraSupervisionDron
   OWNER TO postgres;
 
-
+-- -----------------------------------------------------
+-- Table controlAgricola.detalleSupervisionDron
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS controlAgricola.detalleSupervisionDron 
+(
+	idCabeceraDron INT NOT NULL,
+	idDetalleDron INT NOT NULL,
+	idEmpleado INT NULL,
+	idLabor INT NULL,
+	cantidad DECIMAL NULL,
+	tarifa DECIMAL NULL,
+	CONSTRAINT detalleDron_pkey PRIMARY KEY (idCabeceraDron, idDetalleDron),
+	CONSTRAINT fkEmpleado
+	FOREIGN KEY (idEmpleado)
+	REFERENCES controlAgricola.empleado (idempleado)
+	ON DELETE NO ACTION
+	ON UPDATE NO ACTION,
+	CONSTRAINT fkLabor
+	FOREIGN KEY (idLabor)
+	REFERENCES controlAgricola.labor (idLabor)
+	ON DELETE NO ACTION
+	ON UPDATE NO ACTION,
+	CONSTRAINT fkCabeceraDron
+	FOREIGN KEY (idCabeceraDron)
+	REFERENCES controlAgricola.cabeceraSupervisionDron (idCabeceraDron)
+	ON DELETE NO ACTION
+	ON UPDATE NO ACTION
+)
+WITH 
+(
+  OIDS=FALSE
+);
+ALTER TABLE controlagricola.detalleSupervisionDron
+  OWNER TO postgres;
 
