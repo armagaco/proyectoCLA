@@ -15,7 +15,7 @@ class CabeceraTarifario{
     $this->fecha = $fecha;
     $this->estado = $estado;
     }
-    function setIdCabeceraTarifario($CabeceraTarifario){
+    function setIdCabeceraTarifario($idCabeceraTarifario){
       $this->idCabeceraTarifario = $idCabeceraTarifario;
     }
     function getIdCabeceraTarifario(){
