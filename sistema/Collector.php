@@ -1,11 +1,11 @@
 <?php
 include_once('dataBase.php');
 
-
+// Define configuration
 define("DB_HOST", "localhost");
-define("DB_USER", "root");
-define("DB_PASS", "root");
-define("DB_NAME", "controlAgricoladb");
+define("DB_USER", "postgres");
+define("DB_PASS", "postgres");
+define("DB_NAME", "controlAgricola");
 
 
 class Collector extends dataBase
@@ -24,6 +24,3 @@ class Collector extends dataBase
 }
 
 ?>
-
-
-
