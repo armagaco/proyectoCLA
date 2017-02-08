@@ -11,11 +11,8 @@ session_start();
 	    
                 <link href="../css/estilo.css" rel="stylesheet" >
                  <link href="../css/login.css" rel="stylesheet" >
-
 	</head>
-
 	<body>
-
 
 <?php
         echo "<div id='panel'>";
