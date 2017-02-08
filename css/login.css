@@ -16,12 +16,12 @@ body{
 
 }
 table, th, td{
-  margin-left: 250px;
   border: 1px solid black;
-  border-collapse: collapse;
+  padding: 5px;
+  margin-left: 150px;
 }
-th, td{
- padding:5px;
+ table{
+ border-spacing: 15px;
  text-align:center;
 }
 #menubar{
@@ -30,8 +30,8 @@ th, td{
   background-color: green;
   padding: 5px;
   color: white;
-  width: 60%;
-  margin-left: 250px;
+  width: 80%;
+  margin-left: 150px;
 }
 #salir{ 
   float: right;

@@ -50,34 +50,35 @@ session_start();
 	echo "MENÚ DE TABLAS";
         echo "</div>";
 	echo "<br>";
- 	echo"<center>";   
-	echo "<div id='contenedor'>";
-	    	echo "<div id='contenidos'>";
-		echo "<div id='columna1' ><a href='readCultivo.php'>Cultivos</a></div>";
-		echo "<div id='columna2'><a href='readCargo.php'>Cargos</div>";
-		echo "<div id='columna3'><a href='readCultivo.php'>Lotes</div>";
-		echo "<div id='columna3'><a href='readCultivo.php'>Cultivos por Lotes</div>";
-		echo "</div>";
-		echo "<div id='contenidos'>";
-		echo "<div id='columna1'><a href='readMedida.php'>Medidas</div>";
-		echo "<div id='columna2'><a href='readCultivo.php'>Areas</div>";
-		echo "<div id='columna3'><a href='readCultivo.php'>Periodos</div>";
-		echo "<div id='columna3'><a href='readCultivo.php'>Empleados</div>";
-		echo "</div>";
-		echo "<div id='contenidos'>";
-		echo "<div id='columna1'><a href='readGrupoLabor.php'>Grupos de Labores</div>";
-		echo "<div id='columna2'><a href='readCultivo.php'>Labores</div>";
-		echo "<div id='columna3'><a href='readCultivo.php'>SupervisiónDRON</div>";
-		echo "<div id='columna3'><a href='readCultivo.php'>Ingreso de Tareas</div>";
-		echo "</div>";
-		echo "<div id='contenidos'>";
-		echo "<div id='columna1'><a href='readDepartamento.php'>Departamentos</div>";
-		echo "<div id='columna2'><a href='readCultivo.php'>Tarifario</div>";
-		echo "<div id='columna3'></div>";
-		echo "<div id='columna3'></div>";
-		echo "</div>";
-	echo "</div>";
-	echo "</center>";
+
+
+        echo "<table style='width:81%'>";
+           echo "<tr>";
+              echo "<td><a href='readCultivo.php'>Cultivos</a></td>";
+              echo "<td><a href='readCargo.php'>Cargos</a></td>";
+              echo "<td><a href='readCultivo.php'>Lotes</a></td>";
+              echo "<td><a href='readCultivo.php'>Cultivos por Lotes</a></td>";
+           echo "</tr>";
+           echo "<tr>";
+              echo "<td><a href='readMedida.php'>Medidas</a></td>";
+              echo "<td><a href='readCultivo.php'>Areas</a></td>";
+              echo "<td><a href='readCultivo.php'>Periodos</a></td>";
+              echo "<td><a href='readCultivo.php'>Empleados</a></td>";
+           echo "</tr>";
+           echo "<tr>";
+              echo "<td><a href='readGrupoLabor.php'>Grupos de Labores</a></td>";
+              echo "<td><a href='readCultivo.php'>Labores</a></td>";
+              echo "<td><a href='readCultivo.php'>SupervisiónDRON</a></td>";
+              echo "<td><a href='readCultivo.php'>Ingreso de Tareas</a></td>";
+           echo "</tr>";
+           echo "<tr>";
+              echo "<td><a href='readDepartamento.php'>Departamentos</a></td>";
+              echo "<td><a href='readCultivo.php'>Tarifario</a></td>";
+              
+           echo "</tr>";
+        echo "</table>";
+
+
 ?>
 </body>
 </html>
