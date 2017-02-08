@@ -11,15 +11,18 @@
 	-webki-border-radius:5px;
 	-moz-border-radius: 5px;
 }
+body{
+
+}
 #salir{ 
   float: right;
   position: relative;
-  right: 0.5em;
+  right: 1.5em;
 }
 #welcome{ 
   float: left;
   position: relative;
- font-size: 25px;
+ font-size: 18px;
 
 }
 html{
@@ -34,6 +37,24 @@ html{
         padding: 20px 20px 20px 20px;
 	-webki-border-radius:5px;
 	-moz-border-radius: 5px;
+}
+p{
+  position: relative;
+  top: 40px;
+}
+.opcion{
+ width: 60%;
+ float: left;
+ height: 100px;
+ margin: auto;
+margin-left:250px;
+ position: relative;
+ margin-top: 15px;
+ padding: 10px 5px 15px 5px;
+ text-align:center;
+ /*margin: 20px 60px 10px 0;*/
+ background:#d6d6d6;
+ border-radius: 15px 15px 15px 15px;
 }
 img{
  margin-top:20px;
