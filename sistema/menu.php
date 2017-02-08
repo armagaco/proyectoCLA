@@ -11,16 +11,35 @@ session_start();
 	    
                 <link href="../css/estilo.css" rel="stylesheet" >
                  <link href="../css/login.css" rel="stylesheet" >
-	</head>
-	<body>
 
+<style type="text/css">
+#contenedor {
+    display: table;
+    border: 2px solid #000;
+    width: 333px;
+    text-align: center;
+    margin: 0 auto;
+}
+#contenidos {
+    display: table-row;
+}
+#columna1, #columna2, #columna3 {
+    display: table-cell;
+    border: 1px solid #000;
+    vertical-align: middle;
+    padding: 10px;
+}
+</style>
+
+	</head>
+
+	<body>
 <?php
         echo "<div id='panel'>";
         echo "<div id='welcome'>";
 	echo "Hola Usuario : ";
 	echo '(' . $_SESSION ['Garcia'] . ')';
         echo "</div>";
-
 	echo "<div id='salir'>"; 	
 	echo "<a href = 'logout.php' >Salir</a>"; 
         echo "</div>";
@@ -31,63 +50,34 @@ session_start();
 	echo "MENÚ DE TABLAS";
         echo "</div>";
 	echo "<br>";
-
-        
-        echo "<table style='width:50%'>";
-	echo "<tr>";
-        echo "<th rowspan='2'>";	
-	echo "<a href = 'readCultivo.php' >tablaCultivo</a>"; 
-        echo "</th>";
-        echo "<th>";
-        echo "<a href = 'readDemo.php' >Código</a>";
-        echo "</th>";
-        echo "<th>";
-	echo "<a href = 'readDemo.php' >Nombre</a>";
-        echo "</th>";
-        echo "<th>";
-	echo "<a href = 'readDemo.php' >Estado</a>";
-        echo "</th>";
-      
-
-        echo "<table style='width: 60%'>";
-        
-         echo "<tr>";
-           echo "<th rowspan='2' colspan='2'>";
-           echo "Tabla Cultivo";
-           echo "</th>";
-           echo "<th rowspan='1'>";
-           echo "Código";
-           echo "</th>";
-           echo "<th rowspan='1'>";
-           echo "Nombre";
-           echo "</th>";
-           echo "<th rowspan='1'>";
-           echo "Estado";
-           echo "</th>";
-           
-         echo "</tr>";
-         echo "<tr>";
-           echo "<td>";
-           echo "1";
-           echo "</td>";
-           echo "<td>";
-           echo "Johana";
-           echo "</td>";
-           echo "<td>";
-           echo "Activo";
-           echo "</td>";
-         echo "</tr>";
-        echo "<table>";
-		
-	echo "<a href = 'readMedida.php' >tablaMedida</a>"; 
-	echo "<br>"; 	
-	echo "<a href = 'readGrupoLabor.php' >tablaLabores</a>"; 
-	echo "<br>"; 	
-	echo "<a href = 'readDepartamento.php' >tablaDepartamento</a>"; 
-	echo "<br>"; 	
-	echo "<a href = 'readCargo.php' >tablaCargo</a>"; 
-        echo "</table>";
-
+ 	echo"<center>";   
+	echo "<div id='contenedor'>";
+	    	echo "<div id='contenidos'>";
+		echo "<div id='columna1' ><a href='readCultivo.php'>Cultivos</a></div>";
+		echo "<div id='columna2'><a href='readCargo.php'>Cargos</div>";
+		echo "<div id='columna3'><a href='readCultivo.php'>Lotes</div>";
+		echo "<div id='columna3'><a href='readCultivo.php'>Cultivos por Lotes</div>";
+		echo "</div>";
+		echo "<div id='contenidos'>";
+		echo "<div id='columna1'><a href='readMedida.php'>Medidas</div>";
+		echo "<div id='columna2'><a href='readCultivo.php'>Areas</div>";
+		echo "<div id='columna3'><a href='readCultivo.php'>Periodos</div>";
+		echo "<div id='columna3'><a href='readCultivo.php'>Empleados</div>";
+		echo "</div>";
+		echo "<div id='contenidos'>";
+		echo "<div id='columna1'><a href='readGrupoLabor.php'>Grupos de Labores</div>";
+		echo "<div id='columna2'><a href='readCultivo.php'>Labores</div>";
+		echo "<div id='columna3'><a href='readCultivo.php'>SupervisiónDRON</div>";
+		echo "<div id='columna3'><a href='readCultivo.php'>Ingreso de Tareas</div>";
+		echo "</div>";
+		echo "<div id='contenidos'>";
+		echo "<div id='columna1'><a href='readDepartamento.php'>Departamentos</div>";
+		echo "<div id='columna2'><a href='readCultivo.php'>Tarifario</div>";
+		echo "<div id='columna3'></div>";
+		echo "<div id='columna3'></div>";
+		echo "</div>";
+	echo "</div>";
+	echo "</center>";
 ?>
 </body>
 </html>
