@@ -20,9 +20,9 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cultivos</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Calificaciones</a></div>";
 		echo " <ul class='nav navbar-nav'>";
-		      	echo "<li><a href='menu.php'>Menú</a></li>";
+		      	//echo "<li><a href='menu.php'>Menú</a></li>";
 			echo "<li><a href='createCultivo.php'>Nuevo</a></li>";
 			echo "<li><a href='readCultivo.php'>Consulta</a></li>";
 
@@ -54,7 +54,7 @@ session_start();
          </div>
      </div>
      <div class="form-group">
-         <label for="inputEmail" class="control-label col-xs-2">Estado:</label>
+         <label for="inputEmail" class="control-label col-xs-2">Parcial:</label>
          <div class="col-xs-10">
              <input name = "Estado" type="text" id= "Estado" class="form-control" placeholder="Estado" value="<?php echo $a;?>">
          </div>

@@ -1,7 +1,8 @@
 <?php
 session_start();
 ?>
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html lang ="en">
 <head>
 	<title>Menú</title>
@@ -17,43 +18,26 @@ session_start();
 	<script src="../js/jquery-1.11.1.min.js"></script>
 </head>
 <body>
+
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cultivos</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Calificaciones</a></div>";
 		echo " <ul class='nav navbar-nav'>";
-		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createCultivo.php'>Nuevo</a></li>";
-			echo "<li><a href='readCultivo.php'>Consulta</a></li>";
-
+		      	echo "<li><a href='createCultivo.php'>Formulario</a></li>";
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
+		$usuario = $_POST['Nombre'] ;
+		$_SESSION['Garcia'] = $usuario;
+
 			echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['Garcia'] . ")</a></li>";
 			echo "<li><a href='logout.php'><span class='glyphicon glyphicon-log-out'></span>Salir</a></li>";
+
 		echo "</ul>";
 	  echo "</div>";
 	echo "</nav>";
 
-$id =$_POST['Codigo'];
-$n =$_POST['Nombre'];
-$a =$_POST['Estado'];
 
-
-include_once("CultivoCollector.php");
-$CultivoCollectorObj = new CultivoCollector();
-$CultivoCollectorObj->updateCultivos($id,$n,$a);
-
-echo "<br>";
-
-echo "<div class='container'>";
-echo "  <h2>Cultivos</h2>";
-echo "  <div class='panel panel-default'>";
-echo "    <div class='panel-heading'>Registro Actualizado Correctamente</div>";
-echo "    <div class='panel-body'>$n</div>";
-echo "  </div>";
-echo "</div>";
- 
 ?>
-
 </body>
 </html>

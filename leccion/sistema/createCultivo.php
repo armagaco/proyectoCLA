@@ -23,9 +23,9 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cultivos</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Calificaciones</a></div>";
 		echo " <ul class='nav navbar-nav'>";
-		      	echo "<li><a href='menu.php'>Menú</a></li>";
+		      	//echo "<li><a href='menu.php'>Menú</a></li>";
 			echo "<li><a href='createCultivo.php'>Nuevo</a></li>";
 			echo "<li><a href='readCultivo.php'>Consulta</a></li>";
 
@@ -46,11 +46,36 @@ echo "<form method= 'POST' class='form-horizontal' action= 'newCultivo.php' id='
          echo "</div>";
      echo "</div>";
      echo "<div class='form-group'>";
-         echo "<label for='inputEstado' class='control-label col-xs-2'>Estado:</label>";
+         echo "<label for='inputParcial' class='control-label col-xs-2'>Parcial:</label>";
          echo "<div class='col-xs-10'>";
-             echo "<input name = 'Estado' type='text' id= 'Estado' class='form-control' placeholder='Estado'>";
+             echo "<input name = 'Parcial' type='text' id= 'Parcial' class='form-control' placeholder='Parcial'>";
          echo "</div>";
      echo "</div>";
+
+     echo "<div class='form-group'>";
+         echo "<label for='inputFinal' class='control-label col-xs-2'>Final:</label>";
+         echo "<div class='col-xs-10'>";
+             echo "<input name = 'Final' type='text' id= 'Final' class='form-control' placeholder='Final'>";
+         echo "</div>";
+     echo "</div>";
+
+
+     echo "<div class='form-group'>";
+         echo "<label for='inputMejoramiento' class='control-label col-xs-2'>Mejoramiento:</label>";
+         echo "<div class='col-xs-10'>";
+             echo "<input name = 'Mejoramiento' type='text' id= 'Mejoramiento' class='form-control' placeholder='Mejoramiento'>";
+         echo "</div>";
+     echo "</div>";
+
+     echo "<div class='form-group'>";
+         echo "<label for='inputAprueba' class='control-label col-xs-2'>Aprueba:</label>";
+         echo "<div class='col-xs-10'>";
+             echo "<input name = 'Aprueba' type='text' id= 'Aprueba' class='form-control' placeholder='Aprueba'>";
+         echo "</div>";
+     echo "</div>";
+
+
+
      echo "<div class='form-group'>";
          echo "<div class='col-xs-offset-2 col-xs-10'>";
              echo "<button type='submit' class='btn btn-primary'>Grabar</button>";

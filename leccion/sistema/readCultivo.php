@@ -19,7 +19,7 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cultivos</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Notas</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
 			echo "<li><a href='createCultivo.php'>Nuevo</a></li>";
@@ -35,24 +35,32 @@ include_once("CultivoCollector.php");
 $CultivoCollectorObj = new CultivoCollector();
 
 echo "<div class='container'>";
-echo "<h2>Cultivos</h2>";
+echo "<h2>Notas</h2>";
 echo "<div class='table-responsive'>"; 
 echo "<table class='table'>"; 
 echo "<thead>"; 
 echo "<tr>"; 
 echo " 	   <th>Código</th>"; 
 echo "     <th>Nombre</th>"; 
-echo "     <th>Estado</th>"; 
+echo "     <th>Parcial</th>";
+echo " 	   <th>Final</th>"; 
+echo "     <th>Mejoramiento</th>"; 
+echo "     <th>Aprueba</th>";
+ 
 echo "</tr>"; 
 echo "</thead>"; 
 foreach ($CultivoCollectorObj->showCultivos() as $c){
 	echo "<tbody>"; 
 	echo "<tr>"; 
-	echo "<td>".$c->getIdCultivo()."</td>"; 
-	echo "<td>".$c->getNombre()."</td>"; 
-	echo "<td>".$c->getEstado()."</td>"; 
-	echo "<td><a href='updateCultivo.php?id=".$c->getIdCultivo()."&nombre=".$c->getNombre()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
-	echo "<td><a href='deleteCultivo.php?id=".$c->getIdCultivo()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
+	echo "<td>".$c->getidnota()."</td>"; 
+	echo "<td>".$c->getnombre()."</td>"; 
+	echo "<td>".$c->getparcial()."</td>"; 
+	echo "<td>".$c->getfinal()."</td>"; 
+	echo "<td>".$c->getmejoramiento()."</td>"; 
+	echo "<td>".$c->getaprueba()."</td>"; 
+
+	//echo "<td><a href='updateCultivo.php?id=".$c->getIdCultivo()."&nombre=".$c->getNombre()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
+	//echo "<td><a href='deleteCultivo.php?id=".$c->getIdCultivo()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 
 }
 echo "</tbody>";
