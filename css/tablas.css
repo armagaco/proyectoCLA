@@ -4,13 +4,15 @@
 }
 
 #menubar{
+  position: relative;
+  top: 60px;
   font-weight: bold;
   text-align: center;
   background-color: green;
   padding: 5px;
   color: white;
-  width: 80%;
-  margin-left: 150px;
+  width: 31%;
+  margin-left: 445px;
 }
 #salir{ 
   float: right;
@@ -36,6 +38,8 @@
 	-moz-border-radius: 5px;
 }
 #contenedor {
+    position: relative;
+    top: 50px;
     display: table;
     border: 2px solid #000;
     width: 333px;
@@ -50,4 +54,21 @@
     border: 1px solid #000;
     vertical-align: middle;
     padding: 10px;
+}
+#content_green{
+ width: 800px;
+ height: 100px;
+ float: left;
+ text-align: center;
+ position: relative;
+ left: 430px;
+}
+#content_green_container_box{
+ width: 200px;
+ padding: 10px 5px 15px 5px;
+ text-align: center;
+ margin: 20px 20px 10px 0;
+ float: left;
+ background: #99FF99;
+ border-radius: 15px 15px 15px 15px;
 }
