@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang ="en">
 <head>
@@ -12,20 +13,16 @@ session_start();
   	<link href="../css/bootstrap.min.css" rel="stylesheet">
   	<script src="../js/jquery.min.js"></script>
   	<script src="../js/bootstrap.min.js"></script>
-	<script src= "../js/jquery.js" ></script>
-	<script src="../js/jquery.bootgrid.min.js"></script>
-	<script src="../js/jquery-1.11.1.min.js"></script>
 </head>
+
 <body>
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Medidas</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla GrupoLabores</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createMedida.php'>Nuevo</a></li>";
-			echo "<li><a href='readMedida.php'>Consulta</a></li>";
-
+			echo "<li><a href='createGrupoLabor.php'>Nuevo</a></li>";
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
 			echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['Garcia'] . ")</a></li>";
@@ -34,26 +31,36 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-$id =$_POST['Codigo'];
-$n =$_POST['Nombre'];
-$a =$_POST['Estado'];
-
-
-include_once("MedidaCollector.php");
-$MedidaCollectorObj = new MedidaCollector();
-$MedidaCollectorObj->updateMedidas($id,$n,$a);
-
-echo "<br>";
+include_once("GrupoLaborCollector.php");
+$GrupoLaborCollectorObj = new GrupoLaborCollector();
 
 echo "<div class='container'>";
-echo "  <h2>Medidas</h2>";
-echo "  <div class='panel panel-default'>";
-echo "    <div class='panel-heading'>Registro Actualizado Correctamente</div>";
-echo "    <div class='panel-body'>$n</div>";
-echo "  </div>";
+echo "<h2>GrupoLabores</h2>";
+echo "<div class='table-responsive'>"; 
+echo "<table class='table'>"; 
+echo "<thead>"; 
+echo "<tr>"; 
+echo " 	   <th>Código</th>"; 
+echo "     <th>Nombre</th>"; 
+echo "     <th>Estado</th>"; 
+echo "</tr>"; 
+echo "</thead>"; 
+foreach ($GrupoLaborCollectorObj->showGrupoLabors() as $c){
+	echo "<tbody>"; 
+	echo "<tr>"; 
+	echo "<td>".$c->getIdGrupoLabor()."</td>"; 
+	echo "<td>".$c->getNombre()."</td>"; 
+	echo "<td>".$c->getEstado()."</td>"; 
+	echo "<td><a href='updateGrupoLabor.php?id=".$c->getIdGrupoLabor()."&nombre=".$c->getNombre()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteGrupoLabor.php?id=".$c->getIdGrupoLabor()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
+	echo "</tr>"; 
+}
+echo "</tbody>";
+echo "</table>";
 echo "</div>";
- 
+echo "</div>";
 ?>
 
 </body>
 </html>
+

@@ -19,10 +19,10 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Medidas</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Departamentos</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createMedida.php'>Nuevo</a></li>";
+			echo "<li><a href='createDepartamento.php'>Nuevo</a></li>";
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
 			echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['Garcia'] . ")</a></li>";
@@ -31,11 +31,11 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-include_once("MedidaCollector.php");
-$MedidaCollectorObj = new MedidaCollector();
+include_once("DepartamentoCollector.php");
+$DepartamentoCollectorObj = new DepartamentoCollector();
 
 echo "<div class='container'>";
-echo "<h2>Medidas</h2>";
+echo "<h2>Departamentos</h2>";
 echo "<div class='table-responsive'>"; 
 echo "<table class='table'>"; 
 echo "<thead>"; 
@@ -45,14 +45,14 @@ echo "     <th>Nombre</th>";
 echo "     <th>Estado</th>"; 
 echo "</tr>"; 
 echo "</thead>"; 
-foreach ($MedidaCollectorObj->showMedidas() as $c){
+foreach ($DepartamentoCollectorObj->showDepartamentos() as $c){
 	echo "<tbody>"; 
 	echo "<tr>"; 
-	echo "<td>".$c->getIdMedida()."</td>"; 
+	echo "<td>".$c->getIdDepartamento()."</td>"; 
 	echo "<td>".$c->getNombre()."</td>"; 
 	echo "<td>".$c->getEstado()."</td>"; 
-	echo "<td><a href='updateMedida.php?id=".$c->getIdMedida()."&nombre=".$c->getNombre()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
-	echo "<td><a href='deleteMedida.php?id=".$c->getIdMedida()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
+	echo "<td><a href='updateDepartamento.php?id=".$c->getIdDepartamento()."&nombre=".$c->getNombre()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteDepartamento.php?id=".$c->getIdDepartamento()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 
 }
 echo "</tbody>";

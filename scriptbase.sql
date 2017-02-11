@@ -46,6 +46,7 @@ CREATE TABLE IF NOT EXISTS controlAgricola.medida
 (
 	idMedida  INT NOT NULL DEFAULT nextval('controlAgricola.idMedida_seq'::regclass),
 	nombre VARCHAR(45) ,
+	estado INT,
 	CONSTRAINT medida_pkey PRIMARY KEY (idMedida)
 )
 WITH 

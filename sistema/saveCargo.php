@@ -20,11 +20,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Medidas</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cargos</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createMedida.php'>Nuevo</a></li>";
-			echo "<li><a href='readMedida.php'>Consulta</a></li>";
+			echo "<li><a href='createCargo.php'>Nuevo</a></li>";
+			echo "<li><a href='readCargo.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -39,14 +39,14 @@ $n =$_POST['Nombre'];
 $a =$_POST['Estado'];
 
 
-include_once("MedidaCollector.php");
-$MedidaCollectorObj = new MedidaCollector();
-$MedidaCollectorObj->updateMedidas($id,$n,$a);
+include_once("CargoCollector.php");
+$CargoCollectorObj = new CargoCollector();
+$CargoCollectorObj->updateCargos($id,$n,$a);
 
 echo "<br>";
 
 echo "<div class='container'>";
-echo "  <h2>Medidas</h2>";
+echo "  <h2>Cargos</h2>";
 echo "  <div class='panel panel-default'>";
 echo "    <div class='panel-heading'>Registro Actualizado Correctamente</div>";
 echo "    <div class='panel-body'>$n</div>";

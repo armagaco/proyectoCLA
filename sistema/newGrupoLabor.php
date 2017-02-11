@@ -12,19 +12,16 @@ session_start();
   	<link href="../css/bootstrap.min.css" rel="stylesheet">
   	<script src="../js/jquery.min.js"></script>
   	<script src="../js/bootstrap.min.js"></script>
-	<script src= "../js/jquery.js" ></script>
-	<script src="../js/jquery.bootgrid.min.js"></script>
-	<script src="../js/jquery-1.11.1.min.js"></script>
 </head>
 <body>
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Medidas</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla GrupoLabores</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createMedida.php'>Nuevo</a></li>";
-			echo "<li><a href='readMedida.php'>Consulta</a></li>";
+			echo "<li><a href='createGrupoLabor.php'>Nuevo</a></li>";
+			echo "<li><a href='readGrupoLabor.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -34,25 +31,24 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-$id =$_POST['Codigo'];
-$n =$_POST['Nombre'];
-$a =$_POST['Estado'];
 
+$n = $_POST['Nombre'];
+$a = $_POST['Estado'];
 
-include_once("MedidaCollector.php");
-$MedidaCollectorObj = new MedidaCollector();
-$MedidaCollectorObj->updateMedidas($id,$n,$a);
+include_once("GrupoLaborCollector.php");
+$GrupoLaborCollectorObj = new GrupoLaborCollector();
+$GrupoLaborCollectorObj->insertGrupoLabors($n,$a);
 
 echo "<br>";
 
 echo "<div class='container'>";
-echo "  <h2>Medidas</h2>";
+echo "  <h2>GrupoLabores</h2>";
 echo "  <div class='panel panel-default'>";
-echo "    <div class='panel-heading'>Registro Actualizado Correctamente</div>";
+echo "    <div class='panel-heading'>Registro Ingresado Correctamente</div>";
 echo "    <div class='panel-body'>$n</div>";
 echo "  </div>";
 echo "</div>";
- 
+
 ?>
 
 </body>

@@ -20,11 +20,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Medidas</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla GrupoLabors</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createMedida.php'>Nuevo</a></li>";
-			echo "<li><a href='readMedida.php'>Consulta</a></li>";
+			echo "<li><a href='createGrupoLabor.php'>Nuevo</a></li>";
+			echo "<li><a href='readGrupoLabor.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -39,7 +39,7 @@ session_start();
 	$a =$_GET['estado'];
 ?>
 
-<form method= "POST" class="form-horizontal" action= "saveMedida.php?usuario=" >
+<form method= "POST" class="form-horizontal" action= "saveGrupoLabor.php?usuario=" >
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Código:</label>
          <div class="col-xs-10">

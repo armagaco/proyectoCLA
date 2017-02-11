@@ -23,11 +23,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Medidas</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Departamentos</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createMedida.php'>Nuevo</a></li>";
-			echo "<li><a href='readMedida.php'>Consulta</a></li>";
+			echo "<li><a href='createDepartamento.php'>Nuevo</a></li>";
+			echo "<li><a href='readDepartamento.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -38,7 +38,7 @@ session_start();
 	echo "</nav>";
 
 
-echo "<form method= 'POST' class='form-horizontal' action= 'newMedida.php' id='Medida' title='Medida' >";
+echo "<form method= 'POST' class='form-horizontal' action= 'newDepartamento.php' id='Departamento' title='Departamento' >";
      echo "<div class='form-group'>";
          echo "<label for='inputName' class='control-label col-xs-2'>Nombre:</label>";
          echo "<div class='col-xs-10'>";

@@ -12,19 +12,16 @@ session_start();
   	<link href="../css/bootstrap.min.css" rel="stylesheet">
   	<script src="../js/jquery.min.js"></script>
   	<script src="../js/bootstrap.min.js"></script>
-	<script src= "../js/jquery.js" ></script>
-	<script src="../js/jquery.bootgrid.min.js"></script>
-	<script src="../js/jquery-1.11.1.min.js"></script>
 </head>
 <body>
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Medidas</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cargos</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createMedida.php'>Nuevo</a></li>";
-			echo "<li><a href='readMedida.php'>Consulta</a></li>";
+			echo "<li><a href='createCargo.php'>Nuevo</a></li>";
+			echo "<li><a href='readCargo.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -34,25 +31,22 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-$id =$_POST['Codigo'];
-$n =$_POST['Nombre'];
-$a =$_POST['Estado'];
+	$id =$_GET['id'];
+	$n =$_GET['nombre'];
 
+	include_once("CargoCollector.php");
+	$CargoCollectorObj = new CargoCollector();
+	$CargoCollectorObj->deleteCargos($id);
 
-include_once("MedidaCollector.php");
-$MedidaCollectorObj = new MedidaCollector();
-$MedidaCollectorObj->updateMedidas($id,$n,$a);
+	echo "<br>";
 
-echo "<br>";
-
-echo "<div class='container'>";
-echo "  <h2>Medidas</h2>";
-echo "  <div class='panel panel-default'>";
-echo "    <div class='panel-heading'>Registro Actualizado Correctamente</div>";
-echo "    <div class='panel-body'>$n</div>";
-echo "  </div>";
-echo "</div>";
- 
+	echo "<div class='container'>";
+	echo "  <h2>Cargos</h2>";
+	echo "  <div class='panel panel-default'>";
+	echo "    <div class='panel-heading'>Registro Eliminado Correctamente</div>";
+	echo "    <div class='panel-body'>$n</div>";
+	echo "  </div>";
+	echo "</div>";	 
 ?>
 
 </body>
