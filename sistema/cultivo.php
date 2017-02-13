@@ -19,7 +19,7 @@ class Cultivo
        return $this->idCultivo;
      } 
      function setNombre($nombre){
-       $this->nombre = $nombre;
+	       $this->nombre = $nombre;       
      } 
      function getNombre(){
        return $this->nombre;

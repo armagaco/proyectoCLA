@@ -8,15 +8,7 @@ session_start();
 	<title>Nuevo</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="../css/estilo.css" rel="stylesheet" >
-        <link href="../css/tablas.css" rel="stylesheet" >
-  	<link href="../css/bootstrap.min.css" rel="stylesheet">
-  	<script src="../js/jquery.min.js"></script>
-  	<script src="../js/bootstrap.min.js"></script>
-        <script src="../js/jquery.bootgrid.min.js"></script>
-	<script src="../js/jquery-1.11.1.min.js"></script>
-	<script src= "../js/jquery.js" ></script>
-
+   	<link href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -45,11 +37,15 @@ echo "<form method= 'POST' class='form-horizontal' action= 'newMedida.php' id='M
              echo "<input name = 'Nombre' type='text' id= 'Nombre' class='form-control' placeholder='Nombre'>";
          echo "</div>";
      echo "</div>";
-     echo "<div class='form-group'>";
-         echo "<label for='inputEstado' class='control-label col-xs-2'>Estado:</label>";
-         echo "<div class='col-xs-10'>";
-             echo "<input name = 'Estado' type='text' id= 'Estado' class='form-control' placeholder='Estado'>";
-         echo "</div>";
+	     echo "<div class='form-group'>";
+		 echo "<label for='inputEstado' class='control-label col-xs-2'>Estado:</label>";
+		 echo "<div class='col-xs-10'>";
+		 echo "<select class='form-control' name='Estado'>";
+		    echo "<option value= '1'>Activo</option>";
+		    echo "<option value= '2'>Inactivo</option>";
+		 echo " </select>";
+
+	     echo "</div>";
      echo "</div>";
      echo "<div class='form-group'>";
          echo "<div class='col-xs-offset-2 col-xs-10'>";

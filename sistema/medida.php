@@ -19,8 +19,8 @@ class medida
        return $this->idMedida;
      } 
      function setNombre($nombre){
-       $this->nombre = $nombre;
-     } 
+	 $this->nombre = $nombre;
+     }
      function getNombre(){
        return $this->nombre;
      } 
@@ -33,7 +33,6 @@ class medida
      } 
 
 }
-
 
 ?> 
 

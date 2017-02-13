@@ -54,7 +54,7 @@ session_start();
          </div>
      </div>
      <div class="form-group">
-         <label for="inputEmail" class="control-label col-xs-2">Estado:</label>
+         <label for="inputEstado" class="control-label col-xs-2">Estado:</label>
          <div class="col-xs-10">
              <input name = "Estado" type="text" id= "Estado" class="form-control" placeholder="Estado" value="<?php echo $a;?>">
          </div>

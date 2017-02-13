@@ -7,17 +7,17 @@ class MedidaCollector extends Collector
 {
  
   function showMedidas() {
-    $rows = self::$db->getRows("SELECT idMedida,nombre,estado FROM controlAgricola.medida ");        
+    $rows = self::$db->getRows("SELECT idmedida,nombre,estado FROM controlAgricola.medida ");        
     $arrayMedida= array();        
     foreach ($rows as $c){
-      $aux = new medida($c{'idMedida'},$c{'nombre'},$c{'estado'} );
+      $aux = new medida($c{'idmedida'},$c{'nombre'},$c{'estado'} );
       array_push($arrayMedida, $aux);
     }
     return $arrayMedida;        
   }
 
   function deleteMedidas($id) {
-    $rows = self::$db->deleteRow("DELETE FROM controlAgricola.medida where idMedida = $id", null);             
+    $rows = self::$db->deleteRow("DELETE FROM controlAgricola.medida where idmedida = $id", null);             
   }
 
   function insertMedidas($nombre, $estado) {
@@ -25,7 +25,7 @@ class MedidaCollector extends Collector
   }
 
   function updateMedidas($id,$nombre, $estado) {
-    $rows = self::$db->updateRow("Update controlAgricola.medida set nombre = '$nombre', estado = $estado where idMedida =$id", null);             
+    $rows = self::$db->updateRow("Update controlAgricola.medida set nombre = '$nombre', estado = $estado where idmedida =$id", null);             
   }
 
 }
