@@ -41,7 +41,7 @@ echo "<form method= 'POST' class='form-horizontal' action= 'newMedida.php' id='M
 		 echo "<label for='inputEstado' class='control-label col-xs-2'>Estado:</label>";
 		 echo "<div class='col-xs-10'>";
 		 echo "<select class='form-control' name='Estado'>";
-		    echo "<option value= '1'>Activo</option>";
+		    echo "<option value= '1'selected>Activo</option>";
 		    echo "<option value= '2'>Inactivo</option>";
 		 echo " </select>";
 
