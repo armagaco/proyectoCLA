@@ -1,10 +1,14 @@
 <?php
 session_start();
+?>
 
-
-if (isset($_SESSION['Garcia'])){
-	session_destroy();
-	 echo "se ha destruido la sesion exitosamente";
-	echo "<a href= 'index.php'>Volver</a>";
+<?php
+if(isset($_SESSION['Garcia'])){
+session_destroy();
 }
 ?>
+
+<script>
+	alert('Ha salido de su sesion');
+	window.location="../index.html";	
+</script>

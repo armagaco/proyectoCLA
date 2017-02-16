@@ -50,7 +50,13 @@ foreach ($CargoCollectorObj->showCargos() as $c){
 	echo "<tr>"; 
 	echo "<td>".$c->getIdCargo()."</td>"; 
 	echo "<td>".$c->getNombre()."</td>"; 
-	echo "<td>".$c->getEstado()."</td>"; 
+
+ 	if($c->getEstado()== '1'){
+		echo "<td>Activo</td>";
+	}else{
+		echo "<td>Inactivo</td>";
+	}
+
 	echo "<td><a href='updateCargo.php?id=".$c->getIdCargo()."&nombre=".$c->getNombre()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
 	echo "<td><a href='deleteCargo.php?id=".$c->getIdCargo()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 

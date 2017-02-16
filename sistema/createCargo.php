@@ -48,7 +48,10 @@ echo "<form method= 'POST' class='form-horizontal' action= 'newCargo.php' id='ca
      echo "<div class='form-group'>";
          echo "<label for='inputEstado' class='control-label col-xs-2'>Estado:</label>";
          echo "<div class='col-xs-10'>";
-             echo "<input name = 'Estado' type='text' id= 'Estado' class='form-control' placeholder='Estado'>";
+		 echo "<select class='form-control' name='Estado'>";
+		    echo "<option value= '1'selected>Activo</option>";
+		    echo "<option value= '2'>Inactivo</option>";
+		 echo " </select>";
          echo "</div>";
      echo "</div>";
      echo "<div class='form-group'>";

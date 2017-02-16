@@ -50,7 +50,11 @@ foreach ($DepartamentoCollectorObj->showDepartamentos() as $c){
 	echo "<tr>"; 
 	echo "<td>".$c->getIdDepartamento()."</td>"; 
 	echo "<td>".$c->getNombre()."</td>"; 
-	echo "<td>".$c->getEstado()."</td>"; 
+ 	if($c->getEstado()== '1'){
+		echo "<td>Activo</td>";
+	}else{
+		echo "<td>Inactivo</td>";
+	}
 	echo "<td><a href='updateDepartamento.php?id=".$c->getIdDepartamento()."&nombre=".$c->getNombre()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
 	echo "<td><a href='deleteDepartamento.php?id=".$c->getIdDepartamento()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 

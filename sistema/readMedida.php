@@ -50,7 +50,13 @@ foreach ($MedidaCollectorObj->showMedidas() as $c){
 	echo "<tr>"; 
 	echo "<td>".$c->getIdMedida()."</td>"; 
 	echo "<td>".$c->getNombre()."</td>"; 
-	echo "<td>".$c->getEstado()."</td>"; 
+	
+ 	if($c->getEstado()== '1'){
+		echo "<td>Activo</td>";
+	}else{
+		echo "<td>Inactivo</td>";
+	}
+
 	echo "<td><a href='updateMedida.php?id=".$c->getIdMedida()."&nombre=".$c->getNombre()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
 	echo "<td><a href='deleteMedida.php?id=".$c->getIdMedida()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 

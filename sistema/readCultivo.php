@@ -50,7 +50,11 @@ foreach ($CultivoCollectorObj->showCultivos() as $c){
 	echo "<tr>"; 
 	echo "<td>".$c->getIdCultivo()."</td>"; 
 	echo "<td>".$c->getNombre()."</td>"; 
-	echo "<td>".$c->getEstado()."</td>"; 
+ 	if($c->getEstado()== '1'){
+		echo "<td>Activo</td>";
+	}else{
+		echo "<td>Inactivo</td>";
+	}
 	echo "<td><a href='updateCultivo.php?id=".$c->getIdCultivo()."&nombre=".$c->getNombre()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
 	echo "<td><a href='deleteCultivo.php?id=".$c->getIdCultivo()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 

@@ -50,7 +50,11 @@ foreach ($GrupoLaborCollectorObj->showGrupoLabors() as $c){
 	echo "<tr>"; 
 	echo "<td>".$c->getIdGrupoLabor()."</td>"; 
 	echo "<td>".$c->getNombre()."</td>"; 
-	echo "<td>".$c->getEstado()."</td>"; 
+ 	if($c->getEstado()== '1'){
+		echo "<td>Activo</td>";
+	}else{
+		echo "<td>Inactivo</td>";
+	}
 	echo "<td><a href='updateGrupoLabor.php?id=".$c->getIdGrupoLabor()."&nombre=".$c->getNombre()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
 	echo "<td><a href='deleteGrupoLabor.php?id=".$c->getIdGrupoLabor()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 
