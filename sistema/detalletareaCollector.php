@@ -10,7 +10,7 @@ class DetalletareaCollector extends Collector
     $rows = self::$db->getRows("SELECT * FROM detalletarea ");        
     $arrayDetalletarea= array();        
     foreach ($rows as $c){
-      $aux = new Detalletarea($c{'idDetalletarea'},$c{'idCabeceratarea'},$c{'idEmpleado'},$c{'idArea'},$c{'cantidad'},$c{'tarifa'});
+      $aux = new Detalletarea($c{'idDetalletarea'},$c{'idTarea'},$c{'idEmpleado'},$c{'idArea'},$c{'cantidad'},$c{'tarifa'});
       array_push($arrayDetalletarea, $aux);
     }
     return $arrayDetalletarea;        

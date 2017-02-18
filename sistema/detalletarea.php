@@ -3,15 +3,15 @@
 class Detalletarea{
 
 	private $idDetalletarea;
-	private $idCabeceratarea;
+	private $idTarea;
 	private $idEmpleado;
 	private $idArea;
 	private $cantidad;
 	private $tarifa;
 
-	function __construct($idDetalletarea, $idCabeceratarea, $idEmpleado, $idArea, $cantidad, $tarifa){
+	function __construct($idDetalletarea, $idTarea, $idEmpleado, $idArea, $cantidad, $tarifa){
 		$this->idDetalletarea = $idDetalletarea;
-		$this->idCabeceratarea = $idCabeceratarea;
+		$this->idTarea = $idTarea;
 		$this->idEmpleado = $idEmpleado;
 		$this->idArea = $idArea;
 		$this->cantidad = $cantidad;
@@ -26,12 +26,12 @@ class Detalletarea{
 		return $this->idDetalletarea;
 	}
 
-	function setIdCabeceratarea($idCabeceratarea){
-                $this->idCabeceratarea = $idCabeceratarea;
+	function setIdTarea($idTarea){
+                $this->idTarea = $idTarea;
         }
 
-        function getIdCabeceratarea(){
-                return $this->idCabeceratarea;
+        function getIdTarea(){
+                return $this->idTarea;
         }
 
 	function setIdEmpleado($idEmpleado){

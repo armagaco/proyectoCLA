@@ -1,16 +1,16 @@
 <?php
 
-class Cabeceratarea{
+class Tarea{
 
-	private $idCabeceratarea;
+	private $idTarea;
 	private $idPeriodo;
 	private $idCultivolote;
 	private $idEmpleado;
 	private $fecha;
 	private $estado;
 
-	function __construct($idCabeceratarea, $idPeriodo, $idCultivolote, $idEmpleado, $fecha, $estado){
-		$this->idCabeceratarea = $idCabeceratarea;
+	function __construct($idTarea, $idPeriodo, $idCultivolote, $idEmpleado, $fecha, $estado){
+		$this->idTarea = $idTarea;
 		$this->idPeriodo = $idPeriodo;
 		$this->idCultivolote = $idCultivolote;
 		$this->idEmpleado = $idEmpleado;
@@ -18,12 +18,12 @@ class Cabeceratarea{
 		$this->estado = $estado;
 	}
 
-	function setIdCabeceratarea($idCabeceratarea){
-		$this->idCabeceratarea = $idCabeceratarea;
+	function setIdTarea($idTarea){
+		$this->idTarea = $idTarea;
 	}
 
-	function getIdCabeceratarea(){
-		return $this->idCabeceratarea;
+	function getIdTarea(){
+		return $this->idTarea;
 	}
 
 	function setIdPeriodo($idPeriodo){

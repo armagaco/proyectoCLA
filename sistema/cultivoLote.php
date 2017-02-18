@@ -1,16 +1,16 @@
 <?php
 
-class Cultivolote{
+class CultivoLote{
 
-	private $idCultivolote;
+	private $idCultivoLote;
 	private $idPeriodo;
 	private $idLote;
 	private $idCultivo;
 	private $fecha;
 	private $estado;
 
-	function __construct($idCultivolote, $idPeriodo, $idLote, $idCultivo, $fecha, $estado){
-		$this->idCultivolote = $idCultivolote ;
+	function __construct($idCultivoLote, $idPeriodo, $idLote, $idCultivo, $fecha, $estado){
+		$this->idCultivoLote = $idCultivoLote ;
 		$this->idPeriodo = $idPeriodo ;
 		$this->idLote = $idLote ;
 		$this->idCultivo = $idCultivo ;
@@ -18,12 +18,12 @@ class Cultivolote{
 		$this->estado = $estado ;
 	}
 
-	function setIdCultivolote($idCultivolote){
-		$this->idCultivolote = $idCultivolote;
+	function setIdCultivoLote($idCultivoLote){
+		$this->idCultivoLote = $idCultivoLote;
 	}
 
-	function getIdCultivolote(){
-		return $this->idCultivolote;
+	function getIdCultivoLote(){
+		return $this->idCultivoLote;
 	}
 
 	function setIdPeriodo($idPeriodo){
