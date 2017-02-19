@@ -17,11 +17,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cultivos</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla CultivoLotes</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createCultivo.php'>Nuevo</a></li>";
-			echo "<li><a href='readCultivo.php'>Consulta</a></li>";
+			echo "<li><a href='createCultivoLote.php'>Nuevo</a></li>";
+			echo "<li><a href='readCultivoLote.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -34,14 +34,14 @@ session_start();
 	$id =$_GET['id'];
 	$n =$_GET['nombre'];
 
-	include_once("CultivoCollector.php");
-	$CultivoCollectorObj = new CultivoCollector();
-	$CultivoCollectorObj->deleteCultivos($id);
+	include_once("cultivoLoteCollector.php");
+	$CultivoLoteCollectorObj = new CultivoLoteCollector();
+	$CultivoLoteCollectorObj->deleteCultivoLotes($id);
 
 	echo "<br>";
 
 	echo "<div class='container'>";
-	echo "  <h2>Cultivos</h2>";
+	echo "  <h2>CultivoLotes</h2>";
 	echo "  <div class='panel panel-default'>";
 	echo "    <div class='panel-heading'>Registro Eliminado Correctamente</div>";
 	echo "    <div class='panel-body'>$n</div>";

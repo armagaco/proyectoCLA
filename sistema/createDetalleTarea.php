@@ -15,11 +15,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cultivos</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla DetalleTareas</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createCultivo.php'>Nuevo</a></li>";
-			echo "<li><a href='readCultivo.php'>Consulta</a></li>";
+			echo "<li><a href='createDetalleTarea.php'>Nuevo</a></li>";
+			echo "<li><a href='readDetalleTarea.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -30,7 +30,7 @@ session_start();
 	echo "</nav>";
 
 
-echo "<form method= 'POST' class='form-horizontal' action= 'newCultivo.php' id='cultivo' title='cultivo' >";
+echo "<form method= 'POST' class='form-horizontal' action= 'newDetalleTarea.php' id='detalleTarea' title='detalleTarea' >";
      echo "<div class='form-group'>";
          echo "<label for='inputName' class='control-label col-xs-2'>Nombre:</label>";
          echo "<div class='col-xs-10'>";
