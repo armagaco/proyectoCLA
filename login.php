@@ -48,6 +48,7 @@ else{
 }
 
 ?>
+	<br/><br/>
 	<div class= "container">
 	<br>
 	<header>
@@ -62,7 +63,7 @@ else{
 		<span class = "icon-bar"></span>
 	</button>
 
-
+	
 	<a href = "#" class= "navbar-brand"> Sistema de Control de Labores</a>
 	</div>
 
