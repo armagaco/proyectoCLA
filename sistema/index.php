@@ -8,12 +8,12 @@ session_start();
 		<title>Ingresar</title>
 		<meta name= "viewport" content= "width = device-width, initial-escale=1.0">
 		<meta http-equiv= "Content-Type" content= "text/html; charset=UTF-8" />
-		<link rel= "stylesheet" type="text/css" href="css/bootstrap.css">
-		<link rel= "stylesheet" type="text/css" href="css/login.css">
+		<link rel= "stylesheet" type="text/css" href="../css/bootstrap.css">
+		<link rel= "stylesheet" type="text/css" href="../css/login.css">
 	</head>
 	<body>
 		<div class="jumbotron boxlogin" >
-                  <img src="images/logo.png" alt="JARE Solutions" title="JARE Soluions" style="width:279px;height:47px;">
+                  <img src="../images/logo.png" alt="JARE Solutions" title="JARE Soluions" style="width:279px;height:47px;">
 
 <?php
 
@@ -24,7 +24,7 @@ session_start();
 else{
 }
 ?>
-			<form method="POST" name = "flogin" id = "flogin" action ="sistema/login.php" >
+			<form method="POST" name = "flogin" id = "flogin" action ="login.php" >
 				<label>Nombre de Usuario:</label>
 				<input type="text" name="Nombre" id = "Nombre" class="form-control">
 				<label>Contraseña:</label>
