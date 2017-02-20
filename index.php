@@ -2,7 +2,6 @@
 session_start();
 ?>
 
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -18,21 +17,20 @@ session_start();
 
 <?php
 
- if (isset($_SESSION['Salmeron'])){
-   echo"<p> Bienvenido Usuario:(" . $_SESSION['Salmeron']. ") [<a href='logout.php'>Salir</a>]";
+ if (isset($_SESSION['Garcia'])){
+ echo "<p> Hola Usuario: (" . $_SESSION['Garcia']. ")  [<a href = 'logout.php' >Cerrar Sesión</a>]";
+
 }
 else{
 }
 ?>
-
-			<form action="login.php" method="POST" name = "flogin" id = "flogin">
+			<form method="POST" name = "flogin" id = "flogin" action ="sistema/login.php" >
 				<label>Nombre de Usuario:</label>
-				<input type="text" name="username" id = "username" class="form-control">
+				<input type="text" name="Nombre" id = "Nombre" class="form-control">
 				<label>Contraseña:</label>
-				<input type="text" name="password" id="password" class="form-control">
-				<!--<input type="submit" class="btn btn-success" value="Conectarse">-->
-				<!--<a href= "principal.html" class="btn btn-success" role = "button"> Conectarse </a>-->
+				<input type="password" name="Apellido" id="Apellido" class="form-control">
                                 <input type="submit" value="Conectarse" class="btn btn-success" />
+				
 			</form>
 		</div>
 
