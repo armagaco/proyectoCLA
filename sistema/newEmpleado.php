@@ -33,11 +33,13 @@ session_start();
 
 
 $n = $_POST['Nombre'];
-$a = $_POST['Estado'];
+$a = $_POST['Apellido'];
+$d = $_POST['Departamento'];
+$c = $_POST['Cargo'];
 
 include_once("empleadoCollector.php");
 $EmpleadoCollectorObj = new EmpleadoCollector();
-$EmpleadoCollectorObj->insertEmpleados($n,$a);
+$EmpleadoCollectorObj->insertEmpleados($n,$a,$d,$c);
 
 echo "<br>";
 

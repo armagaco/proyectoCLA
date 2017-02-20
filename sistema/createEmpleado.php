@@ -50,6 +50,12 @@ echo "<form method= 'POST' class='form-horizontal' action= 'newEmpleado.php' id=
          echo "</div>";
      echo "</div>";
      echo "<div class='form-group'>";
+         echo "<label for='inputPosition' class='control-label col-xs-2'>Cargo:</label>";
+         echo "<div class='col-xs-10'>";
+             echo "<input name = 'Cargo' type='text' id= 'Cargo' class='form-control' placeholder='Cargo'>";
+         echo "</div>";
+     echo "</div>";
+     echo "<div class='form-group'>";
          echo "<div class='col-xs-offset-2 col-xs-10'>";
              echo "<button type='submit' class='btn btn-primary'>Grabar</button>";
          echo "</div>";
