@@ -27,13 +27,13 @@ $psw_valido = '1234';
        echo "<div id='panel'>";
         echo "<div id='welcome'>";
 	echo 'Bienvenid@ ' . $usuario;
-	$_SESSION['Salmeron']=$usuario;
+	$_SESSION['Garcia']=$usuario;
         echo "</div>";
         echo '<br>';
 
 	echo "<div id='salir'><a href='logout.php'>Salir</a></div>";
 
-        if (isset($_SESSION['Salmeron'])){
+        if (isset($_SESSION['Garcia'])){
         echo '<br>';
 	echo "Se ha creado sesion";
 	}
