@@ -1,6 +1,6 @@
 <?php
 
-class detalleTarifario{
+class DetalleTarifario{
 
   private $idCabeceraTarifario;
   private $idDetalleTarifario;
