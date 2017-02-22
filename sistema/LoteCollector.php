@@ -24,7 +24,7 @@ class LoteCollector extends Collector
 
   function insertLote($idarea, $nombre, $tamano, $estado) 
   {
-    $rows = self::$db->insertRow("Insert into controlAgricola.lote (idarea, nombre, tamano, estado) values ('$idarea' ,'$nombre' , $tamano , $estado )" , null);             
+    $rows = self::$db->insertRow("Insert into controlAgricola.lote (idarea, nombre, tamano, estado) values ($idarea ,$nombre , $tamano , $estado )" , null);             
   }
  
  function updateLote($id, $idarea, $nombre, $tamano, $estado) 

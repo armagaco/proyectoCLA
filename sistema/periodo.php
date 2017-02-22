@@ -2,22 +2,24 @@
 
 class Periodo{
 
-  private $idArea;
+  private $idPeriodo;
   private $nombre;
-  private $tamano;
+  private $fechainicio;
+  private $fechafin;
   private $estado;
 
-    function __construct($idArea, $nombre, $tamano, $estado){
-    $this->idArea = $idArea;
+    function __construct($idPeriodo, $nombre, $fechainicio, $fechafin, $estado){
+    $this->idPeriodo = $idPeriodo;
     $this->nombre = $nombre;
-    $this->tamano = $tamano;
+    $this->fechainicio = $fechainicio;
+	$this->fechafin = $fechafin;
     $this->estado = $estado;
     }
-    function setIdArea($idArea){
-      $this->idArea = $idArea;
+    function setidPeriodo($idPeriodo){
+      $this->idPeriodo = $idPeriodo;
     }
-    function getIdArea(){
-      return $this->idArea;
+    function getidPeriodo(){
+      return $this->idPeriodo;
     }
     function setNombre($nombre){
       $this->nombre = $nombre;
@@ -25,11 +27,17 @@ class Periodo{
     function getNombre(){
       return $this->nombre;
     }
-    function setTamano($tamano){
-      $this->tamano = $tamano;
+    function setFechainicio($fechainicio){
+      $this->fechainicio = $fechainicio;
     }
-    function getTamano(){
-      return $this->tamano;
+    function getFechainicio(){
+      return $this->fechainicio;
+    }
+	function setFechafin($fechafin){
+      $this->fechafin = $fechafin;
+    }
+    function getFechafin(){
+      return $this->fechafin;
     }
     function setEstado($estado){
       $this->estado = $estado;
