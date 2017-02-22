@@ -21,11 +21,11 @@ class CabeceraTarifarioCollector extends Collector
 }
 
 function insertCabecerasTarifarias($idperiodo, $idcultivo, $fecha, $estado) {
-    $rows = self::$db->insertRow("Insert into controlAgricola.cabeceratarifario (idperiodo, idcultivo, fecha, estado) values ($idperiodo, $idcultivo, '$fecha' , $estado )" , null);             
+    $rows = self::$db->insertRow("Insert into controlAgricola.cabeceratarifario (idperiodo, idcultivo, fecha, estado) values ('$idperiodo', '$idcultivo', '$fecha' , '$estado' )" , null);             
   }
 
 function updateCabecerasTarifarias($id, $idperiodo, $idcultivo, $fecha, $estado) {
-    $rows = self::$db->updateRow("Update controlAgricola.cabeceratarifario set idperiodo = $idperiodo, idcultivo = $idcultivo, fecha = '$fecha', estado = $estado where idcabeceratarifario =$id", null);             
+    $rows = self::$db->updateRow("Update controlAgricola.cabeceratarifario set idperiodo = '$idperiodo', idcultivo = '$idcultivo', fecha = '$fecha', estado = '$estado' where idcabeceratarifario =$id", null);             
   }
 }
 ?>
