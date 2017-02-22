@@ -31,7 +31,7 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-
+$id =$_POST['Codigo'];
 $p = $_POST['Periodo'];
 $c = $_POST['Cultivo'];
 $f = $_POST['Fecha'];
@@ -41,7 +41,7 @@ $a = $_POST['Estado'];
 
 include_once("CabeceraTarifarioCollector.php");
 $CabeceraTarifarioCollectorObj = new CabeceraTarifarioCollector();
-$CabeceraTarifarioCollectorObj->insertCabecerasTarifarias($p,$c,$f,$a);
+$CabeceraTarifarioCollectorObj->insertCabecerasTarifarias($id,$p,$c,$f,$a);
 
 echo "<br>";
 

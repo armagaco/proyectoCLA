@@ -46,7 +46,7 @@ session_start();
          <label for="inputName" class="control-label col-xs-2">Código:</label>
          <div class="col-xs-10">
              <input name = "Codigo" type="text" id= "Codigo" class="form-control"
- placeholder="Codigo" value="<?php echo $id;?>" readonly>
+ placeholder="Codigo" value="<?php echo $id;?>">
          </div>
      </div>
      <div class="form-group">
