@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html lang ="en">
 <head>
-	<title>Eliminar Lote</title>
+	<title>Nuevo Lote</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="../css/estilo.css" rel="stylesheet" >
@@ -31,23 +31,25 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-	$id =$_GET['id'];
-	$n =$_GET['nombre'];
-        $d = $_GET['tamano'];
+$a = $_POST['Area'];
+$n = $_POST['Nombre'];
+$d = $_POST['Tamano'];
+$e = $_POST['Estado'];
+echo "    <div class='panel-body'>$a,$n,$d,$e</div>";
+include_once("LoteCollector.php");
+$LoteCollectorObj = new LoteCollector();
+$LoteCollectorObj->insertLote($a,$n,$d,$e);
 
-	include_once("LoteCollector.php");
-	$LoteCollectorObj = new LoteCollector();
-	$LoteCollectorObj->deleteLote($id);
+echo "<br>";
 
-	echo "<br>";
+echo "<div class='container'>";
+echo "  <h2>Áreas</h2>";
+echo "  <div class='panel panel-default'>";
+echo "    <div class='panel-heading'>Registro Ingresado Correctamente</div>";
+echo "    <div class='panel-body'>$n,$d</div>";
+echo "  </div>";
+echo "</div>";
 
-	echo "<div class='container'>";
-	echo "  <h2>Cultivos</h2>";
-	echo "  <div class='panel panel-default'>";
-	echo "    <div class='panel-heading'>Registro Eliminado Correctamente</div>";
-	echo "    <div class='panel-body'>$n</div>";
-	echo "  </div>";
-	echo "</div>";	 
 ?>
 
 </body>

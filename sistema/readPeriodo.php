@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html lang ="en">
 <head>
-	<title>Lote</title>
+	<title>Periodo</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="../css/estilo.css" rel="stylesheet" >
@@ -19,10 +19,10 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Lote</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Periodo</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createLote.php'>Nuevo</a></li>";
+			echo "<li><a href='createPeriodo.php'>Nuevo</a></li>";
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
 			echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['Garcia'] . ")</a></li>";
@@ -31,33 +31,33 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-include_once("LoteCollector.php");
-$LoteCollectorObj = new LoteCollector();
+include_once("PeriodoCollector.php");
+$PeriodoCollectorObj = new PeriodoCollector();
 
 echo "<div class='container'>";
-echo "<h2>Lote</h2>";
+echo "<h2>Periodo</h2>";
 echo "<div class='table-responsive'>"; 
 echo "<table class='table'>"; 
 echo "<thead>"; 
 echo "<tr>"; 
 echo " 	   <th>Código</th>"; 
-echo " 	   <th>CódigoArea</th>"; 
 echo "     <th>Nombre</th>"; 
-echo "     <th>Tamaño</th>";
+echo " 	   <th>Fechainicio</th>"; 
+echo "     <th>Fechafin</th>";
 echo "     <th>Estado</th>"; 
 echo "</tr>"; 
 echo "</thead>"; 
-foreach ($LoteCollectorObj->showLote() as $c)
+foreach ($PeriodoCollectorObj->showPeriodo() as $c)
 {
 	echo "<tbody>"; 
 	echo "<tr>"; 
-	echo "<td>".$c->getIdLote()."</td>"; 
-	echo "<td>".$c->getIdArea()."</td>"; 
+	echo "<td>".$c->getIdPeriodo()."</td>";
 	echo "<td>".$c->getNombre()."</td>"; 
-    echo "<td>".$c->getTamano()."</td>"; 
+	echo "<td>".$c->getFechainicio()."</td>"; 
+    echo "<td>".$c->getFechafin()."</td>"; 
 	echo "<td>".$c->getEstado()."</td>"; 
-	echo "<td><a href='updateLote.php?id=".$c->getIdLote()."&idArea=".$c->getIdArea()."&nombre=".$c->getNombre()."&tamano=".$c->getTamano()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
-	echo "<td><a href='deleteLote.php?id=".$c->getIdLote()."&idArea=".$c->getIdArea()."&nombre=".$c->getNombre()."&tamano=".$c->getTamano()."'>Eliminar</a></td>"; 
+	echo "<td><a href='updatePeriodo.php?id=".$c->getIdPeriodo()."&nombre=".$c->getNombre()."&fechainicio=".$c->getFechainicio()."&fechafin=".$c->getFechafin()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
+	echo "<td><a href='deletePeriodo.php?id=".$c->getIdPeriodo()."&nombre=".$c->getNombre()."&fechainicio=".$c->getFechainicio()."&fechafin=".$c->getFechafin()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 
 }
 echo "</tbody>";
