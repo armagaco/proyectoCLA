@@ -35,7 +35,7 @@ include_once("LoteCollector.php");
 $LoteCollectorObj = new LoteCollector();
 
 echo "<div class='container'>";
-echo "<h2>Áreas</h2>";
+echo "<h2>Lote</h2>";
 echo "<div class='table-responsive'>"; 
 echo "<table class='table'>"; 
 echo "<thead>"; 

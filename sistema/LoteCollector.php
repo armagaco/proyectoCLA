@@ -22,7 +22,7 @@ class LoteCollector extends Collector
     $rows = self::$db->deleteRow("DELETE FROM controlAgricola.lote where idlote = $id", null);             
   }
 
-  function insertLote($nombre, $tamano, $estado) 
+  function insertLote($idarea, $nombre, $tamano, $estado) 
   {
     $rows = self::$db->insertRow("Insert into controlAgricola.lote (idarea, nombre, tamano, estado) values ('$idarea' ,'$nombre' , $tamano , $estado )" , null);             
   }
