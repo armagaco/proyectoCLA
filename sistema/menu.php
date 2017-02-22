@@ -59,7 +59,7 @@ echo"<div id='tabla'>";
 		echo "<div id='columna1' ><a href='readCultivo.php'>Cultivos</a></div>";
 		echo "<div id='columna2'><a href='readArea.php'>Areas</div>";
 		echo "<div id='columna3'><a href='readLotes.php'>Lotes</div>";
-		echo "<div id='columna4'><a href='readCultivoLotes.php'>Cultivos por Lotes</div>";
+		echo "<div id='columna4'><a href='readCultivoLote.php'>Cultivos por Lotes</div>";
 		echo "</div>";
 		echo "<div id='contenidos'>";
 		echo "<div id='columna1'><a href='readMedida.php'>Medidas</div>";
