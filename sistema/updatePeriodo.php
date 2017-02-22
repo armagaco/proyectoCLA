@@ -20,11 +20,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Lote</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Periodo</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createLote.php'>Nueva</a></li>";
-			echo "<li><a href='readLote.php'>Consulta</a></li>";
+			echo "<li><a href='createPeriodo.php'>Nueva</a></li>";
+			echo "<li><a href='readPeriodo.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -35,14 +35,14 @@ session_start();
 	echo "</nav>";
 
 	$id =$_GET['id'];
-	$a = $_GET['idArea'];
 	$n =$_GET['nombre'];
-    $d = $_GET['tamano'];
+	$a = $_GET['fechainicio'];
+    $d = $_GET['fechafin'];
 	$e =$_GET['estado'];
 
 ?>
 
-<form method= "POST" class="form-horizontal" action= "saveLote.php?usuario=" >
+<form method= "POST" class="form-horizontal" action= "savePeriodo.php?usuario=" >
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Código:</label>
          <div class="col-xs-10">
@@ -50,21 +50,21 @@ session_start();
          </div>
      </div>
 	 <div class="form-group">
-         <label for="inputName" class="control-label col-xs-2">Código de Area:</label>
-         <div class="col-xs-10">
-             <input name = "Area" type="text" id= "Area" class="form-control" placeholder="Area" value="<?php echo $a;?>" readonly>
-         </div>
-     </div>
-     <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Nombre:</label>
          <div class="col-xs-10">
              <input name = "Nombre" type="text" id= "Nombre" class="form-control" placeholder="Nombre" value="<?php echo $n;?>">
          </div>
      </div>
-     <div class="form-group">
-         <label for="inputTamano" class="control-label col-xs-2">Tamaño:</label>
+	 <div class="form-group">
+         <label for="inputName" class="control-label col-xs-2">Fecha de Inicio:</label>
          <div class="col-xs-10">
-             <input name = "Tamano" type="text" id= "Tamano" class="form-control" placeholder="Tamaño" value="<?php echo $d;?>">
+             <input name = "fechainicio" type="text" id= "fechainicio" class="form-control" placeholder="fechainicio" value="<?php echo $a;?>" readonly>
+         </div>
+     </div>
+     <div class="form-group">
+         <label for="inputTamano" class="control-label col-xs-2">Fecha de Fin:</label>
+         <div class="col-xs-10">
+             <input name = "fechafin" type="text" id= "fechafin" class="form-control" placeholder="fechafin" value="<?php echo $d;?>">
          </div>
      </div>
      <div class="form-group">
