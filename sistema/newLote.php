@@ -31,12 +31,11 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-
 $a = $_POST['Area'];
 $n = $_POST['Nombre'];
 $d = $_POST['Tamano'];
 $e = $_POST['Estado'];
-
+echo "    <div class='panel-body'>$a,$n,$d,$e</div>";
 include_once("LoteCollector.php");
 $LoteCollectorObj = new LoteCollector();
 $LoteCollectorObj->insertLote($a,$n,$d,$e);
