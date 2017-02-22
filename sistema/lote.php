@@ -2,16 +2,25 @@
 
 class Lote{
 
+  private $idLote;
   private $idArea;
   private $nombre;
   private $tamano;
   private $estado;
 
-    function __construct($idArea, $nombre, $tamano, $estado){
-    $this->idArea = $idArea;
-    $this->nombre = $nombre;
-    $this->tamano = $tamano;
-    $this->estado = $estado;
+    function __construct($idLote, $idArea, $nombre, $tamano, $estado)
+	{
+		$this->idLote = $idLote;
+		$this->idArea = $idArea;
+		$this->nombre = $nombre;
+		$this->tamano = $tamano;
+		$this->estado = $estado;
+    }
+	function setIdLote($idLote){
+      $this->idLote = $idLote;
+    }
+	function getIdLote(){
+      return $this->idLote;
     }
     function setIdArea($idArea){
       $this->idArea = $idArea;
