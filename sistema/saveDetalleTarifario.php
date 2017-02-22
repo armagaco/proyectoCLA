@@ -34,8 +34,9 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-$id =$_POST['DetalleTarifario'];
+
 $ca =$_POST['CabeceraTarifario'];
+$id =$_POST['DetalleTarifario'];
 $l =$_POST['Labor'];
 $m =$_POST['Medida'];
 $a =$_POST['Valor'];
@@ -43,7 +44,7 @@ $a =$_POST['Valor'];
 
 include_once("DetalleTarifarioCollector.php");
 $DetalleTarifarioCollectorObj = new DetalleTarifarioCollector();
-$DetalleTarifarioCollectorObj->updateDetallesTarifarios($id,$ca,$l,$m,$a);
+$DetalleTarifarioCollectorObj->updateDetallesTarifarios($ca,$id,$l,$m,$a);
 
 echo "<br>";
 

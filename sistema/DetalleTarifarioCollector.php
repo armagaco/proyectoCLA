@@ -19,12 +19,12 @@ class DetalleTarifarioCollector extends Collector
     $rows = self::$db->deleteRow("DELETE FROM controlAgricola.detalletarifario where iddetalletarifario = $id", null);             
   }
 
-function insertDetallesTarifarios($idcabeceratarifario, $idlabor, $idmedida, $valor) {
-    $rows = self::$db->insertRow("Insert into controlAgricola.detalletarifario (idcabeceratarifario, idlabor, idmedida, valor) values ($idcabeceratarifario, $idlabor, $idmedida, $valor )" , null);             
+function insertDetallesTarifarios($idcabeceratarifario, $id, $idlabor, $idmedida, $valor) {
+    $rows = self::$db->insertRow("Insert into controlAgricola.detalletarifario (idcabeceratarifario, iddetalletarifario, idlabor, idmedida, valor) values ('$idcabeceratarifario', '$id', '$idlabor', '$idmedida', '$valor' )" , null);             
   }
 
-function updateDetallesTarifarios($iddetalletarifario, $id, $idlabor, $idmedida, $valor) {
-    $rows = self::$db->updateRow("Update controlAgricola.detalletarifario set idcabeceratarifario= $idcabeceratarifario, idlabor = $idlabor, idmedida = $idmedida, valor = $valor where iddetalletarifario =$id", null);             
+function updateDetallesTarifarios($idcabeceratarifario, $id, $idlabor, $idmedida, $valor) {
+    $rows = self::$db->updateRow("Update controlAgricola.detalletarifario set idcabeceratarifario= '$idcabeceratarifario', idlabor = '$idlabor', idmedida = '$idmedida', valor = '$valor' where iddetalletarifario =$id", null);             
   }
 
 }

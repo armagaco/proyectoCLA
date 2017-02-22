@@ -33,6 +33,7 @@ session_start();
 
 
 $ca = $_POST['CabeceraTarifario'];
+$id = $_POST['DetalleTarifario'];
 $l = $_POST['Labor'];
 $m = $_POST['Medida'];
 $a = $_POST['Valor'];
@@ -41,7 +42,7 @@ $a = $_POST['Valor'];
 
 include_once("DetalleTarifarioCollector.php");
 $DetalleTarifarioCollectorObj = new DetalleTarifarioCollector();
-$DetalleTarifarioCollectorObj->insertDetallesTarifarios($ca,$l,$m,$a);
+$DetalleTarifarioCollectorObj->insertDetallesTarifarios($ca,$id,$l,$m,$a);
 
 echo "<br>";
 
@@ -49,7 +50,7 @@ echo "<div class='container'>";
 echo "  <h2>Detalle Tarifario</h2>";
 echo "  <div class='panel panel-default'>";
 echo "    <div class='panel-heading'>Registro Ingresado Correctamente</div>";
-echo "    <div class='panel-body'>$a</div>";
+echo "    <div class='panel-body'>$l</div>";
 echo "  </div>";
 echo "</div>";
 

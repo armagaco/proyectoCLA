@@ -53,7 +53,7 @@ session_start();
          <label for="inputName" class="control-label col-xs-2">DetalleTarifario:</label>
          <div class="col-xs-10">
              <input name = "DetalleTarifario" type="text" id= "DetalleTarifario" class="form-control"
- placeholder="DetalleTarifario" value="<?php echo $id;?>" readonly>
+ placeholder="DetalleTarifario" value="<?php echo $id;?>">
          </div>
      </div>
      <div class="form-group">

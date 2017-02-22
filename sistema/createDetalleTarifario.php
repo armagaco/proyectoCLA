@@ -46,6 +46,12 @@ echo "<form method= 'POST' class='form-horizontal' action= 'newDetalleTarifario.
          echo "</div>";
      echo "</div>";
      echo "<div class='form-group'>";
+         echo "<label for='inputDetalleTarifario' class='control-label col-xs-2'>DetalleTarifario:</label>";
+         echo "<div class='col-xs-10'>";
+             echo "<input name = 'DetalleTarifario' type='text' id= 'DetalleTarifario' class='form-control' placeholder='DetalleTarifario'>";
+         echo "</div>";
+     echo "</div>";
+      echo "<div class='form-group'>";
          echo "<label for='inputLabor' class='control-label col-xs-2'>Labor:</label>";
          echo "<div class='col-xs-10'>";
              echo "<input name = 'Labor' type='text' id= 'Labor' class='form-control' placeholder='Labor'>";
@@ -65,12 +71,11 @@ echo "<form method= 'POST' class='form-horizontal' action= 'newDetalleTarifario.
      echo "</div>";
      echo "<div class='form-group'>";
          echo "<div class='col-xs-offset-2 col-xs-10'>";
-             echo "<button type='submit' class='btn btn-primary'>Grabar</button>";r
+             echo "<button type='submit' class='btn btn-primary'>Grabar</button>";
+         echo "</div>";
      echo "</div>";
 echo "</form>";
 ?>
 
 	</body>
 </html>
-
-
