@@ -16,7 +16,6 @@ session_start();
         <script src="../js/jquery.bootgrid.min.js"></script>
 	<script src="../js/jquery-1.11.1.min.js"></script>
 	<script src= "../js/jquery.js" ></script>
-
 </head>
 
 <body>
@@ -35,23 +34,23 @@ session_start();
 		echo "</ul>";
 	  echo "</div>";
 	echo "</nav>";
-echo "<form method= 'POST' class='form-horizontal' action= 'newPeriodo.php' id='Area' title='Area' >";
+echo "<form method= 'POST' class='form-horizontal' action= 'newPeriodo.php' id='Periodo' title='Periodo' >";
      echo "<div class='form-group'>";
-         echo "<label for='inputArea' class='control-label col-xs-2'>Area:</label>";
-         echo "<div class='col-xs-10'>";
-             echo "<input name = 'Area' type='text' id= 'Area' class='form-control' placeholder='Area'>";
-         echo "</div>";
-     echo "</div>";
-     echo "<div class='form-group'>";
-         echo "<label for='inputName' class='control-label col-xs-2'>Nombre:</label>";
+         echo "<label for='inputNombre' class='control-label col-xs-2'>Nombre:</label>";
          echo "<div class='col-xs-10'>";
              echo "<input name = 'Nombre' type='text' id= 'Nombre' class='form-control' placeholder='Nombre'>";
          echo "</div>";
      echo "</div>";
      echo "<div class='form-group'>";
-         echo "<label for='inputTamano' class='control-label col-xs-2'>Tamaño:</label>";
+         echo "<label for='inputFechainicio' class='control-label col-xs-2'>Fecha de inicio:</label>";
          echo "<div class='col-xs-10'>";
-             echo "<input name = 'Tamano' type='text' id= 'Tamano' class='form-control' placeholder='Tamano'>";
+             echo "<input name = 'Fechainicio' type='text' id= 'Fechainicio' class='form-control' placeholder='Fechainicio'>";
+         echo "</div>";
+     echo "</div>";
+	 echo "<div class='form-group'>";
+         echo "<label for='inputFechafin' class='control-label col-xs-2'>Tamaño:</label>";
+         echo "<div class='col-xs-10'>";
+             echo "<input name = 'Fechafin' type='text' id= 'Fechafin' class='form-control' placeholder='Fechafin'>";
          echo "</div>";
      echo "</div>";
      echo "<div class='form-group'>";

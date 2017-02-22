@@ -58,13 +58,13 @@ session_start();
 	 <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Fecha de Inicio:</label>
          <div class="col-xs-10">
-             <input name = "fechainicio" type="text" id= "fechainicio" class="form-control" placeholder="fechainicio" value="<?php echo $a;?>" readonly>
+             <input name = "Fechainicio" type="text" id= "Fechainicio" class="form-control" placeholder="Fechainicio" value="<?php echo $a;?>" readonly>
          </div>
      </div>
      <div class="form-group">
          <label for="inputTamano" class="control-label col-xs-2">Fecha de Fin:</label>
          <div class="col-xs-10">
-             <input name = "fechafin" type="text" id= "fechafin" class="form-control" placeholder="fechafin" value="<?php echo $d;?>">
+             <input name = "Fechafin" type="text" id= "Fechafin" class="form-control" placeholder="Fechafin" value="<?php echo $d;?>">
          </div>
      </div>
      <div class="form-group">

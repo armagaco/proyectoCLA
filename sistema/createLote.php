@@ -35,7 +35,7 @@ session_start();
 		echo "</ul>";
 	  echo "</div>";
 	echo "</nav>";
-echo "<form method= 'POST' class='form-horizontal' action= 'newLote.php' id='Area' title='Area' >";
+echo "<form method= 'POST' class='form-horizontal' action= 'newLote.php' id='Lote' title='Lote' >";
      echo "<div class='form-group'>";
          echo "<label for='inputArea' class='control-label col-xs-2'>Area:</label>";
          echo "<div class='col-xs-10'>";
@@ -43,7 +43,7 @@ echo "<form method= 'POST' class='form-horizontal' action= 'newLote.php' id='Are
          echo "</div>";
      echo "</div>";
      echo "<div class='form-group'>";
-         echo "<label for='inputName' class='control-label col-xs-2'>Nombre:</label>";
+         echo "<label for='inputNombre' class='control-label col-xs-2'>Nombre:</label>";
          echo "<div class='col-xs-10'>";
              echo "<input name = 'Nombre' type='text' id= 'Nombre' class='form-control' placeholder='Nombre'>";
          echo "</div>";
