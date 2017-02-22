@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html lang ="en">
 <head>
-	<title>Añadir Cabecera-Tarifario</title>
+	<title>Añadir Detalle-Tarifario</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="../css/estilo.css" rel="stylesheet" >
@@ -23,11 +23,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cabecera-Tarifario</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Detalle-Tarifario</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createCabeceraTarifario.php'>Nuevo</a></li>";
-			echo "<li><a href='readCabeceraTarifario.php'>Consulta</a></li>";
+			echo "<li><a href='createDetalleTarifario.php'>Nuevo</a></li>";
+			echo "<li><a href='readDetalleTarifario.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -38,35 +38,35 @@ session_start();
 	echo "</nav>";
 
 
-echo "<form method= 'POST' class='form-horizontal' action= 'newCabeceraTarifario.php' id='cabeceratarifario' title='cabeceratarifario' >";
+echo "<form method= 'POST' class='form-horizontal' action= 'newDetalleTarifario.php' id='detalletarifario' title='detalletarifario' >";
      echo "<div class='form-group'>";
-         echo "<label for='inputCodigo' class='control-label col-xs-2'>Codigo:</label>";
+         echo "<label for='inputCabeceraTarifario' class='control-label col-xs-2'>CabeceraTarifario:</label>";
          echo "<div class='col-xs-10'>";
-             echo "<input name = 'Codigo' type='text' id= 'Codigo' class='form-control' placeholder='Codigo'>";
+             echo "<input name = 'CabeceraTarifario' type='text' id= 'CabeceraTarifario' class='form-control' placeholder='CabeceraTarifario'>";
          echo "</div>";
      echo "</div>";
      echo "<div class='form-group'>";
-         echo "<label for='inputPeriodo' class='control-label col-xs-2'>Periodo:</label>";
+         echo "<label for='inputDetalleTarifario' class='control-label col-xs-2'>DetalleTarifario:</label>";
          echo "<div class='col-xs-10'>";
-             echo "<input name = 'Periodo' type='text' id= 'Periodo' class='form-control' placeholder='Periodo'>";
+             echo "<input name = 'DetalleTarifario' type='text' id= 'DetalleTarifario' class='form-control' placeholder='DetalleTarifario'>";
          echo "</div>";
      echo "</div>";
       echo "<div class='form-group'>";
-         echo "<label for='inputCultivo' class='control-label col-xs-2'>Cultivo:</label>";
+         echo "<label for='inputLabor' class='control-label col-xs-2'>Labor:</label>";
          echo "<div class='col-xs-10'>";
-             echo "<input name = 'Cultivo' type='text' id= 'Cultivo' class='form-control' placeholder='Cultivo'>";
+             echo "<input name = 'Labor' type='text' id= 'Labor' class='form-control' placeholder='Labor'>";
          echo "</div>";
      echo "</div>";
      echo "<div class='form-group'>";
-         echo "<label for='inputFecha' class='control-label col-xs-2'>Fecha:</label>";
+         echo "<label for='inputMedida' class='control-label col-xs-2'>Medida:</label>";
          echo "<div class='col-xs-10'>";
-             echo "<input name = 'Fecha' type='text' id= 'Fecha' class='form-control' placeholder='Fecha'>";
+             echo "<input name = 'Medida' type='text' id= 'Medida' class='form-control' placeholder='Medida'>";
          echo "</div>";
      echo "</div>";
      echo "<div class='form-group'>";
-         echo "<label for='inputEstado' class='control-label col-xs-2'>Estado:</label>";
+         echo "<label for='inputValor' class='control-label col-xs-2'>Valor:</label>";
          echo "<div class='col-xs-10'>";
-             echo "<input name = 'Estado' type='text' id= 'Estado' class='form-control' placeholder='Estado'>";
+             echo "<input name = 'Valor' type='text' id= 'Valor' class='form-control' placeholder='Valor'>";
          echo "</div>";
      echo "</div>";
      echo "<div class='form-group'>";
@@ -79,5 +79,3 @@ echo "</form>";
 
 	</body>
 </html>
-
-

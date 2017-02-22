@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html lang ="en">
 <head>
-	<title>Nuevo Cabecera-Tarifario</title>
+	<title>Detalle Tarifario</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="../css/estilo.css" rel="stylesheet" >
@@ -17,11 +17,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cabecera-Tarifario</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Detalle-Tarifario</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createCabeceraTarifario.php'>Nuevo</a></li>";
-			echo "<li><a href='readCabeceraTarifario.php'>Consulta</a></li>";
+			echo "<li><a href='createDetalleTarifario.php'>Nuevo</a></li>";
+			echo "<li><a href='readDetalleTarifario.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -31,28 +31,25 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-$id =$_POST['Codigo'];
-$p = $_POST['Periodo'];
-$c = $_POST['Cultivo'];
-$f = $_POST['Fecha'];
-$a = $_POST['Estado'];
+	$id =$_GET['id'];
+        $idcabeceratarifario =$_GET['idcabeceratarifario'];
+        $idlabor =$_GET['idlabor'];
+        $idmedida =$_GET['idmedida'];
+	$a =$_GET['valor'];
 
+	include_once("DetalleTarifarioCollector.php");
+	$DetalleTarifarioCollectorObj = new DetalleTarifarioCollector();
+	$DetalleTarifarioCollectorObj->deleteDetallesTarifarios($id);
 
+	echo "<br>";
 
-include_once("CabeceraTarifarioCollector.php");
-$CabeceraTarifarioCollectorObj = new CabeceraTarifarioCollector();
-$CabeceraTarifarioCollectorObj->insertCabecerasTarifarias($id,$p,$c,$f,$a);
-
-echo "<br>";
-
-echo "<div class='container'>";
-echo "  <h2>Cabecera Tarifario</h2>";
-echo "  <div class='panel panel-default'>";
-echo "    <div class='panel-heading'>Registro Ingresado Correctamente</div>";
-echo "    <div class='panel-body'>$f</div>";
-echo "  </div>";
-echo "</div>";
-
+	echo "<div class='container'>";
+	echo "  <h2>Detalle Tarifario</h2>";
+	echo "  <div class='panel panel-default'>";
+	echo "    <div class='panel-heading'>Registro Eliminado Correctamente</div>";
+	echo "    <div class='panel-body'>$a</div>";
+	echo "  </div>";
+	echo "</div>";	 
 ?>
 
 </body>

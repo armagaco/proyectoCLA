@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html lang ="en">
 <head>
-	<title>Actualizar Cabecera-Tarifario</title>
+	<title>Actualizar Detalle-Tarifario</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="../css/estilo.css" rel="stylesheet" >
@@ -20,11 +20,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cabecera-Tarifario</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Detalle-Tarifario</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createCabeceraTarifario.php'>Nuevo</a></li>";
-			echo "<li><a href='readCabeceraTarifario.php'>Consulta</a></li>";
+			echo "<li><a href='createDetalleTarifario.php'>Nuevo</a></li>";
+			echo "<li><a href='readDetalleTarifario.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -34,45 +34,45 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
+        $ca =$_GET['idcabeceratarifario'];
 	$id =$_GET['id'];
-        $p =$_GET['idperiodo'];
-        $c =$_GET['idcultivo'];
-	$f =$_GET['fecha'];
-	$a =$_GET['estado'];
+        $l =$_GET['idlabor'];
+	$m =$_GET['idmedida'];
+	$a =$_GET['valor'];
 ?>
 
-<form method= "POST" class="form-horizontal" action= "saveCabeceraTarifario.php?usuario=" >
+<form method= "POST" class="form-horizontal" action= "saveDetalleTarifario.php?usuario=" >
      <div class="form-group">
-         <label for="inputName" class="control-label col-xs-2">Código:</label>
+         <label for="inputName" class="control-label col-xs-2">CabeceraTarifario:</label>
          <div class="col-xs-10">
-             <input name = "Codigo" type="text" id= "Codigo" class="form-control"
- placeholder="Codigo" value="<?php echo $id;?>">
+             <input name = "CabeceraTarifario" type="text" id= "CabeceraTarifario" class="form-control"
+ placeholder="CabeceraTarifario" value="<?php echo $ca;?>">
          </div>
      </div>
      <div class="form-group">
-         <label for="inputName" class="control-label col-xs-2">Periodo:</label>
+         <label for="inputName" class="control-label col-xs-2">DetalleTarifario:</label>
          <div class="col-xs-10">
-             <input name = "Periodo" type="text" id= "Periodo" class="form-control"
- placeholder="Periodo" value="<?php echo $p;?>">
+             <input name = "DetalleTarifario" type="text" id= "DetalleTarifario" class="form-control"
+ placeholder="DetalleTarifario" value="<?php echo $id;?>">
          </div>
      </div>
      <div class="form-group">
-         <label for="inputName" class="control-label col-xs-2">Cultivo:</label>
+         <label for="inputName" class="control-label col-xs-2">Labor:</label>
          <div class="col-xs-10">
-             <input name = "Cultivo" type="text" id= "Cultivo" class="form-control"
- placeholder="Cultivo" value="<?php echo $c;?>">
+             <input name = "Labor" type="text" id= "Labor" class="form-control"
+ placeholder="Labor" value="<?php echo $l;?>">
          </div>
      </div>
      <div class="form-group">
-         <label for="inputFecha" class="control-label col-xs-2">Fecha:</label>
+         <label for="inputMedida" class="control-label col-xs-2">Medida:</label>
          <div class="col-xs-10">
-             <input name = "Fecha" type="text" id= "Fecha" class="form-control" placeholder="Fecha" value="<?php echo $f;?>">
+             <input name = "Medida" type="text" id= "Medida" class="form-control" placeholder="Medida" value="<?php echo $m;?>">
          </div>
      </div>
      <div class="form-group">
-         <label for="inputEmail" class="control-label col-xs-2">Estado:</label>
+         <label for="inputEmail" class="control-label col-xs-2">Valor:</label>
          <div class="col-xs-10">
-             <input name = "Estado" type="text" id= "Estado" class="form-control" placeholder="Estado" value="<?php echo $a;?>">
+             <input name = "Valor" type="text" id= "Valor" class="form-control" placeholder="Valor" value="<?php echo $a;?>">
          </div>
      </div>
      <div class="form-group">
