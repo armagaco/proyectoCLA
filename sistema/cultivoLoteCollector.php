@@ -17,15 +17,18 @@ class CultivoLoteCollector extends Collector
   }
 
   function deleteCultivoLote($idCultivoLote) {
-    $rows = self::$db->deleteRow("DELETE FROM controlAgricola.cultivolote where idcultivolote = $id", null);             
+    $rows = self::$db->deleteRow("DELETE FROM controlAgricola.cultivolote where idcultivolote = $id",null);   
+    return true;          
   }
 
   function insertCultivoLote($idPeriodo, $idLote, $idCultivo, $fecha, $estado) {
-    $rows = self::$db->insertRow("Insert into controlAgricola.cultivolote (idperiodo, idlote, idcultivo, fecha, estado) values ($idPeriodo , $idLote, $idCultivo, $fecha, $estado )", null);             
+    $rows = self::$db->insertRow("INSERT INTO controlAgricola.cultivolote (idperiodo, idlote, idcultivo, fecha, estado) VALUES ('$idPeriodo' , '$idLote', '$idCultivo', '$fecha', '$estado' )",null);             
+	return true;
   }
 
   function updateCultivoLote($idCultivoLote,$idPeriodo, $idLote, $idCultivo, $fecha, $estado) {
-    $rows = self::$db->updateRow("Update controlAgricola.cultivo set periodo = $idPeriodo, lote = $idLote, cultivo = $idCultivo, fecha = $fecha, estado = $estado where idcultivolote =$idCultivoLote", null);             
+    $rows = self::$db->updateRow("UPDATE controlAgricola.cultivolote SET periodo = $idPeriodo, lote = $idLote, cultivo = $idCultivo, fecha = $fecha, estado = $estado WHERE idcultivolote =$idCultivoLote",null);  
+	return true;           
   }
 
 

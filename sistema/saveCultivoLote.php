@@ -34,6 +34,7 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
+$i = $_POST['CultivoLote'];
 $p = $_POST['Periodo'];
 $l = $_POST['Lote'];
 $c = $_POST['Cultivo'];
@@ -42,7 +43,7 @@ $e = $_POST['Estado'];
 
 include_once("cultivoLoteCollector.php");
 $CultivoLoteCollectorObj = new CultivoLoteCollector();
-$CultivoLoteCollectorObj->updateCultivoLote($ip,$l,$c,$f,$e);
+$CultivoLoteCollectorObj->updateCultivoLote($i,$p,$l,$c,$f,$e);
 
 echo "<br>";
 
@@ -50,7 +51,7 @@ echo "<div class='container'>";
 echo "  <h2>CultivoLotes</h2>";
 echo "  <div class='panel panel-default'>";
 echo "    <div class='panel-heading'>Registro Actualizado Correctamente</div>";
-echo "    <div class='panel-body'>$n</div>";
+echo "    <div class='panel-body'>$i</div>";
 echo "  </div>";
 echo "</div>";
  
