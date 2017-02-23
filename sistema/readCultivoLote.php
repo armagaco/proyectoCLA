@@ -61,8 +61,8 @@ foreach ($CultivoLoteCollectorObj->showCultivoLotes() as $c){
 	}else{
 		echo "<td>Inactivo</td>";
 	}
-	echo "<td><a href='updateCultivoLote.php?id=".$c->getIdCultivoLote()."&nombre=".$c->getNombre()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
-	echo "<td><a href='deleteCultivoLote.php?id=".$c->getIdCultivoLote()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
+	echo "<td><a href='updateCultivoLote.php?idcultivolote=".$c->getIdCultivoLote()."&idperiodo=".$c->getIdPeriodo()."&idlote=".$c->getIdLote()."&idcultivo=".$c->getIdCultivo()."&fecha=".$c->getFecha()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteCultivoLote.php?idcultivolote=".$c->getIdCultivoLote()."&idperiodo=".$c->getIdPeriodo()."&idlote=".$c->getIdLote()."&idcultivo=".$c->getIdCultivo()."&fecha=".$c->getFecha()."&estado=".$c->getEstado()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 
 }
 echo "</tbody>";
