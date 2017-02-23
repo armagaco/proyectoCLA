@@ -32,7 +32,7 @@ session_start();
 
 echo "<form method= 'POST' class='form-horizontal' action= 'newCultivoLote.php' id='cultivoLote' title='cultivoLote' >";
      echo "<div class='form-group'>";
-         echo "<label for='inputName' class='control-label col-xs-2'>Periodo:</label>";
+         echo "<label for='inputPeriodo' class='control-label col-xs-2'>Periodo:</label>";
          echo "<div class='col-xs-10'>";
              echo "<input name = 'Periodo' type='text' id= 'Periodo' class='form-control' placeholder='Periodo'>";
          echo "</div>";

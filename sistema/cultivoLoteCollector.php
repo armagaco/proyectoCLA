@@ -10,7 +10,7 @@ class CultivoLoteCollector extends Collector
     $rows = self::$db->getRows("SELECT * FROM controlAgricola.cultivolote ");        
     $arrayCultivoLote= array();        
     foreach ($rows as $c){
-      $aux = new CultivoLote($c{'idCultivoLote'},$c{'idPeriodo'},$c{'idLote'},$c{'idCultivo'},$c{'fecha'},$c{'estado'});
+      $aux = new CultivoLote($c{'idcultivolote'},$c{'idperiodo'},$c{'idlote'},$c{'idcultivo'},$c{'fecha'},$c{'estado'});
       array_push($arrayCultivoLote, $aux);
     }
     return $arrayCultivoLote;        
@@ -21,7 +21,7 @@ class CultivoLoteCollector extends Collector
   }
 
   function insertCultivoLote($idPeriodo, $idLote, $idCultivo, $fecha, $estado) {
-    $rows = self::$db->insertRow("Insert into controlAgricola.cultivolote (idPeriodo, idLote, idCultivo, fecha, estado) values ($idPeriodo , $idLote, $idCultivo, $fecha, $estado )" , null);             
+    $rows = self::$db->insertRow("Insert into controlAgricola.cultivolote (idperiodo, idlote, idcultivo, fecha, estado) values ($idPeriodo , $idLote, $idCultivo, $fecha, $estado )", null);             
   }
 
   function updateCultivoLote($idCultivoLote,$idPeriodo, $idLote, $idCultivo, $fecha, $estado) {
