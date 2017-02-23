@@ -38,7 +38,7 @@ session_start();
 
 	include_once("CabeceraTarifarioCollector.php");
 	$CabeceraTarifarioCollectorObj = new CabeceraTarifarioCollector();
-	$CabeceraTarifarioCollectorObj->deleteCabecerasTarifarios($id);
+	$CabeceraTarifarioCollectorObj->deleteCabecerasTarifarias($id);
 
 	echo "<br>";
 

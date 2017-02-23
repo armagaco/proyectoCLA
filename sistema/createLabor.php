@@ -40,7 +40,7 @@ session_start();
 
 echo "<form method= 'POST' class='form-horizontal' action= 'newLabor.php' id='labor' title='labor' >";
      echo "<div class='form-group'>";
-         echo "<label for='inputGrupoLabor' class='control-label col-xs-2'>Nombre:</label>";
+         echo "<label for='inputGrupoLabor' class='control-label col-xs-2'>GrupoLabor:</label>";
          echo "<div class='col-xs-10'>";
              echo "<input name = 'GrupoLabor' type='text' id= 'GrupoLabor' class='form-control' placeholder='Grupo Labor'>";
          echo "</div>";
