@@ -34,29 +34,49 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-	$id =$_GET['id'];
-	$n =$_GET['nombre'];
-	$a =$_GET['estado'];
+	$id =$_GET['idcabeceratarea'];
+	$p =$_GET['periodo'];
+	$f =$_GET['fecha'];
+	$s =$_GET['supervisor'];
+	$c =$_GET['idcultivolote'];
+	$e =$_GET['estado'];
 ?>
 
-<form method= "POST" class="form-horizontal" action= "saveCultivo.php?usuario=" >
+<form method= "POST" class="form-horizontal" action= "saveTarea.php?usuario=" >
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Código:</label>
          <div class="col-xs-10">
-             <input name = "Codigo" type="text" id= "Codigo" class="form-control"
- placeholder="Codigo" value="<?php echo $id;?>" readonly>
+             <input name = "Codigo" type="text" id= "Codigo" class="form-control" placeholder="Codigo" value="<?php echo $id;?>" readonly>
          </div>
      </div>
      <div class="form-group">
-         <label for="inputName" class="control-label col-xs-2">Nombre:</label>
+         <label for="inputName" class="control-label col-xs-2">Periodo:</label>
          <div class="col-xs-10">
-             <input name = "Nombre" type="text" id= "Nombre" class="form-control" placeholder="Nombre" value="<?php echo $n;?>">
+             <input name = "Periodo" type="text" id= "Periodo" class="form-control" placeholder="Periodo" value="<?php echo $p;?>">
+         </div>
+     </div>
+     <div class="form-group">
+         <label for="inputName" class="control-label col-xs-2">Fecha:</label>
+         <div class="col-xs-10">
+             <input name = "Fecha" type="text" id= "Fecha" class="form-control" placeholder="Fecha" value="<?php echo $f;?>">
+         </div>
+     </div>
+     <div class="form-group">
+         <label for="inputName" class="control-label col-xs-2">Supervisor:</label>
+         <div class="col-xs-10">
+             <input name = "Supervisor" type="text" id= "Supervisor" class="form-control" placeholder="Supervisor" value="<?php echo $s;?>">
+         </div>
+     </div>
+     <div class="form-group">
+         <label for="inputName" class="control-label col-xs-2">CultivoLote:</label>
+         <div class="col-xs-10">
+             <input name= "Cultivolote" type="text" id="Cultivolote" class="form-control" placeholder="Cultivolote" value="<?php echo $c;?>">
          </div>
      </div>
      <div class="form-group">
          <label for="inputEmail" class="control-label col-xs-2">Estado:</label>
          <div class="col-xs-10">
-             <input name = "Estado" type="text" id= "Estado" class="form-control" placeholder="Estado" value="<?php echo $a;?>">
+             <input name = "Estado" type="text" id= "Estado" class="form-control" placeholder="Estado" value="<?php echo $e;?>">
          </div>
      </div>
      <div class="form-group">

@@ -31,6 +31,7 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
+
 $p = $_POST['Periodo'];
 $f = $_POST['Fecha'];
 $s = $_POST['Supervisor'];
@@ -47,7 +48,7 @@ echo "<div class='container'>";
 echo "  <h2>Tareas</h2>";
 echo "  <div class='panel panel-default'>";
 echo "    <div class='panel-heading'>Registro Ingresado Correctamente</div>";
-echo "    <div class='panel-body'>$s</div>";
+echo "    <div class='panel-body'>$f</div>";
 echo "  </div>";
 echo "</div>";
 

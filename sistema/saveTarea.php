@@ -34,14 +34,17 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-$id =$_POST['Codigo'];
-$n =$_POST['Nombre'];
-$a =$_POST['Estado'];
+$id = $_POST['Codigo'];
+$p = $_POST['Periodo'];
+$f = $_POST['Fecha'];
+$s = $_POST['Supervisor'];
+$c = $_POST['Cultivolote'];
+$a = $_POST['Estado'];
 
 
-include_once("CultivoCollector.php");
-$CultivoCollectorObj = new CultivoCollector();
-$CultivoCollectorObj->updateCultivos($id,$n,$a);
+include_once("cabeceratareaCollector.php");
+$CultivoCollectorObj = new CabeceraTareaCollector();
+$CultivoCollectorObj->updateTarea($id,$p,$f,$s,$c,$a);
 
 echo "<br>";
 
@@ -49,7 +52,7 @@ echo "<div class='container'>";
 echo "  <h2>Cultivos</h2>";
 echo "  <div class='panel panel-default'>";
 echo "    <div class='panel-heading'>Registro Actualizado Correctamente</div>";
-echo "    <div class='panel-body'>$n</div>";
+echo "    <div class='panel-body'>$f</div>";
 echo "  </div>";
 echo "</div>";
  

@@ -16,6 +16,21 @@ class CabeceraTareaCollector extends Collector
     return $arrayTarea;        
   }
 
+  function deleteTarea($idcabeceratarea) {
+    $rows = self::$db->deleteRow("DELETE FROM controlAgricola.cabeceratarea where idcabeceratarea = '$idcabeceratarea'",null);   
+    return true;          
+  }
+
+  function insertTarea($periodo, $fecha, $supervisor, $idcultivolote, $estado) {
+    $rows = self::$db->insertRow("INSERT INTO controlAgricola.cabeceratarea (periodo, fecha, supervisor, idcultivolote, estado) VALUES ($periodo , '$fecha', '$supervisor', $idcultivolote, $estado )",null);             
+	return true;
+  }
+
+  function updateTarea($idcabeceratarea, $periodo, $fecha, $supervisor, $idcultivolote, $estado) {
+    $rows = self::$db->updateRow("UPDATE controlAgricola.cabeceratarea SET periodo = $periodo, fecha = '$fecha', supervisor = $supervisor, idcultivolote = $idcultivolote, estado = $estado WHERE idcabeceratarea = $idcabeceratarea",null);  
+	return true;           
+  }
+
 }
 ?>
 
