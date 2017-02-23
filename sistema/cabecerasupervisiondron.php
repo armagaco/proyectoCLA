@@ -2,7 +2,7 @@
 
 class CabeceraSupervisiondron{
 
-  private $idIdCabeceraDron;
+  private $idCabeceraDron;
   private $idPeriodo;
   private $fecha;
   private $supervisor;
@@ -10,16 +10,16 @@ class CabeceraSupervisiondron{
   private $estado;
   
 
-    function __construct($idIdCabeceraDron, $idPeriodo, $fecha, $supervisor, $idCultivoLote, $estado){
-    $this->idIdCabeceraDron = $idIdCabeceraDron;
+    function __construct($idCabeceraDron, $idPeriodo, $fecha, $supervisor, $idCultivoLote, $estado){
+    $this->idCabeceraDron = $idCabeceraDron;
     $this->idPeriodo = $idPeriodo;
     $this->fecha = $fecha;
 	$this->supervisor = $supervisor;
 	$this->idCultivoLote = $idCultivoLote;
     $this->estado = $estado;
     }
-    function setIdIdCabeceraDron($idIdCabeceraDron){
-      $this->idIdCabeceraDron = $idIdCabeceraDron;
+    function setIdCabeceraDron($idCabeceraDron){
+      $this->idCabeceraDron = $idCabeceraDron;
     }
     function getIdCabeceraDron(){
       return $this->idCabeceraDron;
