@@ -20,11 +20,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cultivos</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla CultivoLotes</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createCultivo.php'>Nuevo</a></li>";
-			echo "<li><a href='readCultivo.php'>Consulta</a></li>";
+			echo "<li><a href='createCultivoLote.php'>Nuevo</a></li>";
+			echo "<li><a href='readCultivoLote.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -34,19 +34,20 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-$id =$_POST['Codigo'];
-$n =$_POST['Nombre'];
-$a =$_POST['Estado'];
+$p = $_POST['Periodo'];
+$l = $_POST['Lote'];
+$c = $_POST['Cultivo'];
+$f = $_POST['Fecha'];
+$e = $_POST['Estado'];
 
-
-include_once("CultivoCollector.php");
-$CultivoCollectorObj = new CultivoCollector();
-$CultivoCollectorObj->updateCultivos($id,$n,$a);
+include_once("cultivoLoteCollector.php");
+$CultivoLoteCollectorObj = new CultivoLoteCollector();
+$CultivoLoteCollectorObj->updateCultivoLote($ip,$l,$c,$f,$e);
 
 echo "<br>";
 
 echo "<div class='container'>";
-echo "  <h2>Cultivos</h2>";
+echo "  <h2>CultivoLotes</h2>";
 echo "  <div class='panel panel-default'>";
 echo "    <div class='panel-heading'>Registro Actualizado Correctamente</div>";
 echo "    <div class='panel-body'>$n</div>";
