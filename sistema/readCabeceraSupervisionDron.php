@@ -57,8 +57,8 @@ foreach ($CabeceraSupervisionDronCollectorObj->showCabeceraSupervisionDron() as 
 	echo "<td>".$c->getSupervisor()."</td>"; 
 	echo "<td>".$c->getIdCultivoLote()."</td>";
     echo "<td>".$c->getEstado()."</td>"; 
-	echo "<td><a href='updateIdCabeceraDron.php?id=".$c->getIdCabeceraDron()."&idperiodo=".$c->getIdPeriodo()."&idCultivoLote=".$c->getIdCultivoLote()."&fecha=".$c->getFecha()."&supervisor=".$c->getSupervisor()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
-	echo "<td><a href='deleteIdCabeceraDron.php?id=".$c->getIdCabeceraDron()."&idperiodo=".$c->getIdPeriodo()."&idCultivoLote=".$c->getIdCultivoLote()."&fecha=".$c->getFecha()."'>Eliminar</a></td>"; 
+	echo "<td><a href='updateCabeceraSupervisionDron.php?id=".$c->getIdCabeceraDron()."&idperiodo=".$c->getIdPeriodo()."&idCultivoLote=".$c->getIdCultivoLote()."&fecha=".$c->getFecha()."&supervisor=".$c->getSupervisor()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteCabeceraSupervisionDron.php?id=".$c->getIdCabeceraDron()."&idperiodo=".$c->getIdPeriodo()."&idCultivoLote=".$c->getIdCultivoLote()."&fecha=".$c->getFecha()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 
 }
 echo "</tbody>";
