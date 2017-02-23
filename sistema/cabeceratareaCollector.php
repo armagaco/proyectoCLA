@@ -7,7 +7,7 @@ class CabeceraTareaCollector extends Collector
 {
   
   function showTareas() {
-    $rows = self::$db->getRows("SELECT * FROM cabeceratarea ");        
+    $rows = self::$db->getRows("SELECT * FROM controlAgricola.cabeceratarea ");        
     $arrayTarea= array();        
     foreach ($rows as $c){
       $aux = new Tarea($c{'idcabeceratarea'},$c{'periodo'},$c{'fecha'},$c{'supervisor'},$c{'idcultivolote'},$c{'estado'});

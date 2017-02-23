@@ -31,8 +31,8 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-include_once("tareaCollector.php");
-$TareaCollectorObj = new TareaCollector();
+include_once("cabeceratareaCollector.php");
+$CabeceraTareaCollectorObj = new CabeceraTareaCollector();
 
 echo "<div class='container'>";
 echo "<h2>Tareas</h2>";
@@ -45,18 +45,21 @@ echo "     <th>Nombre</th>";
 echo "     <th>Estado</th>"; 
 echo "</tr>"; 
 echo "</thead>"; 
-foreach ($TareaCollectorObj->showTareas() as $c){
+foreach ($CabeceraTareaCollectorObj->showTareas() as $c){
 	echo "<tbody>"; 
 	echo "<tr>"; 
-	echo "<td>".$c->getIdTarea()."</td>"; 
-	echo "<td>".$c->getNombre()."</td>"; 
+	echo "<td>".$c->getIdcabeceratarea()."</td>"; 
+	echo "<td>".$c->getPeriodo()."</td>";
+	echo "<td>".$c->getFecha()."</td>";
+	echo "<td>".$c->getSupervisor()."</td>";
+	echo "<td>".$c->getIdcultivolote()."</td>"; 
  	if($c->getEstado()== '1'){
 		echo "<td>Activo</td>";
 	}else{
 		echo "<td>Inactivo</td>";
 	}
-	echo "<td><a href='updateTarea.php?id=".$c->getIdTarea()."&nombre=".$c->getNombre()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
-	echo "<td><a href='deleteTarea.php?id=".$c->getIdTarea()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
+	echo "<td><a href='updateTarea.php?idcabeceratarea=".$c->getIdcabeceratarea()."&periodo=".$c->getPeriodo()."&fecha=".$c->getFecha()."&supervisor=".$c->getSupervisor()."&idcultivolote=".$c->getIdcultivolote()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteTarea.php?idcabeceratarea=".$c->getIdcabeceratarea()."&periodo=".$c->getPeriodo()."&fecha=".$c->getFecha()."&supervisor=".$c->getSupervisor()."&idcultivolote=".$c->getIdcultivolote()."&estado=".$c->getEstado()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 
 }
 echo "</tbody>";
