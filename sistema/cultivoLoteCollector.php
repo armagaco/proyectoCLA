@@ -16,6 +16,19 @@ class CultivoLoteCollector extends Collector
     return $arrayCultivoLote;        
   }
 
+  function deleteCultivoLote($idCultivoLote) {
+    $rows = self::$db->deleteRow("DELETE FROM controlAgricola.cultivolote where idcultivolote = $id", null);             
+  }
+
+  function insertCultivoLote($idPeriodo, $idLote, $idCultivo, $fecha, $estado) {
+    $rows = self::$db->insertRow("Insert into controlAgricola.cultivolote (idPeriodo, idLote, idCultivo, fecha, estado) values ($idPeriodo , $idLote, $idCultivo, $fecha, $estado )" , null);             
+  }
+
+  function updateCultivoLote($idCultivoLote,$idPeriodo, $idLote, $idCultivo, $fecha, $estado) {
+    $rows = self::$db->updateRow("Update controlAgricola.cultivo set periodo = $idPeriodo, lote = $idLote, cultivo = $idCultivo, fecha = $fecha, estado = $estado where idcultivolote =$idCultivoLote", null);             
+  }
+
+
 }
 ?>
 
