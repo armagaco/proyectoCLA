@@ -17,7 +17,7 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Área</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Lote</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
 			echo "<li><a href='createLote.php'>Nueva</a></li>";
