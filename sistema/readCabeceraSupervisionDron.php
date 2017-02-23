@@ -42,8 +42,9 @@ echo "<thead>";
 echo "<tr>"; 
 echo " 	   <th>Código</th>"; 
 echo " 	   <th>Periodo</th>"; 
-echo " 	   <th>Cultivo</th>"; 
 echo "     <th>Fecha</th>"; 
+echo " 	   <th>Supervisor</th>"; 
+echo " 	   <th>Cultivo</th>"; 
 echo "     <th>Estado</th>"; 
 echo "</tr>"; 
 echo "</thead>"; 
@@ -51,12 +52,13 @@ foreach ($CabeceraSupervisionDronCollectorObj->showCabecerasTarifarias() as $c){
 	echo "<tbody>"; 
 	echo "<tr>"; 
 	echo "<td>".$c->getIdCabeceraDron()."</td>"; 
-    echo "<td>".$c->getIdPeriodo()."</td>"; 
-	echo "<td>".$c->getIdCultivo()."</td>"; 
+    echo "<td>".$c->getIdPeriodo()."</td>";  
 	echo "<td>".$c->getFecha()."</td>"; 
+	echo "<td>".$c->getSupervisor()."</td>"; 
+	echo "<td>".$c->getIdCultivoLote()."</td>";
     echo "<td>".$c->getEstado()."</td>"; 
-	echo "<td><a href='updateIdCabeceraDron.php?id=".$c->getIdCabeceraDron()."&idperiodo=".$c->getIdPeriodo()."&idcultivo=".$c->getIdCultivo()."&fecha=".$c->getFecha()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
-	echo "<td><a href='deleteIdCabeceraDron.php?id=".$c->getIdCabeceraDron()."&idperiodo=".$c->getIdPeriodo()."&idcultivo=".$c->getIdCultivo()."&fecha=".$c->getFecha()."'>Eliminar</a></td>"; 
+	echo "<td><a href='updateIdCabeceraDron.php?id=".$c->getIdCabeceraDron()."&idperiodo=".$c->getIdPeriodo()."&idCultivoLote=".$c->getIdCultivoLote()."&fecha=".$c->getFecha()."&supervisor=".$c->getSupervisor()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteIdCabeceraDron.php?id=".$c->getIdCabeceraDron()."&idperiodo=".$c->getIdPeriodo()."&idCultivoLote=".$c->getIdCultivoLote()."&fecha=".$c->getFecha()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 
 }
 echo "</tbody>";
