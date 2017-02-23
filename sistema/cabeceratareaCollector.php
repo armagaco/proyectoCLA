@@ -3,14 +3,14 @@
 include_once('cabeceratarea.php');
 include_once('Collector.php');
 
-class TareaCollector extends Collector
+class CabeceraTareaCollector extends Collector
 {
   
   function showTareas() {
     $rows = self::$db->getRows("SELECT * FROM cabeceratarea ");        
     $arrayTarea= array();        
     foreach ($rows as $c){
-      $aux = new Tarea($c{'idTarea'},$c{'idPeriodo'},$c{'idCultivolote'},$c{'idEmpleado'},$c{'fecha'},$c{'estado'});
+      $aux = new Tarea($c{'idcabeceratarea'},$c{'periodo'},$c{'fecha'},$c{'supervisor'},$c{'idcultivolote'},$c{'estado'});
       array_push($arrayTarea, $aux);
     }
     return $arrayTarea;        

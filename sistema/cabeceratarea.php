@@ -1,53 +1,53 @@
 <?php
 
-class Tarea{
+class CabeceraTarea{
 
-	private $idTarea;
-	private $idPeriodo;
-	private $idCultivolote;
-	private $idEmpleado;
+	private $idcabeceratarea;
+	private $periodo;
 	private $fecha;
+	private $supervisor;
+	private $idcultivolote;
 	private $estado;
 
-	function __construct($idTarea, $idPeriodo, $idCultivolote, $idEmpleado, $fecha, $estado){
-		$this->idTarea = $idTarea;
-		$this->idPeriodo = $idPeriodo;
-		$this->idCultivolote = $idCultivolote;
-		$this->idEmpleado = $idEmpleado;
+	function __construct($idcabeceratarea, $periodo, $fecha, $supervisor, $idcultivolote, $estado){
+		$this->idcabeceratarea = $idcabeceratarea;
+		$this->periodo = $periodo;
+		$this->idcultivolote = $idcultivolote;
+		$this->supervisor = $supervisor;
 		$this->fecha = $fecha;
 		$this->estado = $estado;
 	}
 
-	function setIdTarea($idTarea){
-		$this->idTarea = $idTarea;
+	function setIdcabeceratarea($idcabeceratarea){
+		$this->idcabeceratarea = $idcabeceratarea;
 	}
 
-	function getIdTarea(){
-		return $this->idTarea;
+	function getIdcabeceratarea(){
+		return $this->idcabeceratarea;
 	}
 
-	function setIdPeriodo($idPeriodo){
-                $this->idPeriodo = $idPeriodo;
+	function setPeriodo($periodo){
+                $this->periodo = $periodo;
         }
 
-        function getIdPeriodo(){
-                return $this->idPeriodo;
+        function getPeriodo(){
+                return $this->periodo;
         }
 
-	function setIdCultivolote($idCultivolote){
-                $this->idCultivolote = $idCultivolote;
+	function setIdcultivolote($idcultivolote){
+                $this->idcultivolote = $idcultivolote;
         }
 
-        function getIdCultivolote(){
-                return $this->idCultivolote;
+        function getIdcultivolote(){
+                return $this->idcultivolote;
         }
 
-	function setIdEmpleado($idEmpleado){
-                $this->idEmpleado = $idEmpleado;
+	function setSupervisor($supervisor){
+                $this->supervisor = $supervisor;
         }
 
-        function getIdEmpleado(){
-                return $this->idEmpleado;
+        function getSupervisor(){
+                return $this->supervisor;
         }
 
 	function setFecha($fecha){
