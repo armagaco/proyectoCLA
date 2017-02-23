@@ -1,25 +1,25 @@
 <?php
 
-class CabeceraTarifario{
+class CabeceraSupervisiondron{
 
-  private $idCabeceraTarifario;
+  private $idCabeceraSupervisiondron;
   private $idPeriodo;
   private $idCultivo;
   private $fecha;
   private $estado;
 
-    function __construct($idCabeceraTarifario, $idPeriodo, $idCultivo, $fecha, $estado){
-    $this->idCabeceraTarifario = $idCabeceraTarifario;
+    function __construct($idCabeceraSupervisiondron, $idPeriodo, $idCultivo, $fecha, $estado){
+    $this->idCabeceraSupervisiondron = $idCabeceraSupervisiondron;
     $this->idPeriodo = $idPeriodo;
     $this->idCultivo = $idCultivo;
     $this->fecha = $fecha;
     $this->estado = $estado;
     }
-    function setIdCabeceraTarifario($idCabeceraTarifario){
-      $this->idCabeceraTarifario = $idCabeceraTarifario;
+    function setIdCabeceraSupervisiondron($idCabeceraSupervisiondron){
+      $this->idCabeceraSupervisiondron = $idCabeceraSupervisiondron;
     }
-    function getIdCabeceraTarifario(){
-      return $this->idCabeceraTarifario;
+    function getIdCabeceraSupervisiondron(){
+      return $this->idCabeceraSupervisiondron;
     }
     function setIdPeriodo($idperiodo){
       $this->idPeriodo = $idPeriodo;
