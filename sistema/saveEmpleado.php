@@ -20,11 +20,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cultivos</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Empleados</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createCultivo.php'>Nuevo</a></li>";
-			echo "<li><a href='readCultivo.php'>Consulta</a></li>";
+			echo "<li><a href='createEmpleado.php'>Nuevo</a></li>";
+			echo "<li><a href='readEmpleado.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -36,20 +36,22 @@ session_start();
 
 $id =$_POST['Codigo'];
 $n =$_POST['Nombre'];
-$a =$_POST['Estado'];
+$a =$_POST['Apellido'];
+$d =$_POST['Departamento'];
+$c =$_POST['Cargo'];
 
 
-include_once("CultivoCollector.php");
-$CultivoCollectorObj = new CultivoCollector();
-$CultivoCollectorObj->updateCultivos($id,$n,$a);
+include_once("empleadoCollector.php");
+$EmpleadoCollectorObj = new EmpleadoCollector();
+$EmpleadoCollectorObj->updateEmpleado($id,$n,$a,$d,$c);
 
 echo "<br>";
 
 echo "<div class='container'>";
-echo "  <h2>Cultivos</h2>";
+echo "  <h2>Empleados</h2>";
 echo "  <div class='panel panel-default'>";
 echo "    <div class='panel-heading'>Registro Actualizado Correctamente</div>";
-echo "    <div class='panel-body'>$n</div>";
+echo "    <div class='panel-body'>$id</div>";
 echo "  </div>";
 echo "</div>";
  

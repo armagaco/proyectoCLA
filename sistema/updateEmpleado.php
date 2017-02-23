@@ -20,11 +20,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cultivos</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Empleados</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createCultivo.php'>Nuevo</a></li>";
-			echo "<li><a href='readCultivo.php'>Consulta</a></li>";
+			echo "<li><a href='createEmpleado.php'>Nuevo</a></li>";
+			echo "<li><a href='readEmpleado.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -34,17 +34,19 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-	$id =$_GET['id'];
+	$id =$_GET['idempleado'];
 	$n =$_GET['nombre'];
-	$a =$_GET['estado'];
+	$a =$_GET['apellido'];
+	$d =$_GET['departamento'];
+	$c =$_GET['cargo'];
+
 ?>
 
-<form method= "POST" class="form-horizontal" action= "saveCultivo.php?usuario=" >
+<form method= "POST" class="form-horizontal" action= "saveEmpleado.php?usuario=" >
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Código:</label>
          <div class="col-xs-10">
-             <input name = "Codigo" type="text" id= "Codigo" class="form-control"
- placeholder="Codigo" value="<?php echo $id;?>" readonly>
+             <input name = "Codigo" type="text" id= "Codigo" class="form-control" placeholder="Codigo" value="<?php echo $id;?>" readonly>
          </div>
      </div>
      <div class="form-group">
@@ -54,9 +56,21 @@ session_start();
          </div>
      </div>
      <div class="form-group">
-         <label for="inputEmail" class="control-label col-xs-2">Estado:</label>
+         <label for="inputName" class="control-label col-xs-2">Apellido:</label>
          <div class="col-xs-10">
-             <input name = "Estado" type="text" id= "Estado" class="form-control" placeholder="Estado" value="<?php echo $a;?>">
+             <input name = "Apellido" type="text" id= "Apellido" class="form-control" placeholder="Apellido" value="<?php echo $a;?>">
+         </div>
+     </div>
+     <div class="form-group">
+         <label for="inputEmail" class="control-label col-xs-2">Departamento:</label>
+         <div class="col-xs-10">
+             <input name = "Departamento" type="text" id= "Departamento" class="form-control" placeholder="Departamento" value="<?php echo $d;?>">
+         </div>
+     </div>
+     <div class="form-group">
+         <label for="inputEmail" class="control-label col-xs-2">Cargo:</label>
+         <div class="col-xs-10">
+             <input name = "Cargo" type="text" id= "Cargo" class="form-control" placeholder="Cargo" value="<?php echo $c;?>">
          </div>
      </div>
      <div class="form-group">

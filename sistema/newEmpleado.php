@@ -39,7 +39,7 @@ $c = $_POST['Cargo'];
 
 include_once("empleadoCollector.php");
 $EmpleadoCollectorObj = new EmpleadoCollector();
-$EmpleadoCollectorObj->insertEmpleados($n,$a,$d,$c);
+$EmpleadoCollectorObj->insertEmpleado($n,$a,$d,$c);
 
 echo "<br>";
 

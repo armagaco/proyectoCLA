@@ -60,8 +60,8 @@ foreach ($EmpleadoCollectorObj->showEmpleados() as $c){
 	}else{
 		echo "<td>Inactivo</td>";
 	}*/
-	echo "<td><a href='updateEmpleado.php?id=".$c->getIdEmpleado()."&nombre=".$c->getNombre()."&apellido=".$c->getApellido()."&departamento=".$c->getDepartamento()."&cargo=".$c->getCargo()."'>Editar</a></td>"; 
-	echo "<td><a href='deleteEmpleado.php?id=".$c->getIdEmpleado()."&nombre=".$c->getNombre()."&apellido=".$c->getApellido()."'>Eliminar</a></td>"; 
+	echo "<td><a href='updateEmpleado.php?idempleado=".$c->getIdEmpleado()."&nombre=".$c->getNombre()."&apellido=".$c->getApellido()."&departamento=".$c->getDepartamento()."&cargo=".$c->getCargo()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteEmpleado.php?idempleado=".$c->getIdEmpleado()."&nombre=".$c->getNombre()."&apellido=".$c->getApellido()."&departamento=".$c->getDepartamento()."&cargo=".$c->getCargo()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 
 }
 echo "</tbody>";

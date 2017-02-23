@@ -17,11 +17,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cultivos</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Empleados</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createCultivo.php'>Nuevo</a></li>";
-			echo "<li><a href='readCultivo.php'>Consulta</a></li>";
+			echo "<li><a href='createEmpleado.php'>Nuevo</a></li>";
+			echo "<li><a href='readEmpleado.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -31,17 +31,20 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-	$id =$_GET['id'];
+	$id =$_GET['idempleado'];
 	$n =$_GET['nombre'];
+	$n =$_GET['apellido'];
+	$d =$_GET['departamento'];
+	$c =$_GET['cargo'];
 
-	include_once("CultivoCollector.php");
-	$CultivoCollectorObj = new CultivoCollector();
-	$CultivoCollectorObj->deleteCultivos($id);
+	include_once("empleadoCollector.php");
+	$EmpleadoCollectorObj = new EmpleadoCollector();
+	$EmpleadoCollectorObj->deleteEmpleado($id);
 
 	echo "<br>";
 
 	echo "<div class='container'>";
-	echo "  <h2>Cultivos</h2>";
+	echo "  <h2>Empleados</h2>";
 	echo "  <div class='panel panel-default'>";
 	echo "    <div class='panel-heading'>Registro Eliminado Correctamente</div>";
 	echo "    <div class='panel-body'>$n</div>";

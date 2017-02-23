@@ -5,15 +5,15 @@ class Empleado{
 	private $idEmpleado;
 	private $nombre;
 	private $apellido;
-	private $idDepartamento;
-	private $idCargo;
+	private $departamento;
+	private $cargo;
 
-	function __construct($idEmpleado, $nombre, $apellido, $idDepartamento, $idCargo){
+	function __construct($idEmpleado, $nombre, $apellido, $departamento, $cargo){
 		$this->idEmpleado = $idEmpleado;
 		$this->nombre = $nombre;
 		$this->apellido = $apellido;
-		$this->idDepartamento = $idDepartamento;
-		$this->idCargo = $idCargo;
+		$this->departamento = $departamento;
+		$this->cargo = $cargo;
 	}
 
 	function setIdEmpleado($idEmpleado){
@@ -40,20 +40,20 @@ class Empleado{
 		return $this->apellido;
 	}
 
-	function setIdDepartamento($idDepartamento){
-		$this->idDepartamento = $idDepartamento;
+	function setDepartamento($departamento){
+		$this->departamento = $departamento;
 	}
 
-	function getIdDepartamento(){
-		return $this->idDepartamento;
+	function getDepartamento(){
+		return $this->departamento;
 	}
 
-	function setIdCargo($idCargo){
-		$this->idCargo = $idCargo;
+	function setCargo($cargo){
+		$this->cargo = $cargo;
 	}
 
-	function getIdCargo(){
-		return $this->idCargo;
+	function getCargo(){
+		return $this->cargo;
 	}
 
 
