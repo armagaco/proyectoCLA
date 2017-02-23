@@ -58,9 +58,9 @@ echo "<form method= 'POST' class='form-horizontal' action= 'newCabeceraSupervisi
          echo "</div>";
      echo "</div>";
 	 echo "<div class='form-group'>";
-		echo "<label for='inputSupervision' class='control-label col-xs-2'>Supervision:</label>";
+		echo "<label for='inputSupervisor' class='control-label col-xs-2'>Supervisor:</label>";
 		echo "<div class='col-xs-10'>";
-			echo "<input name = 'Supervision' type='text' id= 'Supervision' class='form-control' placeholder='Supervision'>";
+			echo "<input name = 'Supervisor' type='text' id= 'Supervisor' class='form-control' placeholder='Supervisor'>";
 		echo "</div>";
      echo "</div>";
 	 echo "<div class='form-group'>";
