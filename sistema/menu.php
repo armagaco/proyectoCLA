@@ -61,7 +61,7 @@ echo"<div id='tabla'>";
 //<<<<<<< HEAD
 		echo "<div id='columna3'><a href='readLotes.php'>Lotes</div>";
 		echo "<div id='columna4'><a href='readCultivoLote.php'>Cultivos por Lotes</div>";
-=======
+//=======
 		echo "<div id='columna3'><a href='readLote.php'>Lotes</div>";
 		echo "<div id='columna4'><a href='readCultivoLotes.php'>Cultivos por Lotes</div>";
 //>>>>>>> 41c2903b0243d5e3f6747f7de0a518e033c9993c
