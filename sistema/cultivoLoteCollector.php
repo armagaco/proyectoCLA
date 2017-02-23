@@ -7,7 +7,7 @@ class CultivoLoteCollector extends Collector
 {
   
   function showCultivoLotes() {
-    $rows = self::$db->getRows("SELECT * FROM cultivolote ");        
+    $rows = self::$db->getRows("SELECT * FROM controlAgricola.cultivolote ");        
     $arrayCultivoLote= array();        
     foreach ($rows as $c){
       $aux = new CultivoLote($c{'idCultivoLote'},$c{'idPeriodo'},$c{'idLote'},$c{'idCultivo'},$c{'fecha'},$c{'estado'});
