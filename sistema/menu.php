@@ -58,13 +58,13 @@ echo"<div id='tabla'>";
 	    	echo "<div id='contenidos'>";
 		echo "<div id='columna1' ><a href='readCultivo.php'>Cultivos</a></div>";
 		echo "<div id='columna2'><a href='readArea.php'>Areas</div>";
-<<<<<<< HEAD
+//<<<<<<< HEAD
 		echo "<div id='columna3'><a href='readLotes.php'>Lotes</div>";
 		echo "<div id='columna4'><a href='readCultivoLote.php'>Cultivos por Lotes</div>";
 =======
 		echo "<div id='columna3'><a href='readLote.php'>Lotes</div>";
 		echo "<div id='columna4'><a href='readCultivoLotes.php'>Cultivos por Lotes</div>";
->>>>>>> 41c2903b0243d5e3f6747f7de0a518e033c9993c
+//>>>>>>> 41c2903b0243d5e3f6747f7de0a518e033c9993c
 		echo "</div>";
 		echo "<div id='contenidos'>";
 		echo "<div id='columna1'><a href='readMedida.php'>Medidas</div>";

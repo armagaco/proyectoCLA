@@ -41,15 +41,21 @@ echo "<table class='table'>";
 echo "<thead>"; 
 echo "<tr>"; 
 echo " 	   <th>Código</th>"; 
-echo "     <th>Nombre</th>"; 
-echo "     <th>Estado</th>"; 
+echo "     <th>Periodo</th>"; 
+echo "     <th>Lote</th>"; 
+echo "     <th>Cultivo</th>";
+echo "     <th>Fecha</th>";
+echo "     <th>Estado</th>";
 echo "</tr>"; 
 echo "</thead>"; 
 foreach ($CultivoLoteCollectorObj->showCultivoLotes() as $c){
 	echo "<tbody>"; 
 	echo "<tr>"; 
 	echo "<td>".$c->getIdCultivoLote()."</td>"; 
-	echo "<td>".$c->getNombre()."</td>"; 
+	echo "<td>".$c->getIdPeriodo()."</td>";
+	echo "<td>".$c->getIdLote()."</td>";
+	echo "<td>".$c->getIdCultivo()."</td>";
+	echo "<td>".$c->getFecha()."</td>"; 
  	if($c->getEstado()== '1'){
 		echo "<td>Activo</td>";
 	}else{
