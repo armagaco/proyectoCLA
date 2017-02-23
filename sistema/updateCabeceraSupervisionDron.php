@@ -45,13 +45,13 @@ session_start();
 
 <form method= "POST" class="form-horizontal" action= "saveCabeceraTarifario.php?usuario=" >
      <div class="form-group">
-         <label for="inputName" class="control-label col-xs-2">Código:</label>
+         <label for="inputCodigo" class="control-label col-xs-2">Código:</label>
          <div class="col-xs-10">
              <input name = "Codigo" type="text" id= "Codigo" class="form-control" placeholder="Codigo" value="<?php echo $id;?>">
          </div>
      </div>
      <div class="form-group">
-         <label for="inputName" class="control-label col-xs-2">Periodo:</label>
+         <label for="inputPeriodo" class="control-label col-xs-2">Periodo:</label>
          <div class="col-xs-10">
              <input name = "Periodo" type="text" id= "Periodo" class="form-control" placeholder="Periodo" value="<?php echo $p;?>">
          </div>
@@ -63,13 +63,19 @@ session_start();
          </div>
      </div>
      <div class="form-group">
-         <label for="inputName" class="control-label col-xs-2">Cultivo:</label>
+         <label for="inputCultivo" class="control-label col-xs-2">Cultivo:</label>
          <div class="col-xs-10">
              <input name = "Cultivo" type="text" id= "Cultivo" class="form-control" placeholder="Cultivo" value="<?php echo $c;?>">
          </div>
      </div>
+	 <div class="form-group">
+         <label for="inputSupervisor" class="control-label col-xs-2">Supervisor:</label>
+         <div class="col-xs-10">
+             <input name = "Supervisor" type="text" id= "Supervisor" class="form-control" placeholder="Supervisor" value="<?php echo $f;?>">
+         </div>
+     </div>
      <div class="form-group">
-         <label for="inputEmail" class="control-label col-xs-2">Estado:</label>
+         <label for="inputEstado" class="control-label col-xs-2">Estado:</label>
          <div class="col-xs-10">
              <input name = "Estado" type="text" id= "Estado" class="form-control" placeholder="Estado" value="<?php echo $a;?>">
          </div>
