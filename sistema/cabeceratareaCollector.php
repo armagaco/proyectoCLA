@@ -10,19 +10,19 @@ class CabeceraTareaCollector extends Collector
     $rows = self::$db->getRows("SELECT * FROM controlAgricola.cabeceratarea ");        
     $arrayTarea= array();        
     foreach ($rows as $c){
-      $aux = new Tarea($c{'idcabeceratarea'},$c{'periodo'},$c{'fecha'},$c{'supervisor'},$c{'idcultivolote'},$c{'estado'});
+      $aux = new CabeceraTarea($c{'idcabeceratarea'},$c{'periodo'},$c{'fecha'},$c{'supervisor'},$c{'idcultivolote'},$c{'estado'});
       array_push($arrayTarea, $aux);
     }
     return $arrayTarea;        
   }
 
   function deleteTarea($idcabeceratarea) {
-    $rows = self::$db->deleteRow("DELETE FROM controlAgricola.cabeceratarea where idcabeceratarea = '$idcabeceratarea'",null);   
+    $rows = self::$db->deleteRow("DELETE FROM controlAgricola.cabeceratarea where idcabeceratarea = $idcabeceratarea",null);   
     return true;          
   }
 
-  function insertTarea($periodo, $fecha, $supervisor, $idcultivolote, $estado) {
-    $rows = self::$db->insertRow("INSERT INTO controlAgricola.cabeceratarea (periodo, fecha, supervisor, idcultivolote, estado) VALUES ($periodo , '$fecha', '$supervisor', $idcultivolote, $estado )",null);             
+  function insertTarea($idcabeceratarea, $periodo, $fecha, $supervisor, $idcultivolote, $estado) {
+    $rows = self::$db->insertRow("INSERT INTO controlAgricola.cabeceratarea (idcabeceratarea, periodo, fecha, supervisor, idcultivolote, estado) VALUES ($idcabeceratarea, $periodo , '$fecha', $supervisor, $idcultivolote, $estado )",null);             
 	return true;
   }
 

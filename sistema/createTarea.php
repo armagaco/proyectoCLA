@@ -32,6 +32,12 @@ session_start();
 
 echo "<form method= 'POST' class='form-horizontal' action= 'newTarea.php' id='cabeceratarea' title='cabeceratarea' >";
      echo "<div class='form-group'>";
+         echo "<label for='inputCodigo' class='control-label col-xs-2'>Codigo:</label>";
+         echo "<div class='col-xs-10'>";
+             echo "<input name = 'Codigo' type='text' id= 'Codigo' class='form-control' placeholder='Codigo'>";
+         echo "</div>";
+     echo "</div>";
+     echo "<div class='form-group'>";
          echo "<label for='inputPeriodo' class='control-label col-xs-2'>Periodo:</label>";
          echo "<div class='col-xs-10'>";
              echo "<input name = 'Periodo' type='text' id= 'Periodo' class='form-control' placeholder='Periodo'>";

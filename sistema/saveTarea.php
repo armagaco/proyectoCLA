@@ -20,11 +20,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cultivos</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Tareas</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createCultivo.php'>Nuevo</a></li>";
-			echo "<li><a href='readCultivo.php'>Consulta</a></li>";
+			echo "<li><a href='createTarea.php'>Nuevo</a></li>";
+			echo "<li><a href='readTarea.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -49,7 +49,7 @@ $CabeceraTareaCollectorObj->updateTarea($id,$p,$f,$s,$c,$a);
 echo "<br>";
 
 echo "<div class='container'>";
-echo "  <h2>Cultivos</h2>";
+echo "  <h2>Tareas</h2>";
 echo "  <div class='panel panel-default'>";
 echo "    <div class='panel-heading'>Registro Actualizado Correctamente</div>";
 echo "    <div class='panel-body'>$f</div>";

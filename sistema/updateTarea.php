@@ -20,11 +20,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cultivos</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Tareas</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createCultivo.php'>Nuevo</a></li>";
-			echo "<li><a href='readCultivo.php'>Consulta</a></li>";
+			echo "<li><a href='createTarea.php'>Nuevo</a></li>";
+			echo "<li><a href='readTarea.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";

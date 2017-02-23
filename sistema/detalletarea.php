@@ -1,53 +1,53 @@
 <?php
 
-class Detalletarea{
+class DetalleTarea{
 
-	private $idDetalletarea;
-	private $idTarea;
-	private $idEmpleado;
-	private $idArea;
+	private $idcabeceratarea;
+	private $iddetalletarea;
+	private $idempleado;
+	private $idlabor;
 	private $cantidad;
 	private $tarifa;
 
-	function __construct($idDetalletarea, $idTarea, $idEmpleado, $idArea, $cantidad, $tarifa){
-		$this->idDetalletarea = $idDetalletarea;
-		$this->idTarea = $idTarea;
-		$this->idEmpleado = $idEmpleado;
-		$this->idArea = $idArea;
+	function __construct($iddetalletarea, $idcabeceratarea, $idempleado, $idlabor, $cantidad, $tarifa){
+		$this->iddetalletarea = $iddetalletarea;
+		$this->idcabeceratarea = $idcabeceratarea;
+		$this->idempleado = $idempleado;
+		$this->idlabor = $idlabor;
 		$this->cantidad = $cantidad;
 		$this->tarifa = $tarifa;
 	}
 
-	function setIdDetalletarea($idDetalletarea){
-		$this->idDetalletarea = $idDetalletarea;
+	function setIdcabeceratarea($idcabeceratarea){
+		$this->idcabeceratarea = $idcabeceratarea;
 	}
 
-	function getIdDetalletarea(){
-		return $this->idDetalletarea;
+	function getIdcabeceratarea(){
+		return $this->idcabeceratarea;
 	}
 
-	function setIdTarea($idTarea){
-                $this->idTarea = $idTarea;
+	function setIddetalletarea($iddetalletarea){
+                $this->iddetalletarea = $iddetalletarea;
         }
 
-        function getIdTarea(){
-                return $this->idTarea;
+        function getIddetalletarea(){
+                return $this->iddetalletarea;
         }
 
-	function setIdEmpleado($idEmpleado){
-                $this->idEmpleado = $idEmpleado;
+	function setIdempleado($idempleado){
+                $this->idempleado = $idempleado;
         }
 
-        function getIdEmpleado(){
-                return $this->idEmpleado;
+        function getIdempleado(){
+                return $this->idempleado;
         }
 
-	function setIdArea($idArea){
-                $this->idArea = $idArea;
+	function setIdlabor($idlabor){
+                $this->idlabor = $idlabor;
         }
 
-        function getIdArea(){
-                return $this->idArea;
+        function getIdlabor(){
+                return $this->idlabor;
         }
 
 	function setCantidad($cantidad){

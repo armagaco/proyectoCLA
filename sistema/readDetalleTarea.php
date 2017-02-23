@@ -19,10 +19,10 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cultivos</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla DetalleTareas</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createCultivo.php'>Nuevo</a></li>";
+			echo "<li><a href='createDetalleTarea.php'>Nuevo</a></li>";
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
 			echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['Garcia'] . ")</a></li>";
@@ -31,11 +31,11 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-include_once("CultivoCollector.php");
-$CultivoCollectorObj = new CultivoCollector();
+include_once("detalletareaCollector.php");
+$DetalleTareaCollectorObj = new DetalleTareaCollector();
 
 echo "<div class='container'>";
-echo "<h2>Cultivos</h2>";
+echo "<h2>DetalleTareas</h2>";
 echo "<div class='table-responsive'>"; 
 echo "<table class='table'>"; 
 echo "<thead>"; 
@@ -45,18 +45,18 @@ echo "     <th>Nombre</th>";
 echo "     <th>Estado</th>"; 
 echo "</tr>"; 
 echo "</thead>"; 
-foreach ($CultivoCollectorObj->showCultivos() as $c){
+foreach ($DetalleTareaCollectorObj->showDetalleTareas() as $c){
 	echo "<tbody>"; 
 	echo "<tr>"; 
-	echo "<td>".$c->getIdCultivo()."</td>"; 
+	echo "<td>".$c->getIdDetalleTarea()."</td>"; 
 	echo "<td>".$c->getNombre()."</td>"; 
  	if($c->getEstado()== '1'){
 		echo "<td>Activo</td>";
 	}else{
 		echo "<td>Inactivo</td>";
 	}
-	echo "<td><a href='updateCultivo.php?id=".$c->getIdCultivo()."&nombre=".$c->getNombre()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
-	echo "<td><a href='deleteCultivo.php?id=".$c->getIdCultivo()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
+	echo "<td><a href='updateDetalleTarea.php?id=".$c->getIdDetalleTarea()."&nombre=".$c->getNombre()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteDetalleTarea.php?id=".$c->getIdDetalleTarea()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 
 }
 echo "</tbody>";

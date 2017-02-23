@@ -31,7 +31,7 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-
+$i = $_POST['Codigo'];
 $p = $_POST['Periodo'];
 $f = $_POST['Fecha'];
 $s = $_POST['Supervisor'];
@@ -40,7 +40,7 @@ $a = $_POST['Estado'];
 
 include_once("cabeceratareaCollector.php");
 $CabeceraTareaCollectorObj = new CabeceraTareaCollector();
-$CabeceraTareaCollectorObj->insertTarea($p,$f,$s,$c,$a);
+$CabeceraTareaCollectorObj->insertTarea($i,$p,$f,$s,$c,$a);
 
 echo "<br>";
 
