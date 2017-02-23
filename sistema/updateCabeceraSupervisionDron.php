@@ -43,7 +43,7 @@ session_start();
 	
 ?>
 
-<form method= "POST" class="form-horizontal" action= "saveCabeceraTarifario.php?usuario=" >
+<form method= "POST" class="form-horizontal" action= "saveCabeceraSupervisionDron.php?usuario=" >
      <div class="form-group">
          <label for="inputCodigo" class="control-label col-xs-2">Código:</label>
          <div class="col-xs-10">
