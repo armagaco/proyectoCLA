@@ -19,7 +19,7 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Areas</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Áreas</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
 			echo "<li><a href='createArea.php'>Nuevo</a></li>";
