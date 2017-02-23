@@ -17,17 +17,17 @@ class CabeceraSupervisionDronCollector extends Collector
     return $arrayCabeceraSupervisionDron;        
   }
  
-  function deleteCabecerasTarifarias($id)
+  function deleteCabeceraSupervisionDron($id)
   {
     $rows = self::$db->deleteRow("DELETE FROM controlAgricola.cabecerasupervisiondron where idcabeceradron = $id", null);
   }
   
-  function insertCabecerasTarifarias($id, $idperiodo, $fecha, $supervisor, $idcultivolote, $estado) 
+  function insertCabeceraSupervisionDron($id, $idperiodo, $fecha, $supervisor, $idcultivolote, $estado) 
   {
     $rows = self::$db->insertRow("Insert into controlAgricola.cabecerasupervisiondron (idcabeceradron, periodo, fecha, supervisor, idcultivolote, estado) values ('$id','$idperiodo', '$fecha', '$supervisor', '$idcultivolote', '$estado' )" , null);             
   }
 
-  function updateCabecerasTarifarias($id, $idperiodo, $idcultivolote, $fecha, $supervisor, $estado) 
+  function updateCabeceraSupervisionDron($id, $idperiodo, $idcultivolote, $fecha, $supervisor, $estado) 
   {
     $rows = self::$db->updateRow("Update controlAgricola.cabecerasupervisiondron set periodo = '$idperiodo', idcultivolote = '$idcultivolote', fecha = '$fecha', supervisor=$supervisor, estado = '$estado' where idcabeceradron =$id", null);             
   }

@@ -33,15 +33,16 @@ session_start();
 
 $id =$_POST['Codigo'];
 $p = $_POST['Periodo'];
-$c = $_POST['Cultivo'];
 $f = $_POST['Fecha'];
+$s = $_POST['Supervisor'];
+$c = $_POST['Cultivo'];
 $a = $_POST['Estado'];
 
-
+$id, $idperiodo, $fecha, $supervisor, $idcultivolote, $estado
 
 include_once("CabeceraSupervisionDronCollector.php");
 $CabeceraSupervisionDronCollectorObj = new CabeceraSupervisionDronCollector();
-$CabeceraSupervisionDronCollectorObj->insertCabecerasTarifarias($id,$p,$c,$f,$a);
+$CabeceraSupervisionDronCollectorObj->insertCabeceraSupervisionDron($id,$p,$f,$s,$c,$a);
 
 echo "<br>";
 
