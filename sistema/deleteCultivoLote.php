@@ -31,12 +31,16 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-	$id =$_GET['id'];
-	$n =$_GET['nombre'];
+	$i =$_GET['idcultivolote'];
+	$p =$_GET['idperiodo'];
+	$l =$_GET['idlote'];
+	$c =$_GET['idcultivo'];
+	$f =$_GET['fecha'];
+	$e =$_GET['estado'];
 
 	include_once("cultivoLoteCollector.php");
 	$CultivoLoteCollectorObj = new CultivoLoteCollector();
-	$CultivoLoteCollectorObj->deleteCultivoLotes($id);
+	$CultivoLoteCollectorObj->deleteCultivoLote($i);
 
 	echo "<br>";
 
@@ -44,7 +48,7 @@ session_start();
 	echo "  <h2>CultivoLotes</h2>";
 	echo "  <div class='panel panel-default'>";
 	echo "    <div class='panel-heading'>Registro Eliminado Correctamente</div>";
-	echo "    <div class='panel-body'>$n</div>";
+	echo "    <div class='panel-body'>$i</div>";
 	echo "  </div>";
 	echo "</div>";	 
 ?>

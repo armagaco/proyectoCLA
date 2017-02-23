@@ -17,7 +17,7 @@ class CultivoLoteCollector extends Collector
   }
 
   function deleteCultivoLote($idCultivoLote) {
-    $rows = self::$db->deleteRow("DELETE FROM controlAgricola.cultivolote where idcultivolote = $id",null);   
+    $rows = self::$db->deleteRow("DELETE FROM controlAgricola.cultivolote where idcultivolote = $idCultivoLote",null);   
     return true;          
   }
 
