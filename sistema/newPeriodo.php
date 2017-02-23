@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html lang ="en">
 <head>
-	<title>Nuevo Lote</title>
+	<title>Nuevo Periodo</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="../css/estilo.css" rel="stylesheet" >
@@ -20,8 +20,8 @@ session_start();
 	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Área</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createLote.php'>Nueva</a></li>";
-			echo "<li><a href='readLote.php'>Consulta</a></li>";
+			echo "<li><a href='createPeriodo.php'>Nueva</a></li>";
+			echo "<li><a href='readPeriodo.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -37,9 +37,9 @@ $a = $_POST['Fechainicio'];
 $d = $_POST['Fechafin'];
 $e = $_POST['Estado'];
 
-include_once("LoteCollector.php");
-$LoteCollectorObj = new LoteCollector();
-$LoteCollectorObj->insertLote($n,$a,$d,$e);
+include_once("PeriodoCollector.php");
+$PeriodoCollectorObj = new PeriodoCollector();
+$PeriodoCollectorObj->insertPeriodo($n,$a,$d,$e);
 
 echo "<br>";
 
