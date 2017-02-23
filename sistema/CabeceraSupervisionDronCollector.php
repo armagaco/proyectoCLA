@@ -6,7 +6,7 @@ include_once('Collector.php');
 class CabeceraSupervisionDronCollector extends Collector
 {
   
-  function showCabecerasTarifarias() 
+  function showCabeceraSupervisionDron() 
   {
     $rows = self::$db->getRows("select idcabeceradron, periodo, fecha, supervisor, idcultivolote, estado from controlagricola.cabecerasupervisiondron ");        
     $arrayCabeceraSupervisionDron= array();        
