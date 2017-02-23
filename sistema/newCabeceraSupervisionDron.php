@@ -38,7 +38,6 @@ $s = $_POST['Supervisor'];
 $c = $_POST['Cultivo'];
 $a = $_POST['Estado'];
 
-$id, $idperiodo, $fecha, $supervisor, $idcultivolote, $estado
 
 include_once("CabeceraSupervisionDronCollector.php");
 $CabeceraSupervisionDronCollectorObj = new CabeceraSupervisionDronCollector();
