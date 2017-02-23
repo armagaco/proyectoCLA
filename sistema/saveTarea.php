@@ -43,8 +43,8 @@ $a = $_POST['Estado'];
 
 
 include_once("cabeceratareaCollector.php");
-$CultivoCollectorObj = new CabeceraTareaCollector();
-$CultivoCollectorObj->updateTarea($id,$p,$f,$s,$c,$a);
+$CabeceraTareaCollectorObj = new CabeceraTareaCollector();
+$CabeceraTareaCollectorObj->updateTarea($id,$p,$f,$s,$c,$a);
 
 echo "<br>";
 
