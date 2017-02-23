@@ -44,7 +44,7 @@ echo " 	   <th>Código</th>";
 echo " 	   <th>Periodo</th>"; 
 echo "     <th>Fecha</th>"; 
 echo " 	   <th>Supervisor</th>"; 
-echo " 	   <th>Cultivo</th>"; 
+echo " 	   <th>Cultivo Lote</th>"; 
 echo "     <th>Estado</th>"; 
 echo "</tr>"; 
 echo "</thead>"; 
