@@ -45,25 +45,25 @@ session_start();
 
 <form method= "POST" class="form-horizontal" action= "saveCultivoLote.php?usuario=" >
      <div class="form-group">
-         <label for="inputName" class="control-label col-xs-2">CultivoLote:</label>
+         <label for="inputEmail" class="control-label col-xs-2">CultivoLote:</label>
          <div class="col-xs-10">
-             <input name = "Cultivolote" type="text" id= "Cultivolote" class="form-control" placeholder="Cultivolote" value="<?php echo $i;?>" readonly>
+             <input name = "CultivoLote" type="text" id= "CultivoLote" class="form-control" placeholder="CultivoLote" value="<?php echo $i;?>" readonly>
          </div>
      </div>
      <div class="form-group">
-         <label for="inputName" class="control-label col-xs-2">Periodo:</label>
+         <label for="inputEmail" class="control-label col-xs-2">Periodo:</label>
          <div class="col-xs-10">
              <input name = "Periodo" type="text" id= "Periodo" class="form-control" placeholder="Periodo" value="<?php echo $p;?>">
          </div>
      </div>
      <div class="form-group">
-         <label for="inputName" class="control-label col-xs-2">Lote:</label>
+         <label for="inputEmail" class="control-label col-xs-2">Lote:</label>
          <div class="col-xs-10">
              <input name = "Lote" type="text" id= "Lote" class="form-control" placeholder="Lote" value="<?php echo $l;?>">
          </div>
      </div>
      <div class="form-group">
-         <label for="inputName" class="control-label col-xs-2">Cultivo:</label>
+         <label for="inputEmail" class="control-label col-xs-2">Cultivo:</label>
          <div class="col-xs-10">
              <input name = "Cultivo" type="text" id= "Cultivo" class="form-control" placeholder="Cultivo" value="<?php echo $c;?>">
          </div>
