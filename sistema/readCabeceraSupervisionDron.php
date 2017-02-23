@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html lang ="en">
 <head>
-	<title>Cabecera Supervision Dron</title>
+	<title>Cabecera Supervision-Dron</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="../css/estilo.css" rel="stylesheet" >
@@ -19,7 +19,7 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cabecera-Tarifario</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cabecera Supervision-Dron</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
 			echo "<li><a href='createCabeceraSupervisionDron.php'>Nuevo</a></li>";
@@ -35,7 +35,7 @@ include_once("CabeceraSupervisionDronCollector.php");
 $CabeceraSupervisionDronCollectorObj = new CabeceraSupervisionDronCollector();
 
 echo "<div class='container'>";
-echo "<h2>Cabecera Tarifario</h2>";
+echo "<h2>Cabecera Supervision-Dron</h2>";
 echo "<div class='table-responsive'>"; 
 echo "<table class='table'>"; 
 echo "<thead>"; 

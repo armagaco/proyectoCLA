@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html lang ="en">
 <head>
-	<title>Añadir Cabecera-Tarifario</title>
+	<title>Añadir Supervision-Dron</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="../css/estilo.css" rel="stylesheet" >
@@ -23,11 +23,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cabecera-Tarifario</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cabecera Supervision-Dron</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createCabeceraTarifario.php'>Nuevo</a></li>";
-			echo "<li><a href='readCabeceraTarifario.php'>Consulta</a></li>";
+			echo "<li><a href='createCabeceraSupervisionDron.php'>Nuevo</a></li>";
+			echo "<li><a href='readCabeceraSupervisionDron.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -38,7 +38,7 @@ session_start();
 	echo "</nav>";
 
 
-echo "<form method= 'POST' class='form-horizontal' action= 'newCabeceraTarifario.php' id='cabeceratarifario' title='cabeceratarifario' >";
+echo "<form method= 'POST' class='form-horizontal' action= 'newCabeceraSupervisionDron.php' id='cabeceradron' title='cabeceradron' >";
      echo "<div class='form-group'>";
          echo "<label for='inputCodigo' class='control-label col-xs-2'>Codigo:</label>";
          echo "<div class='col-xs-10'>";
