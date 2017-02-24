@@ -24,7 +24,7 @@ session_start();
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
 			echo "<li><a href='createCabeceraSupervisionDron.php'>Nuevo</a></li>";
-			echo "<li><a href='readCCabeceraSupervisionDron.php'>Consulta</a></li>";
+			echo "<li><a href='readCabeceraSupervisionDron.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
