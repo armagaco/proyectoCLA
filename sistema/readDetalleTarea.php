@@ -41,20 +41,23 @@ echo "<table class='table'>";
 echo "<thead>"; 
 echo "<tr>"; 
 echo " 	   <th>Código</th>"; 
-echo "     <th>Nombre</th>"; 
-echo "     <th>Estado</th>"; 
+echo "     <th>Tarea</th>"; 
+echo "     <th>Empleado</th>";
+echo "     <th>Labor</th>";
+echo "     <th>Cantidad</th>";
+echo "     <th>Tarifa</th>"; 
 echo "</tr>"; 
 echo "</thead>"; 
 foreach ($DetalleTareaCollectorObj->showDetalleTareas() as $c){
 	echo "<tbody>"; 
 	echo "<tr>"; 
-	echo "<td>".$c->getIdDetalleTarea()."</td>"; 
-	echo "<td>".$c->getNombre()."</td>"; 
- 	if($c->getEstado()== '1'){
-		echo "<td>Activo</td>";
-	}else{
-		echo "<td>Inactivo</td>";
-	}
+	echo "<td>".$c->getIddetalletarea()."</td>"; 
+	echo "<td>".$c->getIdcabeceratarea()."</td>";
+	echo "<td>".$c->getIdempleado()."</td>"; 
+	echo "<td>".$c->getIdlabor()."</td>";
+	echo "<td>".$c->getCantidad()."</td>";
+	echo "<td>".$c->getTarifa()."</td>";
+ 	
 	echo "<td><a href='updateDetalleTarea.php?id=".$c->getIdDetalleTarea()."&nombre=".$c->getNombre()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
 	echo "<td><a href='deleteDetalleTarea.php?id=".$c->getIdDetalleTarea()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 
