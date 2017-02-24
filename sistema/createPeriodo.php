@@ -48,7 +48,7 @@ echo "<form method= 'POST' class='form-horizontal' action= 'newPeriodo.php' id='
          echo "</div>";
      echo "</div>";
 	 echo "<div class='form-group'>";
-         echo "<label for='inputFechafin' class='control-label col-xs-2'>Tamaño:</label>";
+         echo "<label for='inputFechafin' class='control-label col-xs-2'>Fecha fin:</label>";
          echo "<div class='col-xs-10'>";
              echo "<input name = 'Fechafin' type='text' id= 'Fechafin' class='form-control' placeholder='Fechafin'>";
          echo "</div>";
