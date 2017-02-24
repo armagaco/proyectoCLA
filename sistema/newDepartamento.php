@@ -39,7 +39,7 @@ $f = $_POST['Fecha'];
 
 include_once("DepartamentoCollector.php");
 $DepartamentoCollectorObj = new DepartamentoCollector();
-$DepartamentoCollectorObj->insertDepartamentos($n,$a,$f);
+$DepartamentoCollectorObj->insertDepartamentos($n,$f,$a);
 
 echo "<br>";
 
