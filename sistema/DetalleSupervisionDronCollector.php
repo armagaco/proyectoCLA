@@ -10,7 +10,7 @@ class DetalleSupervisionDronCollector extends Collector
     $rows = self::$db->getRows("SELECT idcabeceradron, iddetalledron, idempleado, idlabor,cantidad,tarifa, imagen FROM controlAgricola.detallesupervisiondron order by idcabeceradron,iddetalledron ");        
     $arraydetallesupervisiondron= array();        
     foreach ($rows as $c){
-      $aux = new detallesupervisiondron($c{'idempleado'},$c{'tarifa'},$c{'iddetalledron'},$c{'idlabor'},$c{'cantidad'},$c{'imagen'});
+      $aux = new detallesupervisiondron($c{'iddetalledron'},$c{'idempleado'},$c{'tarifa'},$c{'idlabor'},$c{'cantidad'},$c{'imagen'});
       array_push($arraydetallesupervisiondron, $aux);
     }
     return $arraydetallesupervisiondron;        
