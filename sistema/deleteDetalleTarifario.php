@@ -39,7 +39,7 @@ session_start();
 
 	include_once("DetalleTarifarioCollector.php");
 	$DetalleTarifarioCollectorObj = new DetalleTarifarioCollector();
-	$DetalleTarifarioCollectorObj->deleteDetallesTarifarios($id);
+	$DetalleTarifarioCollectorObj->deleteDetallesTarifarios($id,$idcabeceratarifario);
 
 	echo "<br>";
 
