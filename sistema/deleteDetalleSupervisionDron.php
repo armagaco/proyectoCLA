@@ -44,7 +44,7 @@ session_start();
 	echo "<br>";
 
 	echo "<div class='container'>";
-	echo "  <h2>Detalle Tarifario</h2>";
+	echo "  <h2>Detalle Supervision-Dron</h2>";
 	echo "  <div class='panel panel-default'>";
 	echo "    <div class='panel-heading'>Registro Eliminado Correctamente</div>";
 	echo "    <div class='panel-body'>$a</div>";
