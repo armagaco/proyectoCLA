@@ -45,7 +45,7 @@ $i = null;
 
 include_once("DetalleSupervisionDronCollector.php");
 $DetalleSupervisionDronCollectorObj = new DetalleSupervisionDronCollector();
-$DetalleSupervisionDronCollectorObj->updateDetalleSupervisionDron($ca,$id,$e,$l,$c,$a,$i);
+$DetalleSupervisionDronCollectorObj->updateDetalleSupervisionDron($ca,$id,$e,$c,$l,$a,$i);
 
 echo "<br>";
 
