@@ -23,8 +23,8 @@ session_start();
 	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Detalle Supervision-Dron</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createDetalleTarifario.php'>Nuevo</a></li>";
-			echo "<li><a href='readDetalleTarifario.php'>Consulta</a></li>";
+			echo "<li><a href='createDetalleSupervisionDron.php'>Nuevo</a></li>";
+			echo "<li><a href='readDetalleSupervisionDron.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -43,14 +43,14 @@ $c =$_POST['cantidad'];
 $a =$_POST['tarifa'];
 $i = null;
 
-include_once("DetalleTarifarioCollector.php");
-$DetalleTarifarioCollectorObj = new DetalleTarifarioCollector();
-$DetalleTarifarioCollectorObj->updateDetallesTarifarios($ca,$id,$e,$l,$c,$a,$i);
+include_once("DetalleSupervisionDronCollector.php");
+$DetalleSupervisionDronCollectorObj = new DetalleSupervisionDronCollector();
+$DetalleSupervisionDronCollectorObj->updateDetalleSupervisionDron($ca,$id,$e,$l,$c,$a,$i);
 
 echo "<br>";
 
 echo "<div class='container'>";
-echo "  <h2>Detalle Tarifario</h2>";
+echo "  <h2>Detalle Supervision-Dron</h2>";
 echo "  <div class='panel panel-default'>";
 echo "    <div class='panel-heading'>Registro Actualizado Correctamente</div>";
 echo "    <div class='panel-body'>$a</div>";
