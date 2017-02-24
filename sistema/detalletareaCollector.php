@@ -21,8 +21,8 @@ class DetalleTareaCollector extends Collector
     return true;          
   }
 
-  function insertDetalleTarea($idcabeceratarea, $idempleado, $idlabor, $cantidad, $tarifa) {
-    $rows = self::$db->insertRow("INSERT INTO controlAgricola.detalletarea (idcabeceratarea, idempleado, idlabor, cantidad, tarifa) VALUES ($idcabeceratarea, $idempleado , $idlabor, $cantidad, $tarifa)",null);             
+  function insertDetalleTarea($iddetalletarea, $idcabeceratarea, $idempleado, $idlabor, $cantidad, $tarifa) {
+    $rows = self::$db->insertRow("INSERT INTO controlAgricola.detalletarea (iddetalletarea, idcabeceratarea, idempleado, idlabor, cantidad, tarifa) VALUES ($iddetalletarea, $idcabeceratarea, $idempleado , $idlabor, $cantidad, $tarifa)",null);             
 	return true;
   }
 

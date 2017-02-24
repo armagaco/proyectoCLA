@@ -31,7 +31,7 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-
+$idd = $_POST['Detalletarea'];
 $idt = $_POST['Cabeceratarea'];
 $e = $_POST['Empleado'];
 $l = $_POST['Labor'];
@@ -40,7 +40,7 @@ $t = $_POST['Tarifa'];
 
 include_once("detalletareaCollector.php");
 $DetalleTareaCollectorObj = new DetalleTareaCollector();
-$DetalleTareaCollectorObj->insertDetalleTarea($idt,$e,$l,$c,$t);
+$DetalleTareaCollectorObj->insertDetalleTarea($idd,$idt,$e,$l,$c,$t);
 
 echo "<br>";
 
@@ -48,7 +48,7 @@ echo "<div class='container'>";
 echo "  <h2>DetalleTareas</h2>";
 echo "  <div class='panel panel-default'>";
 echo "    <div class='panel-heading'>Registro Ingresado Correctamente</div>";
-echo "    <div class='panel-body'>$n</div>";
+echo "    <div class='panel-body'>$idd</div>";
 echo "  </div>";
 echo "</div>";
 
