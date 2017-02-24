@@ -17,11 +17,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cultivos</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla DetalleTareas</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createCultivo.php'>Nuevo</a></li>";
-			echo "<li><a href='readCultivo.php'>Consulta</a></li>";
+			echo "<li><a href='createDetalleTarea.php'>Nuevo</a></li>";
+			echo "<li><a href='readDetalleTarea.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -32,17 +32,20 @@ session_start();
 	echo "</nav>";
 
 
-$n = $_POST['Nombre'];
-$a = $_POST['Estado'];
+$idt = $_POST['Cabeceratarea'];
+$e = $_POST['Empleado'];
+$l = $_POST['Labor'];
+$c = $_POST['Cantidad'];
+$t = $_POST['Tarifa'];
 
-include_once("CultivoCollector.php");
-$CultivoCollectorObj = new CultivoCollector();
-$CultivoCollectorObj->insertCultivos($n,$a);
+include_once("detalletareaCollector.php");
+$DetalleTareaCollectorObj = new DetalleTareaCollector();
+$DetalleTareaCollectorObj->insertDetalleTarea($idt,$e,$l,$c,$t);
 
 echo "<br>";
 
 echo "<div class='container'>";
-echo "  <h2>Cultivos</h2>";
+echo "  <h2>DetalleTareas</h2>";
 echo "  <div class='panel panel-default'>";
 echo "    <div class='panel-heading'>Registro Ingresado Correctamente</div>";
 echo "    <div class='panel-body'>$n</div>";
