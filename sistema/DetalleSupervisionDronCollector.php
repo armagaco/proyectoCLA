@@ -23,8 +23,8 @@ function insertDetalleSupervisionDron($idCabecera, $id, $idempleado, $idlabor, $
     $rows = self::$db->insertRow("Insert into controlAgricola.detallesupervisiondron (idcabeceradron, iddetalledron, idempleado, idlabor,cantidad,tarifa, imagen) values ('$idCabecera', '$id', '$idempleado', '$idlabor', '$cantidad', '$tarifa', '$imagen' )" , null);             
   }
 
-function updateDetalleSupervisionDron($idCabecera, $id, $cantidad, $idlabor, $tarifa,  $imagen) {
-    $rows = self::$db->updateRow("Update controlAgricola.detallesupervisiondron set idlabor = '$idlabor', cantidad= '$cantidad', tarifa = '$tarifa', imagen = '$imagen' where iddetalledron =$id and idcabeceradron= '$idCabecera'", null);             
+function updateDetalleSupervisionDron($idCabecera, $id, $idempleado, $cantidad, $idlabor, $tarifa,  $imagen) {
+    $rows = self::$db->updateRow("Update controlAgricola.detallesupervisiondron set idlabor = '$idlabor', idempleado=$idempleado, cantidad= '$cantidad', tarifa = '$tarifa', imagen = '$imagen' where iddetalledron =$id and idcabeceradron= '$idCabecera'", null);             
   }
 
 }
