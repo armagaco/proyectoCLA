@@ -45,6 +45,14 @@ echo "<form method= 'POST' class='form-horizontal' action= 'newDepartamento.php'
              echo "<input name = 'Nombre' type='text' id= 'Nombre' class='form-control' placeholder='Nombre'>";
          echo "</div>";
      echo "</div>";
+
+     echo "<div class='form-group'>";
+         echo "<label for='inputFecha' class='control-label col-xs-2'>Fecha:</label>";
+         echo "<div class='col-xs-10'>";
+             echo "<input name = 'Fecha' type='text' id= 'Fecha' class='form-control' placeholder='Fecha'>";
+         echo "</div>";
+     echo "</div>";
+
      echo "<div class='form-group'>";
          echo "<label for='inputEstado' class='control-label col-xs-2'>Estado:</label>";
          echo "<div class='col-xs-10'>";
