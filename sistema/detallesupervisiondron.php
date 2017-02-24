@@ -3,17 +3,22 @@
 class DetalleSupervisionDron{
 
   private $idCabeceraDron;
-  private $idDetalleTarifario;
+  private $iddetalledron;
+  private $idEmpleado;
   private $idLabor;
-  private $idMedida;
-  private $valor;
+  private $cantidad;
+  private $tarifa;
+  private $imagen;
+   
 
-    function __construct($idCabeceraDron, $idDetalleTarifario, $idLabor, $idMedida, $valor){
+    function __construct($idCabeceraDron, $iddetalledron, $idEmpleado, $idLabor, $cantidad, $tarifa, $imagen){
     $this->idCabeceraDron = $idCabeceraDron;
-    $this->idDetalleTarifario = $idDetalleTarifario;
+    $this->iddetalledron = $iddetalledron;
+	$this->idEmpleado = $idEmpleado;
     $this->idLabor = $idLabor;
-    $this->idMedida = $idMedida;
-    $this->valor = $valor;
+    $this->cantidad = $cantidad;
+    $this->tarifa = $tarifa;
+	$this->imagen = $imagen;
     }
     function setIdCabeceraDron($idCabeceraDron){
       $this->idCabeceraDron = $idCabeceraDron;
@@ -21,11 +26,17 @@ class DetalleSupervisionDron{
     function getIdCabeceraDron(){
       return $this->idCabeceraDron;
     }
-    function setIdDetalleTarifario($idDetalleTarifario){
-      $this->idDetalleTarifario = $idDetalleTarifario;
+    function setIdDetalleDron($iddetalledron){
+      $this->iddetalledron = $iddetalledron;
     }
-    function getIdDetalleTarifario(){
-      return $this->idDetalleTarifario;
+    function getIdDetalleDron(){
+      return $this->iddetalledron;
+    }
+	function setidEmpleado($idEmpleado){
+      $this->idEmpleado = $idEmpleado;
+    }
+    function getidEmpleado(){
+      return $this->idEmpleado;
     }
     function setIdLabor($idLabor){
       $this->idLabor = $idLabor;
@@ -33,17 +44,23 @@ class DetalleSupervisionDron{
     function getIdLabor(){
       return $this->idLabor;
     }
-    function setIdMedida($idMedida){
-      $this->idMedida = $idMedida;
+    function setCantidad($cantidad){
+      $this->cantidad = $cantidad;
     }
-    function getIdMedida(){
-      return $this->idMedida;
+    function getCantidad(){
+      return $this->cantidad;
     }
-    function setValor($valor){
-      $this->valor = $valor;
+    function setTarifa($tarifa){
+      $this->tarifa = $tarifa;
     }
-    function getValor(){
-      return $this->valor;
+    function getTarifa(){
+      return $this->tarifa;
+    }
+	function setImagen($imagen){
+      $this->imagen = $imagen;
+    }
+    function getImagen(){
+      return $this->imagen;
     }
 }
 
