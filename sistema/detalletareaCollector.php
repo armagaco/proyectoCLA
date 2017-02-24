@@ -7,13 +7,13 @@ class DetalleTareaCollector extends Collector
 {
   
   function showDetalleTareas() {
-    $rows = self::$db->getRows("SELECT * FROM detalletarea ");        
+    $rows = self::$db->getRows("SELECT * FROM controlAgricola.detalletarea ");        
     $arrayDetalleTarea= array();        
     foreach ($rows as $c){
       $aux = new DetalleTarea($c{'iddetalletarea'},$c{'idcabeceratarea'},$c{'idempleado'},$c{'idlabor'},$c{'cantidad'},$c{'tarifa'});
-      array_push($arrayDetalletarea, $aux);
+      array_push($arrayDetalleTarea, $aux);
     }
-    return $arrayDetalletarea;        
+    return $arrayDetalleTarea;        
   }
 
 }
