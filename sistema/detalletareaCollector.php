@@ -16,6 +16,22 @@ class DetalleTareaCollector extends Collector
     return $arrayDetalleTarea;        
   }
 
+  function deleteDetalleTarea($iddetalletarea) {
+    $rows = self::$db->deleteRow("DELETE FROM controlAgricola.detalletarea where iddetalletarea = $iddetalletarea",null);   
+    return true;          
+  }
+
+  function insertDetalleTarea($iddetalletarea, $idcabeceratarea, $idempleado, $idlabor, $cantidad, $tarifa) {
+    $rows = self::$db->insertRow("INSERT INTO controlAgricola.detalletarea (iddetalletarea, idcabeceratarea, idempleado, idlabor, cantidad, tarifa) VALUES ($iddetalletarea, $idcabeceratarea, $idempleado , $idlabor, $cantidad, $tarifa)",null);             
+	return true;
+  }
+
+  function updateDetalleTarea($iddetalletarea, $idcabeceratarea, $idempleado, $idlabor, $cantidad, $tarifa) {
+    $rows = self::$db->updateRow("UPDATE controlAgricola.detalletarea SET idcabeceratarea = $idcabeceratarea, idempleado = '$idempleado', idlabor = $idlabor, cantidad = $cantidad, tarifa = $tarifa WHERE iddetalletarea = $iddetalletarea",null);  
+	return true;           
+  }
+
+
 }
 ?>
 
