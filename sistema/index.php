@@ -28,7 +28,7 @@ else{
 				<label>Nombre de Usuario:</label>
 				<input type="text" name="Nombre" id = "Nombre" class="form-control">
 				<label>Contraseña:</label>
-				<input type="password" name="Apellido" id="Apellido" class="form-control">
+				<input type="password" name="password" id="password" class="form-control">
                                 <input type="submit" value="Conectarse" class="btn btn-success" />
 				
 			</form>

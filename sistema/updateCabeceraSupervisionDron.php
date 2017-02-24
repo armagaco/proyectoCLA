@@ -37,10 +37,10 @@ session_start();
 	$id =$_GET['id'];
     $p =$_GET['idperiodo'];
 	$f =$_GET['fecha'];
-    $c =$_GET['idcultivo'];
+    $c =$_GET['idCultivoLote'];
 	$s =$_GET['supervisor'];
 	$a =$_GET['estado'];
-	
+	$v =$_GET['valor'];
 ?>
 
 <form method= "POST" class="form-horizontal" action= "saveCabeceraSupervisionDron.php?usuario=" >
@@ -71,13 +71,19 @@ session_start();
 	 <div class="form-group">
          <label for="inputSupervisor" class="control-label col-xs-2">Supervisor:</label>
          <div class="col-xs-10">
-             <input name = "Supervisor" type="text" id= "Supervisor" class="form-control" placeholder="Supervisor" value="<?php echo $f;?>">
+             <input name = "Supervisor" type="text" id= "Supervisor" class="form-control" placeholder="Supervisor" value="<?php echo $s;?>">
          </div>
      </div>
      <div class="form-group">
          <label for="inputEstado" class="control-label col-xs-2">Estado:</label>
          <div class="col-xs-10">
              <input name = "Estado" type="text" id= "Estado" class="form-control" placeholder="Estado" value="<?php echo $a;?>">
+         </div>
+     </div>
+     <div class="form-group">
+         <label for="inputValor" class="control-label col-xs-2">Valor:</label>
+         <div class="col-xs-10">
+             <input name = "Valor" type="text" id= "Valor" class="form-control" placeholder="Valor" value="<?php echo $v;?>">
          </div>
      </div>
      <div class="form-group">
@@ -91,5 +97,6 @@ session_start();
 
 	</body>
 </html>
+
 
 
