@@ -37,6 +37,8 @@ session_start();
 	$id =$_GET['id'];
 	$n =$_GET['nombre'];
 	$a =$_GET['estado'];
+	$f =$_GET['fecha'];
+
 ?>
 
 <form method= "POST" class="form-horizontal" action= "saveDepartamento.php?usuario=" >
@@ -47,12 +49,20 @@ session_start();
  placeholder="Codigo" value="<?php echo $id;?>" readonly>
          </div>
      </div>
+
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Nombre:</label>
          <div class="col-xs-10">
              <input name = "Nombre" type="text" id= "Nombre" class="form-control" placeholder="Nombre" value="<?php echo $n;?>">
          </div>
      </div>
+     <div class="form-group">
+         <label for="inputFecha" class="control-label col-xs-2">Fecha:</label>
+         <div class="col-xs-10">
+             <input name = "Fecha" type="text" id= "Fecha" class="form-control" placeholder="Fecha" value="<?php echo $f;?>">
+         </div>
+     </div>
+
      <div class="form-group">
          <label for="inputEmail" class="control-label col-xs-2">Estado:</label>
          <div class="col-xs-10">

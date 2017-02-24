@@ -42,20 +42,25 @@ echo "<thead>";
 echo "<tr>"; 
 echo " 	   <th>Código</th>"; 
 echo "     <th>Nombre</th>"; 
+echo "     <th>Fecha</th>"; 
 echo "     <th>Estado</th>"; 
+
 echo "</tr>"; 
 echo "</thead>"; 
 foreach ($DepartamentoCollectorObj->showDepartamentos() as $c){
 	echo "<tbody>"; 
 	echo "<tr>"; 
 	echo "<td>".$c->getIdDepartamento()."</td>"; 
-	echo "<td>".$c->getNombre()."</td>"; 
+	echo "<td>".$c->getNombre()."</td>";
+         echo "<td>".$c->getFecha()."</td>";
  	if($c->getEstado()== '1'){
 		echo "<td>Activo</td>";
 	}else{
 		echo "<td>Inactivo</td>";
 	}
-	echo "<td><a href='updateDepartamento.php?id=".$c->getIdDepartamento()."&nombre=".$c->getNombre()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
+	
+
+	echo "<td><a href='updateDepartamento.php?id=".$c->getIdDepartamento()."&nombre=".$c->getNombre()."&estado=".$c->getEstado()."&fecha=".$c->getFecha()."'>Editar</a></td>"; 
 	echo "<td><a href='deleteDepartamento.php?id=".$c->getIdDepartamento()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 
 }

@@ -37,11 +37,13 @@ session_start();
 $id =$_POST['Codigo'];
 $n =$_POST['Nombre'];
 $a =$_POST['Estado'];
+$f =$_POST['Fecha'];
+
 
 
 include_once("DepartamentoCollector.php");
 $DepartamentoCollectorObj = new DepartamentoCollector();
-$DepartamentoCollectorObj->updateDepartamentos($id,$n,$a);
+$DepartamentoCollectorObj->updateDepartamentos($id,$n,$f,$a);
 
 echo "<br>";
 

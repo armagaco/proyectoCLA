@@ -8,10 +8,10 @@ class CabeceraSupervisionDronCollector extends Collector
   
   function showCabeceraSupervisionDron() 
   {
-    $rows = self::$db->getRows("select idcabeceradron, periodo, fecha, supervisor, idcultivolote, estado from controlagricola.cabecerasupervisiondron ");        
+    $rows = self::$db->getRows("select idcabeceradron, periodo, fecha, supervisor, idcultivolote, estado, valor from controlagricola.cabecerasupervisiondron ");        
     $arrayCabeceraSupervisionDron= array();        
     foreach ($rows as $c){
-      $aux = new CabeceraSupervisionDron($c{'idcabeceradron'},$c{'periodo'},$c{'fecha'},$c{'supervisor'},$c{'idcultivolote'},$c{'estado'});
+      $aux = new CabeceraSupervisionDron($c{'idcabeceradron'},$c{'periodo'},$c{'fecha'},$c{'supervisor'},$c{'idcultivolote'},$c{'estado'},$c{'valor'});
       array_push($arrayCabeceraSupervisionDron, $aux);
     }
     return $arrayCabeceraSupervisionDron;        
@@ -27,9 +27,9 @@ class CabeceraSupervisionDronCollector extends Collector
     $rows = self::$db->insertRow("Insert into controlAgricola.cabecerasupervisiondron (idcabeceradron, periodo, fecha, supervisor, idcultivolote, estado) values ('$id','$idperiodo', '$fecha', '$supervisor', '$idcultivolote', '$estado' )" , null);             
   }
 
-  function updateCabeceraSupervisionDron($id, $idperiodo, $idcultivolote, $fecha, $supervisor, $estado) 
+  function updateCabeceraSupervisionDron($id, $idperiodo, $idcultivolote, $fecha, $supervisor, $estado, $valor) 
   {
-    $rows = self::$db->updateRow("Update controlAgricola.cabecerasupervisiondron set periodo = '$idperiodo', idcultivolote = '$idcultivolote', fecha = '$fecha', supervisor=$supervisor, estado = '$estado' where idcabeceradron =$id", null);             
+    $rows = self::$db->updateRow("Update controlAgricola.cabecerasupervisiondron set periodo = '$idperiodo', idcultivolote = '$idcultivolote', fecha = '$fecha', supervisor='$supervisor', estado = '$estado', valor = $valor where idcabeceradron =$id", null);             
   }
 }
 ?>
