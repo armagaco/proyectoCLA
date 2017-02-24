@@ -8,8 +8,7 @@ session_start();
 	<title>Menú</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="../css/estilo.css" rel="stylesheet" >
-        <link href="../css/tablas.css" rel="stylesheet" >
+
   	<link href="../css/bootstrap.min.css" rel="stylesheet">
   	<script src="../js/jquery.min.js"></script>
   	<script src="../js/bootstrap.min.js"></script>
@@ -37,19 +36,6 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
- /*echo "<div id='panel'>";
-$usuario = $_POST['Nombre']  .$_POST['Apellido'];
-
-	$_SESSION['Garcia'] = $usuario;
-	if (isset($_SESSION['Garcia'])){
-          echo "<div id='welcome'>";
-		echo "Hola Usuario :";
-          echo "</div>";	
-	}
-	echo '(' . $_SESSION ['Garcia'] . ')';	
-	 	
- echo"</div>";
-*/
 ?>
 </body>
 </html>
