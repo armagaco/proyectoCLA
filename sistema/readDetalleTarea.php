@@ -58,8 +58,8 @@ foreach ($DetalleTareaCollectorObj->showDetalleTareas() as $c){
 	echo "<td>".$c->getCantidad()."</td>";
 	echo "<td>".$c->getTarifa()."</td>";
  	
-	echo "<td><a href='updateDetalleTarea.php?id=".$c->getIdDetalleTarea()."&nombre=".$c->getNombre()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
-	echo "<td><a href='deleteDetalleTarea.php?id=".$c->getIdDetalleTarea()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
+	echo "<td><a href='updateDetalleTarea.php?iddetalletarea=".$c->getIddetalletarea()."&idcabeceratarea=".$c->getIdcabeceratarea()."&idempleado=".$c->getIdempleado()."&idlabor=".$c->getIdlabor()."&cantidad=".$c->getCantidad()."&tarifa=".$c->getTarifa()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteDetalleTarea.php?iddetalletarea=".$c->getIddetalleTarea()."&idcabeceratarea=".$c->getIdcabeceratarea()."&idempleado=".$c->getIdempleado()."&idlabor=".$c->getIdlabor()."&cantidad=".$c->getCantidad()."&tarifa=".$c->getTarifa()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 
 }
 echo "</tbody>";
