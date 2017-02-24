@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html lang ="en">
 <head>
-	<title>Eliminar Lote</title>
+	<title>Eliminar Periodo</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="../css/estilo.css" rel="stylesheet" >
@@ -17,11 +17,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Lote</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Periodo</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createLote.php'>Nueva</a></li>";
-			echo "<li><a href='readLote.php'>Consulta</a></li>";
+			echo "<li><a href='createPeriodo.php'>Nueva</a></li>";
+			echo "<li><a href='readPeriodo.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -33,11 +33,11 @@ session_start();
 
 	$id =$_GET['id'];
 	$n =$_GET['nombre'];
-        $d = $_GET['tamano'];
+    $d = $_GET['tamano'];
 
-	include_once("LoteCollector.php");
-	$LoteCollectorObj = new LoteCollector();
-	$LoteCollectorObj->deleteLote($id);
+	include_once("PeriodoCollector.php");
+	$PeriodoCollectorObj = new PeriodoCollector();
+	$PeriodoCollectorObj->deletePeriodo($id);
 
 	echo "<br>";
 

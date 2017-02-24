@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html lang ="en">
 <head>
-	<title>Eliminar Lote</title>
+	<title>Nuevo Supervision-Dron</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="../css/estilo.css" rel="stylesheet" >
@@ -17,11 +17,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Lote</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Cabecera Supervision-Dron</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createLote.php'>Nueva</a></li>";
-			echo "<li><a href='readLote.php'>Consulta</a></li>";
+			echo "<li><a href='createCabeceraSupervisionDron.php'>Nuevo</a></li>";
+			echo "<li><a href='readCabeceraSupervisionDron.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -31,23 +31,28 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-	$id =$_GET['id'];
-	$n =$_GET['nombre'];
-        $d = $_GET['tamano'];
+$id =$_POST['Codigo'];
+$p = $_POST['Periodo'];
+$f = $_POST['Fecha'];
+$s = $_POST['Supervisor'];
+$c = $_POST['Cultivo'];
+$a = $_POST['Estado'];
 
-	include_once("LoteCollector.php");
-	$LoteCollectorObj = new LoteCollector();
-	$LoteCollectorObj->deleteLote($id);
 
-	echo "<br>";
+include_once("CabeceraSupervisionDronCollector.php");
+$CabeceraSupervisionDronCollectorObj = new CabeceraSupervisionDronCollector();
+$CabeceraSupervisionDronCollectorObj->insertCabeceraSupervisionDron($id,$p,$f,$s,$c,$a);
 
-	echo "<div class='container'>";
-	echo "  <h2>Cultivos</h2>";
-	echo "  <div class='panel panel-default'>";
-	echo "    <div class='panel-heading'>Registro Eliminado Correctamente</div>";
-	echo "    <div class='panel-body'>$n</div>";
-	echo "  </div>";
-	echo "</div>";	 
+echo "<br>";
+
+echo "<div class='container'>";
+echo "  <h2>Cabecera Tarifario</h2>";
+echo "  <div class='panel panel-default'>";
+echo "    <div class='panel-heading'>Registro Ingresado Correctamente</div>";
+echo "    <div class='panel-body'>$f</div>";
+echo "  </div>";
+echo "</div>";
+
 ?>
 
 </body>

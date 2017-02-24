@@ -2,24 +2,27 @@
 
 class CabeceraSupervisiondron{
 
-  private $idCabeceraSupervisiondron;
+  private $idCabeceraDron;
   private $idPeriodo;
-  private $idCultivo;
   private $fecha;
+  private $supervisor;
+  private $idCultivoLote;
   private $estado;
+  
 
-    function __construct($idCabeceraSupervisiondron, $idPeriodo, $idCultivo, $fecha, $estado){
-    $this->idCabeceraSupervisiondron = $idCabeceraSupervisiondron;
+    function __construct($idCabeceraDron, $idPeriodo, $fecha, $supervisor, $idCultivoLote, $estado){
+    $this->idCabeceraDron = $idCabeceraDron;
     $this->idPeriodo = $idPeriodo;
-    $this->idCultivo = $idCultivo;
     $this->fecha = $fecha;
+	$this->supervisor = $supervisor;
+	$this->idCultivoLote = $idCultivoLote;
     $this->estado = $estado;
     }
-    function setIdCabeceraSupervisiondron($idCabeceraSupervisiondron){
-      $this->idCabeceraSupervisiondron = $idCabeceraSupervisiondron;
+    function setIdCabeceraDron($idCabeceraDron){
+      $this->idCabeceraDron = $idCabeceraDron;
     }
-    function getIdCabeceraSupervisiondron(){
-      return $this->idCabeceraSupervisiondron;
+    function getIdCabeceraDron(){
+      return $this->idCabeceraDron;
     }
     function setIdPeriodo($idperiodo){
       $this->idPeriodo = $idPeriodo;
@@ -27,17 +30,23 @@ class CabeceraSupervisiondron{
     function getIdPeriodo(){
       return $this->idPeriodo;
     }
-    function setIdCultivo($idCultivo){
-      $this->idCultivo = $idCultivo;
+    function setidCultivoLote($idCultivoLote){
+      $this->idCultivoLote = $idCultivoLote;
     }
-    function getIdCultivo(){
-      return $this->idCultivo;
+    function getidCultivoLote(){
+      return $this->idCultivoLote;
     }
     function setFecha($fecha){
       $this->fecha = $fecha;
     }
     function getFecha(){
       return $this->fecha;
+    }
+	function setSupervisor($supervisor){
+      $this->supervisor = $supervisor;
+    }
+    function getSupervisor(){
+      return $this->supervisor;
     }
     function setEstado($estado){
       $this->estado = $estado;
