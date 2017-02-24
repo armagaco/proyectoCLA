@@ -26,7 +26,7 @@ session_start();
 	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Supervision-Dron</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createSupervision-Dron.php'>Nuevo</a></li>";
+			echo "<li><a href='createDetalleSupervisionDron.php'>Nuevo</a></li>";
 			echo "<li><a href='readDetalleSupervisionDron.php'>Consulta</a></li>";
 
 		echo "</ul>";
