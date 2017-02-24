@@ -16,15 +16,15 @@ class DetalleSupervisionDronCollector extends Collector
     return $arraydetallesupervisiondron;        
   }
   function deleteDetalleSupervisionDron($id, $idCabecera) {
-    $rows = self::$db->deleteRow("DELETE FROM controlAgricola.detallesupervisiondron where iddetalledron = $id and tarifa= '$idCabecera'", null);             
+    $rows = self::$db->deleteRow("DELETE FROM controlAgricola.detallesupervisiondron where iddetalledron = $id and idcabeceradron= '$idCabecera'", null);             
   }
 
 function insertDetalleSupervisionDron($idCabecera, $id, $idempleado, $idlabor, $cantidad, $tarifa, $imagen) {
     $rows = self::$db->insertRow("Insert into controlAgricola.detallesupervisiondron (idcabeceradron, iddetalledron, idempleado, idlabor,cantidad,tarifa, imagen) values ('$idCabecera', '$id', '$idempleado', '$idlabor', '$cantidad', '$tarifa', '$imagen' )" , null);             
   }
 
-function updateDetalleSupervisionDron($tarifa, $id, $idlabor, $cantidad, $imagen) {
-    $rows = self::$db->updateRow("Update controlAgricola.detallesupervisiondron set idlabor = '$idlabor', cantidad = '$cantidad', imagen = '$imagen' where iddetalledron =$id and tarifa= '$tarifa'", null);             
+function updateDetalleSupervisionDron($idCabecera, $id, $cantidad, $idlabor, $tarifa,  $imagen) {
+    $rows = self::$db->updateRow("Update controlAgricola.detallesupervisiondron set idlabor = '$idlabor', cantidad= '$cantidad', tarifa = '$tarifa', imagen = '$imagen' where iddetalledron =$id and idcabeceradron= '$idCabecera'", null);             
   }
 
 }
