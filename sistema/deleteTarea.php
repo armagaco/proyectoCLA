@@ -37,6 +37,7 @@ session_start();
 	$s = $_GET['supervisor'];
 	$c = $_GET['idcultivolote'];
 	$e = $_GET['estado'];
+	$ta= $_GET['tarea'];
 
 	include_once("cabeceratareaCollector.php");
 	$CabeceraTareaCollectorObj = new CabeceraTareaCollector();

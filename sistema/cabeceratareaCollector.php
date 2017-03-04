@@ -10,7 +10,7 @@ class CabeceraTareaCollector extends Collector
     $rows = self::$db->getRows("SELECT * FROM controlAgricola.cabeceratarea ");        
     $arrayTarea= array();        
     foreach ($rows as $c){
-      $aux = new CabeceraTarea($c{'idcabeceratarea'},$c{'periodo'},$c{'fecha'},$c{'supervisor'},$c{'idcultivolote'},$c{'estado'});
+      $aux = new CabeceraTarea($c{'idcabeceratarea'},$c{'periodo'},$c{'fecha'},$c{'supervisor'},$c{'idcultivolote'},$c{'estado'},$c{'tarea'});
       array_push($arrayTarea, $aux);
     }
     return $arrayTarea;        
@@ -21,13 +21,13 @@ class CabeceraTareaCollector extends Collector
     return true;          
   }
 
-  function insertTarea($idcabeceratarea, $periodo, $fecha, $supervisor, $idcultivolote, $estado) {
-    $rows = self::$db->insertRow("INSERT INTO controlAgricola.cabeceratarea (idcabeceratarea, periodo, fecha, supervisor, idcultivolote, estado) VALUES ($idcabeceratarea, $periodo , '$fecha', $supervisor, $idcultivolote, $estado )",null);             
+  function insertTarea($idcabeceratarea, $periodo, $fecha, $supervisor, $idcultivolote, $estado, $tarea) {
+    $rows = self::$db->insertRow("INSERT INTO controlAgricola.cabeceratarea (idcabeceratarea, periodo, fecha, supervisor, idcultivolote, estado, tarea) VALUES ($idcabeceratarea, $periodo , '$fecha', $supervisor, $idcultivolote, $estado, '$tarea' )",null);             
 	return true;
   }
 
-  function updateTarea($idcabeceratarea, $periodo, $fecha, $supervisor, $idcultivolote, $estado) {
-    $rows = self::$db->updateRow("UPDATE controlAgricola.cabeceratarea SET periodo = $periodo, fecha = '$fecha', supervisor = $supervisor, idcultivolote = $idcultivolote, estado = $estado WHERE idcabeceratarea = $idcabeceratarea",null);  
+  function updateTarea($idcabeceratarea, $periodo, $fecha, $supervisor, $idcultivolote, $estado, $tarea) {
+    $rows = self::$db->updateRow("UPDATE controlAgricola.cabeceratarea SET periodo = $periodo, fecha = '$fecha', supervisor = $supervisor, idcultivolote = $idcultivolote, estado = $estado, tarea = '$tarea' WHERE idcabeceratarea = $idcabeceratarea",null);  
 	return true;           
   }
 

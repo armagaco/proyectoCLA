@@ -45,7 +45,8 @@ echo "     <th>Periodo</th>";
 echo "     <th>Fecha</th>";
 echo "     <th>Supervisor</th>";
 echo "     <th>Cultivolote</th>";
-echo "     <th>Estado</th>"; 
+echo "     <th>Estado</th>";
+echo "     <th>Tarea</th>"; 
 echo "</tr>"; 
 echo "</thead>"; 
 foreach ($CabeceraTareaCollectorObj->showTareas() as $c){
@@ -61,8 +62,9 @@ foreach ($CabeceraTareaCollectorObj->showTareas() as $c){
 	}else{
 		echo "<td>Inactivo</td>";
 	}
-	echo "<td><a href='updateTarea.php?idcabeceratarea=".$c->getIdcabeceratarea()."&periodo=".$c->getPeriodo()."&fecha=".$c->getFecha()."&supervisor=".$c->getSupervisor()."&idcultivolote=".$c->getIdcultivolote()."&estado=".$c->getEstado()."'>Editar</a></td>"; 
-	echo "<td><a href='deleteTarea.php?idcabeceratarea=".$c->getIdcabeceratarea()."&periodo=".$c->getPeriodo()."&fecha=".$c->getFecha()."&supervisor=".$c->getSupervisor()."&idcultivolote=".$c->getIdcultivolote()."&estado=".$c->getEstado()."'>Eliminar</a></td>"; 
+	echo "<td>".$c->getTarea()."</td>";
+	echo "<td><a href='updateTarea.php?idcabeceratarea=".$c->getIdcabeceratarea()."&periodo=".$c->getPeriodo()."&fecha=".$c->getFecha()."&supervisor=".$c->getSupervisor()."&idcultivolote=".$c->getIdcultivolote()."&estado=".$c->getEstado()."&tarea=".$c->getTarea()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteTarea.php?idcabeceratarea=".$c->getIdcabeceratarea()."&periodo=".$c->getPeriodo()."&fecha=".$c->getFecha()."&supervisor=".$c->getSupervisor()."&idcultivolote=".$c->getIdcultivolote()."&estado=".$c->getEstado()."&tarea=".$c->getTarea()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 
 }
 echo "</tbody>";

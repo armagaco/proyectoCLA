@@ -40,11 +40,12 @@ $f = $_POST['Fecha'];
 $s = $_POST['Supervisor'];
 $c = $_POST['Cultivolote'];
 $a = $_POST['Estado'];
+$ta= $_POST['Tarea'];
 
 
 include_once("cabeceratareaCollector.php");
 $CabeceraTareaCollectorObj = new CabeceraTareaCollector();
-$CabeceraTareaCollectorObj->updateTarea($id,$p,$f,$s,$c,$a);
+$CabeceraTareaCollectorObj->updateTarea($id,$p,$f,$s,$c,$a,$ta);
 
 echo "<br>";
 

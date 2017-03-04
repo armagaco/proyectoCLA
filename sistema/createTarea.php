@@ -71,6 +71,12 @@ echo "<form method= 'POST' class='form-horizontal' action= 'newTarea.php' id='ca
          echo "</div>";
      echo "</div>";
      echo "<div class='form-group'>";
+         echo "<label for='inputTarea' class='control-label col-xs-2'>Tarea:</label>";
+         echo "<div class='col-xs-10'>";
+             echo "<input name = 'Tarea' type='text' id= 'Tarea' class='form-control' placeholder='Tarea'>";
+         echo "</div>";
+     echo "</div>";
+     echo "<div class='form-group'>";
          echo "<div class='col-xs-offset-2 col-xs-10'>";
              echo "<button type='submit' class='btn btn-primary'>Grabar</button>";
          echo "</div>";

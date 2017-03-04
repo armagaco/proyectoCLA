@@ -32,7 +32,12 @@ session_start();
 	echo "</nav>";
 
 include_once("detalletareaCollector.php");
+include_once("cabeceratareaCollector.php");
 $DetalleTareaCollectorObj = new DetalleTareaCollector();
+$CabeceraTareaCollectorObj = new CabeceraTareaCollector();
+foreach($CabeceraTareaCollectorObj->showTareas() as $a){
+	$a->getTarea();
+}
 
 echo "<div class='container'>";
 echo "<h2>DetalleTareas</h2>";
@@ -48,20 +53,22 @@ echo "     <th>Cantidad</th>";
 echo "     <th>Tarifa</th>"; 
 echo "</tr>"; 
 echo "</thead>"; 
+
 foreach ($DetalleTareaCollectorObj->showDetalleTareas() as $c){
 	echo "<tbody>"; 
 	echo "<tr>"; 
 	echo "<td>".$c->getIddetalletarea()."</td>"; 
-	echo "<td>".$c->getIdcabeceratarea()."</td>";
+	echo "<td>".$a->getTarea()."</td>";
 	echo "<td>".$c->getIdempleado()."</td>"; 
 	echo "<td>".$c->getIdlabor()."</td>";
 	echo "<td>".$c->getCantidad()."</td>";
 	echo "<td>".$c->getTarifa()."</td>";
  	
-	echo "<td><a href='updateDetalleTarea.php?iddetalletarea=".$c->getIddetalletarea()."&idcabeceratarea=".$c->getIdcabeceratarea()."&idempleado=".$c->getIdempleado()."&idlabor=".$c->getIdlabor()."&cantidad=".$c->getCantidad()."&tarifa=".$c->getTarifa()."'>Editar</a></td>"; 
-	echo "<td><a href='deleteDetalleTarea.php?iddetalletarea=".$c->getIddetalleTarea()."&idcabeceratarea=".$c->getIdcabeceratarea()."&idempleado=".$c->getIdempleado()."&idlabor=".$c->getIdlabor()."&cantidad=".$c->getCantidad()."&tarifa=".$c->getTarifa()."'>Eliminar</a></td>"; 
+	echo "<td><a href='updateDetalleTarea.php?iddetalletarea=".$c->getIddetalletarea()."&idcabeceratarea=".$a->getTarea()."&idempleado=".$c->getIdempleado()."&idlabor=".$c->getIdlabor()."&cantidad=".$c->getCantidad()."&tarifa=".$c->getTarifa()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteDetalleTarea.php?iddetalletarea=".$c->getIddetalleTarea()."&idcabeceratarea=".$a->getTarea()."&idempleado=".$c->getIdempleado()."&idlabor=".$c->getIdlabor()."&cantidad=".$c->getCantidad()."&tarifa=".$c->getTarifa()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 
 }
+
 echo "</tbody>";
 echo "</table>";
 echo "</div>";

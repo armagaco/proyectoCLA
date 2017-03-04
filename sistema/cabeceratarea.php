@@ -8,14 +8,16 @@ class CabeceraTarea{
 	private $supervisor;
 	private $idcultivolote;
 	private $estado;
+	private $tarea;
 
-	function __construct($idcabeceratarea, $periodo, $fecha, $supervisor, $idcultivolote, $estado){
+	function __construct($idcabeceratarea, $periodo, $fecha, $supervisor, $idcultivolote, $estado, $tarea){
 		$this->idcabeceratarea = $idcabeceratarea;
 		$this->periodo = $periodo;
 		$this->idcultivolote = $idcultivolote;
 		$this->supervisor = $supervisor;
 		$this->fecha = $fecha;
 		$this->estado = $estado;
+		$this->tarea = $tarea;
 	}
 
 	function setIdcabeceratarea($idcabeceratarea){
@@ -65,6 +67,14 @@ class CabeceraTarea{
         function getEstado(){
                 return $this->estado;
         }
+
+	function setTarea($tarea){
+		$this->tarea = $tarea;
+	}
+
+	function getTarea(){
+		return $this->tarea;
+	}
 
 }
 

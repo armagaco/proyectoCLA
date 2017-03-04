@@ -40,6 +40,7 @@ session_start();
 	$s =$_GET['supervisor'];
 	$c =$_GET['idcultivolote'];
 	$e =$_GET['estado'];
+	$ta=$_GET['tarea'];
 ?>
 
 <form method= "POST" class="form-horizontal" action= "saveTarea.php?usuario=" >
@@ -77,6 +78,12 @@ session_start();
          <label for="inputEmail" class="control-label col-xs-2">Estado:</label>
          <div class="col-xs-10">
              <input name = "Estado" type="text" id= "Estado" class="form-control" placeholder="Estado" value="<?php echo $e;?>">
+         </div>
+     </div>
+     <div class="form-group">
+         <label for="inputName" class="control-label col-xs-2">Tarea:</label>
+         <div class="col-xs-10">
+             <input name = "Tarea" type="text" id= "Tarea" class="form-control" placeholder="Tarea" value="<?php echo $ta;?>">
          </div>
      </div>
      <div class="form-group">
