@@ -27,7 +27,7 @@ class CultivoLoteCollector extends Collector
   }
 
   function updateCultivoLote($idCultivoLote,$idPeriodo, $idLote, $idCultivo, $fecha, $estado) {
-    $rows = self::$db->updateRow("UPDATE controlAgricola.cultivolote SET idperiodo = $idPeriodo, idlote = $idLote, idcultivo = $idCultivo, fecha = $fecha, estado = $estado WHERE idcultivolote =$idCultivoLote",null);  
+    $rows = self::$db->updateRow("UPDATE controlAgricola.cultivolote SET idperiodo = $idPeriodo, idlote = $idLote, idcultivo = $idCultivo, fecha = '$fecha', estado = $estado WHERE idcultivolote =$idCultivoLote",null);  
 	return true;           
   }
 

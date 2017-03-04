@@ -70,20 +70,24 @@ echo"<div id='tabla'>";
 		echo "<div id='contenidos'>";
 		echo "<div id='columna1'><a href='readGrupoLabor.php'>Grupos de Labores</div>";
 		echo "<div id='columna2'><a href='readCabeceraTarifario.php'>Cabecera de Tarifario</div>";
+<<<<<<< HEAD
 		echo "<div id='columna3'><a href='readCabeceraSupervision.php'>Cabecera de SupervisiónDRON</div>";
+=======
+		echo "<div id='columna3'><a href='readCabeceraSupervisionDron.php'>Cabecera de SupervisiónDRON</div>";
+>>>>>>> d6b05a38ac9134bafb651a259a8d1d7bdc64729f
 		echo "<div id='columna4'><a href='readTarea.php'>Cabecera de Tareas</div>";
 		echo "</div>";
 		echo "<div id='contenidos'>";
 		echo "<div id='columna1'><a href='readDepartamento.php'>Departamentos</div>";
 		echo "<div id='columna2'><a href='readDetalleTarifario.php'>Detalle de Tarifario</div>";
-		echo "<div id='columna3'><a href='readDetaSupervision.php'>Detalle de SupervisiónDRON</div>";
+		echo "<div id='columna3'><a href='readDetalleSupervisionDron.php'>Detalle de SupervisiónDRON</div>";
 		echo "<div id='columna4'><a href='readDetalleTarea.php'>Detalle de Tareas</div>";
 		echo "</div>";
 		echo "<div id='contenidos'>";
 		echo "<div id='columna1'><a href='readCargo.php'>Cargos</div>";
-		echo "<div id='columna2'><a href='readCultivo.php'></div>";
-		echo "<div id='columna3'><a href='readCultivo.php'></div>";
-		echo "<div id='columna4'><a href='readCultivo.php'></div>";
+		echo "<div id='columna2'><a href='readUsuario.php'>Usuarios</div>";
+		echo "<div id='columna3'></div>";
+		echo "<div id='columna4'></div>";
 		echo "</div>";
 	echo "</div>";
 	echo "</div>";

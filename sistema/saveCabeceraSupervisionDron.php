@@ -1,4 +1,4 @@
-<?php
+?php
 session_start();
 ?>
 <!DOCTYPE html>
@@ -38,13 +38,16 @@ $id =$_POST['Codigo'];
 $p =$_POST['Periodo'];
 $f =$_POST['Fecha'];
 $c =$_POST['Cultivo'];
-$s =$_GET['Supervisor'];
+$s =$_POST['Supervisor'];
 $a =$_POST['Estado'];
+$v =$_POST['Valor'];
+
+echo "id= $id, periodo = $p, fecha = $f, cultivo = $c, supervisor = $s, estado = $a, valor = $v";
 
 
 include_once("CabeceraSupervisionDronCollector.php");
 $CabeceraSupervisionDronCollectorObj = new CabeceraSupervisionDronCollector();
-$CabeceraSupervisionDronCollectorObj->updateCabeceraSupervisionDron($id,$p,$f,$c,$s,$a);
+$CabeceraSupervisionDronCollectorObj->updateCabeceraSupervisionDron($id,$p,$c,$f,$s,$a,$v);
 
 echo "<br>";
 

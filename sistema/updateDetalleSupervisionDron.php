@@ -23,8 +23,8 @@ session_start();
 	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Supervision-Dron</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createCabeceraSupervisionDron.php'>Nuevo</a></li>";
-			echo "<li><a href='readCabeceraSupervisionDron.php'>Consulta</a></li>";
+			echo "<li><a href='createDetalleSupervisionDron.php'>Nuevo</a></li>";
+			echo "<li><a href='readDetalleSupervisionDron.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -34,56 +34,49 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
+    $ca =$_GET['idCabeceraDron'];
 	$id =$_GET['id'];
-    $p =$_GET['idperiodo'];
-	$f =$_GET['fecha'];
-    $c =$_GET['idCultivoLote'];
-	$s =$_GET['supervisor'];
-	$a =$_GET['estado'];
-	$v =$_GET['valor'];
+	$e =$_GET['idEmpleado'];
+    $l =$_GET['idlabor'];
+	$c =$_GET['cantidad'];
+	$a =$_GET['tarifa'];
 ?>
 
-<form method= "POST" class="form-horizontal" action= "saveCabeceraSupervisionDron.php?usuario=" >
+<form method= "POST" class="form-horizontal" action= "saveDetalleSupervisionDron.php?usuario=" >
      <div class="form-group">
-         <label for="inputCodigo" class="control-label col-xs-2">Código:</label>
+         <label for="inputName" class="control-label col-xs-2">CabeceraDron:</label>
          <div class="col-xs-10">
-             <input name = "Codigo" type="text" id= "Codigo" class="form-control" placeholder="Codigo" value="<?php echo $id;?>">
+             <input name = "CabeceraDron" type="text" id= "CabeceraDron" class="form-control" placeholder="CabeceraDron" value="<?php echo $ca;?>">
          </div>
      </div>
      <div class="form-group">
-         <label for="inputPeriodo" class="control-label col-xs-2">Periodo:</label>
+         <label for="inputName" class="control-label col-xs-2">DetalleDron:</label>
          <div class="col-xs-10">
-             <input name = "Periodo" type="text" id= "Periodo" class="form-control" placeholder="Periodo" value="<?php echo $p;?>">
+             <input name = "DetalleDron" type="text" id= "DetalleDron" class="form-control" placeholder="DetalleDron" value="<?php echo $id;?>">
          </div>
      </div>
 	 <div class="form-group">
-         <label for="inputFecha" class="control-label col-xs-2">Fecha:</label>
+         <label for="inputEmpleado" class="control-label col-xs-2">Empleado:</label>
          <div class="col-xs-10">
-             <input name = "Fecha" type="text" id= "Fecha" class="form-control" placeholder="Fecha" value="<?php echo $f;?>">
+             <input name = "Empleado" type="text" id= "Empleado" class="form-control" placeholder="Empleado" value="<?php echo $e;?>">
          </div>
      </div>
      <div class="form-group">
-         <label for="inputCultivo" class="control-label col-xs-2">Cultivo:</label>
+         <label for="inputName" class="control-label col-xs-2">Labor:</label>
          <div class="col-xs-10">
-             <input name = "Cultivo" type="text" id= "Cultivo" class="form-control" placeholder="Cultivo" value="<?php echo $c;?>">
-         </div>
-     </div>
-	 <div class="form-group">
-         <label for="inputSupervisor" class="control-label col-xs-2">Supervisor:</label>
-         <div class="col-xs-10">
-             <input name = "Supervisor" type="text" id= "Supervisor" class="form-control" placeholder="Supervisor" value="<?php echo $s;?>">
+             <input name = "Labor" type="text" id= "Labor" class="form-control" placeholder="Labor" value="<?php echo $l;?>">
          </div>
      </div>
      <div class="form-group">
-         <label for="inputEstado" class="control-label col-xs-2">Estado:</label>
+         <label for="inputCantidad" class="control-label col-xs-2">Cantidad:</label>
          <div class="col-xs-10">
-             <input name = "Estado" type="text" id= "Estado" class="form-control" placeholder="Estado" value="<?php echo $a;?>">
+             <input name = "Cantidad" type="text" id= "Cantidad" class="form-control" placeholder="Cantidad" value="<?php echo $c;?>">
          </div>
      </div>
      <div class="form-group">
-         <label for="inputValor" class="control-label col-xs-2">Valor:</label>
+         <label for="inputTarifa" class="control-label col-xs-2">Tarifa:</label>
          <div class="col-xs-10">
-             <input name = "Valor" type="text" id= "Valor" class="form-control" placeholder="Valor" value="<?php echo $v;?>">
+             <input name = "Tarifa" type="text" id= "Tarifa" class="form-control" placeholder="Tarifa" value="<?php echo $a;?>">
          </div>
      </div>
      <div class="form-group">
@@ -97,6 +90,5 @@ session_start();
 
 	</body>
 </html>
-
 
 

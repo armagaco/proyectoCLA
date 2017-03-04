@@ -8,26 +8,18 @@ session_start();
 	<title>Nuevo</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="../css/estilo.css" rel="stylesheet" >
-        <link href="../css/tablas.css" rel="stylesheet" >
-  	<link href="../css/bootstrap.min.css" rel="stylesheet">
-  	<script src="../js/jquery.min.js"></script>
-  	<script src="../js/bootstrap.min.js"></script>
-        <script src="../js/jquery.bootgrid.min.js"></script>
-	<script src="../js/jquery-1.11.1.min.js"></script>
-	<script src= "../js/jquery.js" ></script>
-
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Departamentos</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Usuarios</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createDepartamento.php'>Nuevo</a></li>";
-			echo "<li><a href='readDepartamento.php'>Consulta</a></li>";
+			echo "<li><a href='createUsuario.php'>Nuevo</a></li>";
+			echo "<li><a href='readUsuario.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -38,28 +30,17 @@ session_start();
 	echo "</nav>";
 
 
-echo "<form method= 'POST' class='form-horizontal' action= 'newDepartamento.php' id='Departamento' title='Departamento' >";
+echo "<form method= 'POST' class='form-horizontal' action= 'newUsuario.php' id='Usuario' title='Usuario' >";
      echo "<div class='form-group'>";
          echo "<label for='inputName' class='control-label col-xs-2'>Nombre:</label>";
          echo "<div class='col-xs-10'>";
              echo "<input name = 'Nombre' type='text' id= 'Nombre' class='form-control' placeholder='Nombre'>";
          echo "</div>";
      echo "</div>";
-
      echo "<div class='form-group'>";
-         echo "<label for='inputFecha' class='control-label col-xs-2'>Fecha:</label>";
+         echo "<label for='inputPassword' class='control-label col-xs-2'>Password:</label>";
          echo "<div class='col-xs-10'>";
-             echo "<input name = 'Fecha' type='text' id= 'Fecha' class='form-control' placeholder='Fecha'>";
-         echo "</div>";
-     echo "</div>";
-
-     echo "<div class='form-group'>";
-         echo "<label for='inputEstado' class='control-label col-xs-2'>Estado:</label>";
-         echo "<div class='col-xs-10'>";
-		 echo "<select class='form-control' name='Estado'>";
-		    echo "<option value= '1'selected>Activo</option>";
-		    echo "<option value= '2'>Inactivo</option>";
-		 echo " </select>";
+		 echo "<input name = 'Password' type='password' id= 'Password' class='form-control' placeholder='Password'>";
          echo "</div>";
      echo "</div>";
      echo "<div class='form-group'>";

@@ -7,7 +7,7 @@ class DetalleTarifarioCollector extends Collector
 {
   
   function showDetallesTarifarios() {
-    $rows = self::$db->getRows("SELECT idcabeceratarifario,iddetalletarifario,idlabor,idmedida,valor FROM controlAgricola.detalletarifario ");        
+    $rows = self::$db->getRows("SELECT idcabeceratarifario,iddetalletarifario,idlabor,idmedida,valor FROM controlAgricola.detalletarifario order by idcabeceratarifario,iddetalletarifario ");        
     $arrayDetalleTarifario= array();        
     foreach ($rows as $c){
       $aux = new DetalleTarifario($c{'idcabeceratarifario'},$c{'iddetalletarifario'},$c{'idlabor'},$c{'idmedida'},$c{'valor'});
@@ -15,8 +15,8 @@ class DetalleTarifarioCollector extends Collector
     }
     return $arrayDetalleTarifario;        
   }
-  function deleteDetallesTarifarios($id) {
-    $rows = self::$db->deleteRow("DELETE FROM controlAgricola.detalletarifario where iddetalletarifario = $id", null);             
+  function deleteDetallesTarifarios($id, $idCabecera) {
+    $rows = self::$db->deleteRow("DELETE FROM controlAgricola.detalletarifario where iddetalletarifario = $id and idcabeceratarifario= '$idCabecera'", null);             
   }
 
 function insertDetallesTarifarios($idcabeceratarifario, $id, $idlabor, $idmedida, $valor) {
@@ -24,9 +24,8 @@ function insertDetallesTarifarios($idcabeceratarifario, $id, $idlabor, $idmedida
   }
 
 function updateDetallesTarifarios($idcabeceratarifario, $id, $idlabor, $idmedida, $valor) {
-    $rows = self::$db->updateRow("Update controlAgricola.detalletarifario set idcabeceratarifario= '$idcabeceratarifario', idlabor = '$idlabor', idmedida = '$idmedida', valor = '$valor' where iddetalletarifario =$id", null);             
+    $rows = self::$db->updateRow("Update controlAgricola.detalletarifario set idlabor = '$idlabor', idmedida = '$idmedida', valor = '$valor' where iddetalletarifario =$id and idcabeceratarifario= '$idcabeceratarifario'", null);             
   }
 
 }
 ?>
-

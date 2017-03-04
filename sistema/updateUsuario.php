@@ -20,11 +20,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Departamentos</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Usuarios</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createDepartamento.php'>Nuevo</a></li>";
-			echo "<li><a href='readDepartamento.php'>Consulta</a></li>";
+			echo "<li><a href='createUsuario.php'>Nuevo</a></li>";
+			echo "<li><a href='readUsuario.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -36,12 +36,10 @@ session_start();
 
 	$id =$_GET['id'];
 	$n =$_GET['nombre'];
-	$a =$_GET['estado'];
-	$f =$_GET['fecha'];
-
+	$a =$_GET['clave'];
 ?>
 
-<form method= "POST" class="form-horizontal" action= "saveDepartamento.php?usuario=" >
+<form method= "POST" class="form-horizontal" action= "saveUsuario.php?usuario=" >
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Código:</label>
          <div class="col-xs-10">
@@ -49,7 +47,6 @@ session_start();
  placeholder="Codigo" value="<?php echo $id;?>" readonly>
          </div>
      </div>
-
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Nombre:</label>
          <div class="col-xs-10">
@@ -57,16 +54,9 @@ session_start();
          </div>
      </div>
      <div class="form-group">
-         <label for="inputFecha" class="control-label col-xs-2">Fecha:</label>
+         <label for="inputPassword" class="control-label col-xs-2">Password:</label>
          <div class="col-xs-10">
-             <input name = "Fecha" type="text" id= "Fecha" class="form-control" placeholder="Fecha" value="<?php echo $f;?>">
-         </div>
-     </div>
-
-     <div class="form-group">
-         <label for="inputEmail" class="control-label col-xs-2">Estado:</label>
-         <div class="col-xs-10">
-             <input name = "Estado" type="text" id= "Estado" class="form-control" placeholder="Estado" value="<?php echo $a;?>">
+             <input name = "Password" type="password" id= "Password" class="form-control" placeholder="Password" value="<?php echo $a;?>">
          </div>
      </div>
      <div class="form-group">

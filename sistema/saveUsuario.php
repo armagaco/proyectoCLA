@@ -20,11 +20,11 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Departamentos</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Usuarios</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createDepartamento.php'>Nuevo</a></li>";
-			echo "<li><a href='readDepartamento.php'>Consulta</a></li>";
+			echo "<li><a href='createUsuario.php'>Nuevo</a></li>";
+			echo "<li><a href='readUsuario.php'>Consulta</a></li>";
 
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
@@ -36,19 +36,17 @@ session_start();
 
 $id =$_POST['Codigo'];
 $n =$_POST['Nombre'];
-$a =$_POST['Estado'];
-$f =$_POST['Fecha'];
+$a =$_POST['Password'];
 
 
-
-include_once("DepartamentoCollector.php");
-$DepartamentoCollectorObj = new DepartamentoCollector();
-$DepartamentoCollectorObj->updateDepartamentos($id,$n,$f,$a);
+include_once("UsuarioCollector.php");
+$UsuarioCollectorObj = new UsuarioCollector();
+$UsuarioCollectorObj->updateUsuarios($id,$n,$a);
 
 echo "<br>";
 
 echo "<div class='container'>";
-echo "  <h2>Departamentos</h2>";
+echo "  <h2>Usuarios</h2>";
 echo "  <div class='panel panel-default'>";
 echo "    <div class='panel-heading'>Registro Actualizado Correctamente</div>";
 echo "    <div class='panel-body'>$n</div>";

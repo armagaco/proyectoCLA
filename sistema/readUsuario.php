@@ -19,10 +19,10 @@ session_start();
 <?php
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
-	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Departamentos</a></div>";
+	    echo "<div class='navbar-header'><a class='navbar-brand' >Tabla Usuarios</a></div>";
 		echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
-			echo "<li><a href='createDepartamento.php'>Nuevo</a></li>";
+			echo "<li><a href='createUsuario.php'>Nuevo</a></li>";
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
 			echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['Garcia'] . ")</a></li>";
@@ -31,37 +31,32 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-include_once("DepartamentoCollector.php");
-$DepartamentoCollectorObj = new DepartamentoCollector();
+include_once("UsuarioCollector.php");
+$UsuarioCollectorObj = new UsuarioCollector();
 
 echo "<div class='container'>";
-echo "<h2>Departamentos</h2>";
+echo "<h2>Usuarios</h2>";
 echo "<div class='table-responsive'>"; 
 echo "<table class='table'>"; 
 echo "<thead>"; 
 echo "<tr>"; 
 echo " 	   <th>Código</th>"; 
 echo "     <th>Nombre</th>"; 
-echo "     <th>Fecha</th>"; 
-echo "     <th>Estado</th>"; 
-
+//echo "     <th>Estado</th>"; 
 echo "</tr>"; 
 echo "</thead>"; 
-foreach ($DepartamentoCollectorObj->showDepartamentos() as $c){
+foreach ($UsuarioCollectorObj->showUsuarios() as $c){
 	echo "<tbody>"; 
 	echo "<tr>"; 
-	echo "<td>".$c->getIdDepartamento()."</td>"; 
-	echo "<td>".$c->getNombre()."</td>";
-         echo "<td>".$c->getFecha()."</td>";
- 	if($c->getEstado()== '1'){
-		echo "<td>Activo</td>";
-	}else{
-		echo "<td>Inactivo</td>";
-	}
-	
-
-	echo "<td><a href='updateDepartamento.php?id=".$c->getIdDepartamento()."&nombre=".$c->getNombre()."&estado=".$c->getEstado()."&fecha=".$c->getFecha()."'>Editar</a></td>"; 
-	echo "<td><a href='deleteDepartamento.php?id=".$c->getIdDepartamento()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
+	echo "<td>".$c->getIdUsuario()."</td>"; 
+	echo "<td>".$c->getNombre()."</td>"; 
+ 	//if($c->getClave()== '1'){
+	//	echo "<td>Activo</td>";
+	//}else{
+	//	echo "<td>Inactivo</td>";
+	//}
+	echo "<td><a href='updateUsuario.php?id=".$c->getIdUsuario()."&nombre=".$c->getNombre()."&clave=".$c->getClave()."'>Editar</a></td>"; 
+	echo "<td><a href='deleteUsuario.php?id=".$c->getIdUsuario()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
 	echo "</tr>"; 
 }
 echo "</tbody>";

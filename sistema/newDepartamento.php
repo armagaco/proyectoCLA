@@ -34,10 +34,12 @@ session_start();
 
 $n = $_POST['Nombre'];
 $a = $_POST['Estado'];
+$f = $_POST['Fecha'];
+
 
 include_once("DepartamentoCollector.php");
 $DepartamentoCollectorObj = new DepartamentoCollector();
-$DepartamentoCollectorObj->insertDepartamentos($n,$a);
+$DepartamentoCollectorObj->insertDepartamentos($n,$f,$a);
 
 echo "<br>";
 
