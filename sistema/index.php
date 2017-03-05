@@ -22,6 +22,7 @@ session_start();
 
 }
 else{
+echo "Por favor vuelva a logear la pagina <br/>";
 }
 ?>
 			<form method="POST" name = "flogin" id = "flogin" action ="login.php" >
