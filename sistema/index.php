@@ -25,12 +25,6 @@ else{
 
 session_destroy();
 
-?>
-<script>
-        alert('Ha salido de su sesion');
-        window.location="../index.html";        
-</script>
-<?php
 }
 ?>
 			<form method="POST" name = "flogin" id = "flogin" action ="login.php" >
