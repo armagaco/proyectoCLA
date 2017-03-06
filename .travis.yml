@@ -3,5 +3,8 @@ php:
   - 5.5
   - 5.4
   - hhvm
-script: phpunit sistema/Test.php
-
+script: phpunit sistema/empleado.php
+deploy:
+  provider: heroku
+  api_key: ...
+  on: production

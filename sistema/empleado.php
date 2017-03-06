@@ -1,6 +1,6 @@
 <?php
 
-class Empleado extends PHPUnit_Framework_TestCase {
+class Empleado /*extends PHPUnit_Framework_TestCase*/ {
 
 	private $idEmpleado;
 	private $nombre;
