@@ -11,10 +11,10 @@ session_start();
 		<link rel= "stylesheet" type="text/css" href="../css/bootstrap.css">
 		<link rel= "stylesheet" type="text/css" href="../css/login.css">
 		<script type="text/javascript">
-			 function Validar(user,pwd)
+			 function Validar('user','pwd')
 			  {
-			   user=document.getElementById(user);
-			   pwd=document.getElementById(pwd);
+			   user=document.getElementById('user');
+			   pwd=document.getElementById('pwd');
 			   if(user.value=="")
 			    {
 			     alert("El campo Nombre esta vacio");
