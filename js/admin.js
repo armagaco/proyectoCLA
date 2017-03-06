@@ -1,7 +1,7 @@
 function admin(nombre,clave)
  {
-	nombre = document.getElementById(nombre);
-	clave = document.getElementById(clave);
+	nombre = document.getElementById("nombre");
+	clave = document.getElementById("clave");
 
 
 	if (nombre== ""||clave== "") {
