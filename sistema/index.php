@@ -10,7 +10,7 @@ session_start();
 		<meta http-equiv= "Content-Type" content= "text/html; charset=UTF-8" />
 		<link rel= "stylesheet" type="text/css" href="../css/bootstrap.css">
 		<link rel= "stylesheet" type="text/css" href="../css/login.css">
-		<script type="text/javascript" src="../js/validar.js"></script>
+		<script type="text/javascript" src="../js/admin.js"></script>
 	</head>
 	<body>
 		<div class="jumbotron boxlogin" >
@@ -28,8 +28,8 @@ session_destroy();
 
 }
 ?>
-<script src="..js/validar.js"></script>
-			<form method="POST" name = "flogin" id = "flogin" action ="login.php" onsubmit= "return validar()" >
+
+			<form method="POST" name = "flogin" id = "flogin" action ="login.php" onsubmit= "return admin('Nombre','password')">
 				<label>Nombre de Usuario:</label>
 				<input type="text" name="Nombre" id = "Nombre" class="form-control">
 				<label>Contraseña:</label>
