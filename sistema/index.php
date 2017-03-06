@@ -22,6 +22,9 @@ session_start();
 
 }
 else{
+
+session_destroy();
+
 ?>
 <script>
         alert('Ha salido de su sesion');
