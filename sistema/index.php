@@ -27,7 +27,7 @@ session_destroy();
 
 }
 ?>
-<script src="../js/validar.js"></script>
+<script src="..js/validar.js"></script>
 			<form method="POST" name = "flogin" id = "flogin" action ="login.php" onsubmit= "return validar()" >
 				<label>Nombre de Usuario:</label>
 				<input type="text" name="Nombre" id = "Nombre" class="form-control">
