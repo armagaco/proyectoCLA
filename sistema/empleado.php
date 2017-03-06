@@ -1,6 +1,6 @@
 <?php
 
-class Empleado extends PHPUnit_Framework_TestCase {
+class Empleado extends PHPUnit_Framework_Assert {
 
 	private $idEmpleado;
 	private $nombre;
@@ -10,7 +10,7 @@ class Empleado extends PHPUnit_Framework_TestCase {
 
 
 	public function testPass(){
-               	$this->assertNotEquals($this->nombre == $this->apellido);
+               	$this->assertFalse($this->nombre == $this->apellido);
        	}
 
 	function __construct($idEmpleado, $nombre, $apellido, $departamento, $cargo){
