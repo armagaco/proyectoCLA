@@ -10,7 +10,7 @@ class Empleado extends PHPUnit_Framework_TestCase {
 
 
 	public function testPass(){
-               	$this->assertFalse($this->nombre == $this->apellido);
+               	$this->assertFalse($this->nombre != $this->apellido);
        	}
 
 	function __construct($idEmpleado, $nombre, $apellido, $departamento, $cargo){
