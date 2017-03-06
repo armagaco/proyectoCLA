@@ -43,7 +43,7 @@ $c =$_POST['Cargo'];
 class Test extends PHPUnit_Framework_TestCase
 {
 	public function testNotEquals() {
-		$this->assertNotEquals($n,$a);
+		$this->assertNotEquals($_POST['Nombre'],$_POST['Apellido']);
   	}
 }
 
