@@ -9,7 +9,7 @@ class Empleado extends PHPUnit_Framework_TestCase{
 	private $cargo;
 
 	public function testNotEquals(){
-		Sthis->assertNotRegExp($nombre,$apellido);
+		$this->assertNotRegExp($nombre,$apellido);
 	}
 
 	function __construct($idEmpleado, $nombre, $apellido, $departamento, $cargo){
