@@ -9,9 +9,9 @@ class Empleado /*extends PHPUnit_Framework_TestCase*/ {
 	private $cargo;
 
 
-	public function testPass(){
-               	$this->assertFalse($this->nombre != $this->apellido);
-       	}
+//	public function testPass(){
+//              	$this->assertFalse($this->nombre != $this->apellido);
+//       	}
 
 	function __construct($idEmpleado, $nombre, $apellido, $departamento, $cargo){
 		$this->idEmpleado = $idEmpleado;
