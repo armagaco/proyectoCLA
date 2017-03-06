@@ -10,6 +10,7 @@ session_start();
 		<meta http-equiv= "Content-Type" content= "text/html; charset=UTF-8" />
 		<link rel= "stylesheet" type="text/css" href="../css/bootstrap.css">
 		<link rel= "stylesheet" type="text/css" href="../css/login.css">
+		<script type="text/javascript" src="js/validar.js"></script>
 	</head>
 	<body>
 		<div class="jumbotron boxlogin" >
