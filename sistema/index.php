@@ -29,7 +29,7 @@ session_destroy();
 }
 ?>
 
-			<form method="POST" name = "flogin" id = "flogin" action ="login.php" onsubmit= "return admin('Nombre','password')">
+			<form method="POST" name = "flogin" id = "flogin" action ="login.php" onSubmit= "return admin('Nombre','password')">
 				<label>Nombre de Usuario:</label>
 				<input type="text" name="Nombre" id = "Nombre" class="form-control">
 				<label>Contraseña:</label>
