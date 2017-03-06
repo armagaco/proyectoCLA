@@ -8,6 +8,12 @@ class Empleado {
 	private $departamento;
 	private $cargo;
 
+	class Test extends PHPUnit_Framework_TestCase
+	{
+        	public function testOnePlusOne() {
+                	$this->assertNotEquals(nombre,apellido);
+        	}
+	}
 
 	function __construct($idEmpleado, $nombre, $apellido, $departamento, $cargo){
 		$this->idEmpleado = $idEmpleado;
