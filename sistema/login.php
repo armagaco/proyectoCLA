@@ -19,6 +19,13 @@ session_start();
 <body>
 
 <?php
+
+$usuario = $_POST['Nombre'] ;
+$_SESSION['Garcia'] = $usuario;
+$clave = $_POST['password'];
+
+$user = 'admin';
+
 	echo "<nav class='navbar navbar-default'>";
 	  echo "<div class='container-fluid'>";
 	    echo "<div class='navbar-header'><a class='navbar-brand' >Control Agrícola</a></div>";
@@ -26,9 +33,6 @@ session_start();
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
-		$usuario = $_POST['Nombre'] ;
-		$_SESSION['Garcia'] = $usuario;
-
 			echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['Garcia'] . ")</a></li>";
 			echo "<li><a href='logout.php'><span class='glyphicon glyphicon-log-out'></span>Salir</a></li>";
 
