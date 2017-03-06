@@ -40,6 +40,14 @@ $a =$_POST['Apellido'];
 $d =$_POST['Departamento'];
 $c =$_POST['Cargo'];
 
+class Test extends PHPUnit_Framework_TestCase
+{
+	public function testNotEquals() {
+		$this->assertNotEquals($n,$a);
+  	}
+}
+
+
 
 include_once("empleadoCollector.php");
 $EmpleadoCollectorObj = new EmpleadoCollector();
