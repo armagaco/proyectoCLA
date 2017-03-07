@@ -67,6 +67,12 @@ class dataBase
   public function deleteRow($query, $params){
     return $this->insertRow($query, $params);
   }
+
+  public function assertNotNull($actual, $message = '')
+  {
+         self::assertThat($actual, self::logicalNot(self::isNull()), $message);
+  }
+
 }
 
 ?>
