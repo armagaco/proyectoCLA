@@ -31,8 +31,8 @@ class EmpleadoCollector extends Collector
 	return true;           
   }
 
-  function testAhora($nombre,'no es nulo'){
-	$this->assertNotNull($nombre,'no es nulo');
+  function testAhora(){
+	$this->assertNotNull("nombre");
   }
 
 }
