@@ -9,10 +9,6 @@ class EmpleadoCollector extends Collector
   function showEmpleados() {
     $rows = self::$db->getRows("SELECT * FROM controlAgricola.empleado ");        
     $arrayEmpleado= array();
-    function testListo()
-    {
-    		$this->assertNotNull($arrayEmpleado);
-    }
     foreach ($rows as $c){
       $aux = new Empleado($c{'idempleado'},$c{'nombre'},$c{'apellido'},$c{'departamento'},$c{'cargo'});
       array_push($arrayEmpleado, $aux);
@@ -33,6 +29,10 @@ class EmpleadoCollector extends Collector
   function updateEmpleado($idEmpleado, $nombre, $apellido, $departamento, $cargo) {
     $rows = self::$db->updateRow("UPDATE controlAgricola.empleado SET nombre = '$nombre', apellido = '$apellido', departamento = $departamento, cargo = $cargo WHERE idempleado ='$idEmpleado'",null);  
 	return true;           
+  }
+
+  function testAhora(){
+	$this->assertNotNull($nombre);
   }
 
 }
