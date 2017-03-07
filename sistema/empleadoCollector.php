@@ -31,9 +31,9 @@ class EmpleadoCollector extends Collector
 	return true;           
   }
 
-  function testAhora(){
+ /* function testAhora(){
 	$this->assertNotNull("nombre");
-  }
+  }*/
 
 }
 ?>
