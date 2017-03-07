@@ -68,10 +68,10 @@ class dataBase extends PHPUnit_Framework_TestCase
     return $this->insertRow($query, $params);
   }
 
-  public static function assertNotNull($actual, $message = '')
+ /* public static function assertNotNull($actual, $message = '')
   {
          self::assertThat($actual, self::logicalNot(self::isNull()), $message);
-  }
+  }*/
 
 }
 
