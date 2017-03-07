@@ -2,7 +2,7 @@
 
 
 
-class dataBase
+class dataBase extends PHPUnit_Framework_TestCase
 {
   public $isConnected;
   protected $datab;
