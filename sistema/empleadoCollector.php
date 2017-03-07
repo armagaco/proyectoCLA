@@ -10,7 +10,7 @@ class EmpleadoCollector extends Collector implements Test
   function showEmpleados() {
     $rows = self::$db->getRows("SELECT * FROM controlAgricola.empleado ");        
     $arrayEmpleado= array();
-    public function testOnePlusOne()
+    function testOnePlusOne()
     {
     	$this->assertNotNull($arrayEmpleado);
     }
