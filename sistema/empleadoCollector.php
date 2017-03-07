@@ -4,13 +4,16 @@ include_once('empleado.php');
 include_once('Collector.php');
 include_once('Test.php');
 
-class EmpleadoCollector extends Collector implements PHPUnit_Framework_TestCase
+class EmpleadoCollector extends Collector implements Test
 {
   
   function showEmpleados() {
     $rows = self::$db->getRows("SELECT * FROM controlAgricola.empleado ");        
     $arrayEmpleado= array();
-    $this->assertNotNull($arrayEmpleado);
+    public function testOnePlusOne()
+    {
+    	$this->assertNotNull($arrayEmpleado);
+    }
     foreach ($rows as $c){
       $aux = new Empleado($c{'idempleado'},$c{'nombre'},$c{'apellido'},$c{'departamento'},$c{'cargo'});
       array_push($arrayEmpleado, $aux);
