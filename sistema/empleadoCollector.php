@@ -2,6 +2,7 @@
 
 include_once('empleado.php');
 include_once('Collector.php');
+include_once('Test.php');
 
 class EmpleadoCollector extends Collector implements PHPUnit_Framework_TestCase
 {
