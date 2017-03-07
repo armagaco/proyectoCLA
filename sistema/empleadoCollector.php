@@ -9,7 +9,7 @@ class EmpleadoCollector extends Collector
   function showEmpleados() {
     $rows = self::$db->getRows("SELECT * FROM controlAgricola.empleado ");        
     $arrayEmpleado= array();
-    public function testListo()
+    function testListo()
     {
     		$this->assertNotNull($arrayEmpleado);
     }
